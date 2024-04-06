@@ -22,6 +22,6 @@ from home.views import kmc_home
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', kmc_home, name='home'),
-    path('accounts', include('allauth.urls')),
+    path('accounts/', include('allauth.urls')),
 
 ]
