@@ -229,6 +229,33 @@ h2 {
     text-align: left!important;
 }
 
+/* Login */
+
+.login-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 500px;
+}
+
+.login-heading {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.login-wrapper {
+    text-align: center;
+}
+
 /* Footer */
 
 .footer i {
