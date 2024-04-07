@@ -5,18 +5,19 @@ body {
     font-style: normal;
     font-weight: 100;
     color: black;
+    background-color: #e6e6e6;
 }
 
 /* Logo */
 
 .logo-font {
-    color: orange;
+    color: #f99411;
 }
 
 /* Nav Bar */
 
 .navbar-toggler-icon {
-    background-color: orange;
+    background-color: f99411;
 }
 
 .navbar {
@@ -30,9 +31,35 @@ body {
     color: black;
 }
 
+/* index.html */
+.content-wrapper {
+    padding-top: 100px;
+    text-align: center;
+}
 
-/* Media Queries for mobile 
-*/
+.heading {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f99411;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #f99411; 
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Media Queries for mobile */
 
 @media (max-width: 991.98px) {
     .navbar {
