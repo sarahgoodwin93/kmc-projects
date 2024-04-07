@@ -1,4 +1,7 @@
 {% load static %}
+{% url 'about' as about_url %}
+{% url 'cart' as cart_url %}
+{% url 'items' as items_url %}
 
 <!doctype html>
 <html lang="en">
@@ -57,10 +60,10 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Home</a>
+                                <a class="nav-link active" href="{% url 'home' %}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
+                                <a class="nav-link" href="{% url 'about' %}">About</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -71,14 +74,14 @@
                                   <a class="dropdown-item" href="#">Clamps</a>
                                   <a class="dropdown-item" href="#">Sensors</a>
                                   <div class="dropdown-divider"></div>
-                                  <a class="dropdown-item" href="#">View all products</a>
+                                  <a class="dropdown-item" href="{% url 'items' %}">View all products</a>
                                 </div>
                               </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Login</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Cart
+                                <a class="nav-link" href="{% url 'cart' %}">Cart
                                     <i class="fa-solid fa-cart-shopping"></i>
                                 </a>
                             </li>
