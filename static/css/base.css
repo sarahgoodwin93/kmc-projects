@@ -4,4 +4,51 @@ body {
     font-family: 'proxima-nova', sans-serif;
     font-style: normal;
     font-weight: 100;
+    color: black;
+}
+
+/* Logo */
+
+.logo-font {
+    color: orange;
+}
+
+/* Nav Bar */
+
+.navbar-toggler-icon {
+    background-color: orange;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: black;
+}
+
+
+/* Media Queries for mobile 
+*/
+
+@media (max-width: 991.98px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .navbar-toggler {
+        order: 3;
+        align-self: flex-end;
+    }
+
+    .navbar-collapse {
+        order: 1;
+        width: 100%;
+        text-align: right;
+        margin-top: 10px;
+    }
 }
