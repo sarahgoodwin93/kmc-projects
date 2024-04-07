@@ -147,6 +147,12 @@ h1 {
     font-weight: bold;
 }
 
+/* items.html */
+
+.item-list {
+    margin-top: 20px;
+}
+
 /* Footer */
 
 .footer i {
@@ -177,6 +183,11 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+}
+
+.site-creator li {
+    font-size: 12px;
+    color: white;
 }
 
 /* Media Queries for mobile */

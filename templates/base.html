@@ -68,13 +68,14 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link {% if request.path == '/items/' %}active{% endif %}" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   Products
+                                  <i class="fa-solid fa-square-chevron-down"></i>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="nav-link {% if request.path == '/items/' %}active{% endif %}" href="{% url 'items' %}">View all products</a>
+                                  <div class="dropdown-divider"></div>
                                   <a class="dropdown-item" href="#">Values</a>
                                   <a class="dropdown-item" href="#">Clamps</a>
                                   <a class="dropdown-item" href="#">Sensors</a>
-                                  <div class="dropdown-divider"></div>
-                                  <a class="nav-link {% if request.path == '/items/' %}active{% endif %}" href="{% url 'items' %}">View all products</a>
                                 </div>
                               </li>
                             <li class="nav-item">
@@ -116,10 +117,10 @@
                         Connect with us on social:
                     </li>
                     <li class="d-flex flex-row align-items-center">
-                        <a href="#"><i class="fab fa-facebook mr-2"></i> Facebook</a>
+                        <a href="https://www.facebook.com/kmc.projects.admin/" target="_blank" rel="noopener" aria-label="KMC Facebook page"><i class="fab fa-facebook mr-2"></i> Facebook</a>
                     </li>
                     <li class="d-flex flex-row align-items-center">
-                        <a href="#"><i class="fab fa-linkedin mr-2"></i> LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/kevmccaffrey?originalSubdomain=nz" target="_blank" rel="noopener" aria-label="Linkedin Kevin McCaffrey"><i class="fab fa-linkedin mr-2"></i> LinkedIn</a>
                     </li>
                 </ul>
             </div>
@@ -130,7 +131,7 @@
                         {% block copyright %}Site made by Sarah Goodwin{% endblock copyright %}
                     </li>
                     <li>
-                        <a href="https://github.com/sarahgoodwin93/kmc-projects" target="_blank" rel="noopener" aria-label="Github Page">Connect with me: <i class="fab fa-github"></i></a>
+                        <a href="https://github.com/sarahgoodwin93/kmc-projects" target="_blank" rel="noopener" aria-label="Github Page">Github: <i class="fab fa-github"></i></a>
                     </li>
                 </ul>
             </div>
