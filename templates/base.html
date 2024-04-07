@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
 
-    {% block meta %}
+{% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,20 +22,16 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
-{% endblock %}
+    {% endblock %}
 
 {% block extra_css %}
 {% endblock %}
 
 {% block corejs %}
+    <!-- Bootstrap Scripts -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/17e7a6d47c.js" crossorigin="anonymous"></script>
-{% endblock %}
-
-{% block extra_js %}
-    <script src="https://kit.fontawesome.com/17e7a6d47c.js" crossorigin="anonymous"></script>
 {% endblock %}
 
 <title>KMC Projects {% block extra_title %}{% endblock %}</title>
@@ -93,6 +89,16 @@
         </div>
     </header>
 
+<!-- Footer -->
+<footer class="footer mt-auto py-3 dark-bg">
+    <li class="footer-text m-0 text-center">
+        {% block copyright %}Made by Sarah Goodwin{% endblock copyright %}
+    </li>
+    <li class="footer-text m-0 text-center">
+        Connect with us: <a href="https://github.com/sarahgoodwin93/kmc-projects" target="_blank" rel="noopener" aria-label="Github Page"><i class="fa-brands fa-github"></i></a>
+    </li>
+</footer>
+
 {% if messages %}
     <div class="message-container"></div>
 {% endif %}
@@ -103,7 +109,12 @@
 {% block content %}
 {% endblock %}
 
-{% block postloadjs %}
+{% block extra_js %}
+    <!-- Font Awesome Script -->
+    <script src="https://kit.fontawesome.com/17e7a6d47c.js" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block postloadjs %}  
 {% endblock %}
 
 </body>

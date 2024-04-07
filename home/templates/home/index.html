@@ -18,8 +18,55 @@
                     </p>
                 </div>
             </div>
-            <div>
+            <div class="cylinder-scroll">
                 <img class="cylinders-img" src="{% static 'images/cylinders.jpg' %}" alt="cylinders image">
             </div>
+            <div class="homepage-bottom">
+                <p>Other content</p>
+            </div>
     </div>
+
+<!-- Footer -->
+<footer class="footer mt-auto py-3 dark-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Left column -->
+                <ul class="list-unstyled d-flex flex-column">
+                    <li class="d-flex flex-row align-items-center">
+                        Contact Details:
+                    </li>
+                    <li class="d-flex flex-row align-items-center">
+                        <i class="fas fa-phone-alt mr-2"></i><a href="tel: +61477020336">Phone: +61 477 020 336</a>
+                    </li>
+                    <li class="d-flex flex-row align-items-center">
+                        <i class="fas fa-envelope mr-2"></i> <a href="#">Contact Us</a>
+                    </li>
+                    <br>
+                    <li class="d-flex flex-row align-items-center">
+                        Connect with us on social:
+                    </li>
+                    <li class="d-flex flex-row align-items-center">
+                        <a href="#"><i class="fab fa-facebook mr-2"></i> Facebook</a>
+                    </li>
+                    <li class="d-flex flex-row align-items-center">
+                        <a href="#"><i class="fab fa-linkedin mr-2"></i> LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 text-right site-creator">
+                <!-- Site creator details -->
+                <ul class="list-unstyled d-flex flex-column">
+                    <li>
+                        {% block copyright %}Site made by Sarah Goodwin{% endblock copyright %}
+                    </li>
+                    <li>
+                        <a href="https://github.com/sarahgoodwin93/kmc-projects" target="_blank" rel="noopener" aria-label="Github Page">Connect with me: <i class="fab fa-github"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
 {% endblock %}
