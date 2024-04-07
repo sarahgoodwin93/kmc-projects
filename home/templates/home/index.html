@@ -4,7 +4,7 @@
 {% block content %}
     <div class="content-wrapper">
         <h1 class="home-heading">Problems Solved</h1>
-        <a href="#" class="contact-button">Contact Us</a>
+        <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
             <div class="homepage-box">
                 <div>
                     <p class="homepage-text">
@@ -40,7 +40,7 @@
                         <i class="fas fa-phone-alt mr-2"></i><a href="tel: +61477020336">Phone: +61 477 020 336</a>
                     </li>
                     <li class="d-flex flex-row align-items-center">
-                        <i class="fas fa-envelope mr-2"></i> <a href="#">Contact Us</a>
+                        <i class="fas fa-envelope mr-2"></i> <a href="{% url 'contact' %}">Contact Us</a>
                     </li>
                     <br>
                     <li class="d-flex flex-row align-items-center">
