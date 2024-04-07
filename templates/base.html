@@ -63,7 +63,7 @@
                                 <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'home' %}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {% if request.path == '/about/' %}active{% endif %}" href="{% url 'about' %}">About</a>
+                                <a class="nav-link {% if request.path == '/about/' %}active{% endif %}" href="{% url 'about' %}">Services</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link {% if request.path == '/items/' %}active{% endif %}" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -73,7 +73,7 @@
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                   <a class="nav-link {% if request.path == '/items/' %}active{% endif %}" href="{% url 'items' %}">View all products</a>
                                   <div class="dropdown-divider"></div>
-                                  <a class="dropdown-item" href="#">Values</a>
+                                  <a class="dropdown-item" href="#">Valves</a>
                                   <a class="dropdown-item" href="#">Clamps</a>
                                   <a class="dropdown-item" href="#">Sensors</a>
                                 </div>
