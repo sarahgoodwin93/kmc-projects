@@ -97,7 +97,6 @@ h2 {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     height: 300px;
-
 }
 
 .homepage-text {
@@ -154,7 +153,17 @@ h2 {
     margin-top: 20px;
 }
 
-/* contact.html */
+.item-box {
+    display: flex;
+    align-items: center;
+    margin: 30px 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 300px;
+}
 
 /* contact.html */
 .form-heading {
@@ -213,6 +222,12 @@ h2 {
     background-color: black;
     color: #f99411;
   }
+
+/* Items */
+
+.product-name h3 {
+    text-align: left!important;
+}
 
 /* Footer */
 

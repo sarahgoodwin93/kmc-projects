@@ -3,9 +3,101 @@
 
 {% block content %}
 <div class="content-wrapper">
-    <h1 class="home-heading">Problems Solved</h1>
-    <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
-        <div class="homepage-box">
+    <div>
+        <h1 class="home-heading">Problems Solved</h1>
+        <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-8"></div>
+        <div class="col-lg-4 my-auto py-1 py-lg-0">
+            <form method="GET" action="" class="d-flex justify-content-end">
+                <div class="input-group">
+                    <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search for product">
+                    <div class="input-group-append">
+                        <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                            <span class="icon">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
+    </div>
+</div>
+<div class="item-box">
+    <div class="item-list">
+        <h3 class="product-text">
+            Product 1
+        </h3>
+        <ul class="item-details">
+            <li>
+                Item Name:
+            </li>
+            <li>
+                Item Number:
+            </li>
+            <li>
+                Type:
+            </li>
+            <li>
+                Price:
+            </li>
+            <li>
+                Preferred Supplier:
+            </li>
+        </ul>
+    </div>
+</div>
+    <div class="item-box">
+        <div class="item-list">
+            <h3 class="product-name">
+                Product 2
+            </h3>
+            <ul class="item-details">
+                <li>
+                    Item Name:
+                </li>
+                <li>
+                    Item Number:
+                </li>
+                <li>
+                    Type:
+                </li>
+                <li>
+                    Price:
+                </li>
+                <li>
+                    Preferred Supplier:
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="item-box">
+        <div class="item-list">
+            <h3 class="product-name">
+                Product 3
+            </h3>
+            <ul class="item-details">
+                <li>
+                    Item Name:
+                </li>
+                <li>
+                    Item Number:
+                </li>
+                <li>
+                    Type:
+                </li>
+                <li>
+                    Price:
+                </li>
+                <li>
+                    Preferred Supplier:
+                </li>
+            </ul>
+        </div>
+     </div>
 </div>
 {% endblock %}
