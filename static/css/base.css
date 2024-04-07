@@ -43,7 +43,12 @@ h1 {
     color: black;
 }
 
+.navbar-nav .nav-link.active {
+    color: #f99411;
+}
+
 /* index.html */
+
 .content-wrapper {
     padding-top: 100px;
     text-align: center;
