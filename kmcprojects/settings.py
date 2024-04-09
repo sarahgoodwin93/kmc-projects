@@ -30,6 +30,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['8000-sarahgoodwi-kmcprojects-2f614thin9r.ws-eu110.gitpod.io', 
 '.herokuapp.com']
 
+CSRF_TRUSTED_ORIGINS = ['https://8000-sarahgoodwi-kmcprojects-2f614thin9r.ws-eu110.gitpod.io']
 
 # Application definition
 

@@ -1,0 +1,33 @@
+[
+    {
+      "pk": 1,
+      "model": "items.item",
+      "fields": {
+        "sku": "R06E3-10BS",
+        "name": "10 BAR SPRING",
+        "description": "10 BAR SPRING ",
+        "price": 28.5,
+        "type": 6,
+        "preferred_supplier": "Quality Springs",
+        "item_number": "R06E3-10BS",
+        "image_url": "",
+        "image": "9N800S.png"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "items.item",
+      "fields": {
+        "sku": "A09-A-MOD-120130",
+        "name": "120 X 130 SPECIAL GREASE SEAL",
+        "description": "120 X 130 SPECIAL GREASE SEAL",
+        "price": 20.33,
+        "type": 6,
+        "preferred_supplier": "Fluid Power Engineering",
+        "item_number": " A09-A-MOD-120130",
+        "image_url": "",
+        "image": "15CN210Q.png"
+      }
+    }
+  ]
+  
