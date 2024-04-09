@@ -122,6 +122,7 @@ h2 {
 
 .about-box {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin: 30px 80px;
@@ -333,4 +334,25 @@ footer {
         padding-top: 150px;
     }
 
+    .homepage-box,
+    .about-box,
+    .item-box {
+        margin: 30px 10px;
+    }
+
+    .about-img,
+    .about-text {
+        flex: 1 1 auto;
+        max-width: 100%; 
+    }
+
+    .about-text {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    .search-items {
+        display: flex;
+        justify-content: center;
+    }
 }
