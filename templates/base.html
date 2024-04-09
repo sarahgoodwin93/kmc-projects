@@ -70,7 +70,7 @@
                                 <a class="nav-link {% if request.path == '/services/' %}active{% endif %}" href="{% url 'services' %}">Services</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link {% if request.path == '/items/' %}active{% endif %}" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link {% if request.path == '/items/' %}active{% endif %}" href="{% url 'items' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   Products
                                   <i class="fa-solid fa-square-chevron-down"></i>
                                 </a>
@@ -83,7 +83,7 @@
                                 </div>
                               </li>
                             <li class="nav-item">
-                                <a class="nav-link {% if request.path == '/login/' %}active{% endif %}" href="{% url 'account_login' %}">Login</a>
+                                <a class="nav-link {% if request.path == '/account/login/' %}active{% endif %}" href="{% url 'account_login' %}">Login</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link {% if request.path == '/cart/' %}active{% endif %}" href="{% url 'cart' %}">Cart
