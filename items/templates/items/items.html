@@ -27,77 +27,25 @@
         </div>
     </div>
 </div>
+{% for item in items %}
 <div class="item-box">
     <div class="item-list">
-        <h3 class="product-text">
-            Product 1
-        </h3>
-        <ul class="item-details">
-            <li>
-                Item Name:
-            </li>
-            <li>
-                Item Number:
-            </li>
-            <li>
-                Type:
-            </li>
-            <li>
-                Price:
-            </li>
-            <li>
-                Preferred Supplier:
-            </li>
-        </ul>
-    </div>
-</div>
-    <div class="item-box">
-        <div class="item-list">
-            <h3 class="product-name">
-                Product 2
-            </h3>
-            <ul class="item-details">
-                <li>
-                    Item Name:
-                </li>
-                <li>
-                    Item Number:
-                </li>
-                <li>
-                    Type:
-                </li>
-                <li>
-                    Price:
-                </li>
-                <li>
-                    Preferred Supplier:
-                </li>
-            </ul>
+        {% if item.image %}
+        <a href="">
+            <img class="card-img-top img-fluid item-img" src="{{ item.image.url }}" alt="{{ item.name }}">
+        </a>
+        {% else %}
+        <a href="">
+            <img class="card-img-top img-fluid" src="" alt="{{ item.name }}">
+        </a>
+        {% endif %}
+        <div class="item-details">
+            <h3 class="product-name">{{ item.name }}</h3>
+            <p class="lead mb-0">${{ item.price }}</p>
+            <p class="lead mb-0">Item Number: {{ item.item_number }}</p>
+            <small class="text-muted">Preferred Supplier: {{ item.preferred_supplier }}</small>
         </div>
     </div>
-    <div class="item-box">
-        <div class="item-list">
-            <h3 class="product-name">
-                Product 3
-            </h3>
-            <ul class="item-details">
-                <li>
-                    Item Name:
-                </li>
-                <li>
-                    Item Number:
-                </li>
-                <li>
-                    Type:
-                </li>
-                <li>
-                    Price:
-                </li>
-                <li>
-                    Preferred Supplier:
-                </li>
-            </ul>
-        </div>
-     </div>
 </div>
+{% endfor %}
 {% endblock %}

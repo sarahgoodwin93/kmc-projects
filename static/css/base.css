@@ -48,7 +48,7 @@ h2 {
     color: #f99411;
 }
 
-/* index.html */
+/* Home Page */
 
 .content-wrapper {
     padding-top: 100px;
@@ -147,25 +147,45 @@ h2 {
     font-weight: bold;
 }
 
-/* items.html */
-
-.item-list {
-    margin-top: 20px;
-}
+/* Items */
 
 .item-box {
-    display: flex;
-    align-items: center;
     margin: 30px 80px;
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 300px;
+    display: flex;
 }
 
-/* contact.html */
+.item-list {
+    display: flex;
+    align-items: center;
+}
+
+.item-img {
+    max-width: 150px;
+    height: auto;
+}
+
+.item-details {
+    margin-left: 20px;
+}
+
+.product-name {
+    margin-bottom: 10px;
+}
+
+.product-name h3 {
+    margin: 0;
+}
+
+.product-text {
+    text-align: left;
+}
+
+/* Contact Form */
 .form-heading {
     text-align: center;
     margin-bottom: 20px;
@@ -222,12 +242,6 @@ h2 {
     background-color: black;
     color: #f99411;
   }
-
-/* Items */
-
-.product-name h3 {
-    text-align: left!important;
-}
 
 /* Login */
 
