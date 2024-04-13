@@ -11,7 +11,8 @@
         "preferred_supplier": "Quality Springs",
         "item_number": "R06E3-10BS",
         "image_url": "",
-        "image": "9N800S.png"
+        "image": "9N800S.png",
+        "datasheet": "https://acrobat.adobe.com/id/urn:aaid:sc:EU:967054e7-c1fc-4bd5-9afa-77732dbf5603"
       }
     },
     {
@@ -26,7 +27,8 @@
         "preferred_supplier": "Fluid Power Engineering",
         "item_number": " A09-A-MOD-120130",
         "image_url": "",
-        "image": "15CN210Q.png"
+        "image": "",
+        "datasheet": ""
       }
     },
     {
@@ -41,7 +43,8 @@
         "preferred_supplier": "",
         "item_number": "1695",
         "image_url": "",
-        "image": "1695"
+        "image": "1695-sensor.png",
+        "datasheet": "https://acrobat.adobe.com/id/urn:aaid:sc:EU:bee84c93-74c2-4624-bcad-b4820607d6e3"
       }
     },
     {
@@ -56,7 +59,8 @@
         "preferred_supplier": "",
         "item_number": "1040965",
         "image_url": "",
-        "image": "1040965"
+        "image": "1040965.png",
+        "datasheet": "https://acrobat.adobe.com/id/urn:aaid:sc:EU:378d9f22-e879-4e3b-8d60-0fdcb55493de"
       }
     },
     {
@@ -71,7 +75,8 @@
         "preferred_supplier": "Reentech",
         "item_number": "5010033",
         "image_url": "",
-        "image": "5010033"
+        "image": "5010033.png",
+        "datasheet": "https://acrobat.adobe.com/id/urn:aaid:sc:EU:1d5992eb-ab87-4df0-bfd2-5d25e5bf2f61"
       }
     },
     {
@@ -86,7 +91,8 @@
         "preferred_supplier": "Reentech",
         "item_number": "5020027",
         "image_url": "",
-        "image": "5020027"
+        "image": "5020027.png",
+        "datasheet": "https://acrobat.adobe.com/id/urn:aaid:sc:EU:9d0523a1-ed0a-4312-b477-f11e01b941f7"
       }
     },
     {
@@ -101,7 +107,8 @@
         "preferred_supplier": "",
         "item_number": "20077771",
         "image_url": "",
-        "image": "20077771"
+        "image": "20077771.png",
+        "datasheet": "https://acrobat.adobe.com/id/urn:aaid:sc:EU:df53175a-a739-4a78-a932-d03de02fe8c7"
       }
     },
     {
@@ -116,7 +123,8 @@
         "preferred_supplier": "Reentech",
         "item_number": "20085184",
         "image_url": "",
-        "image": "20085184"
+        "image": "20085184.png",
+        "datasheet": "https://acrobat.adobe.com/id/urn:aaid:sc:EU:79b5f726-692d-4e2a-86fd-4176e7685f67"
       }
     },
     {
@@ -131,7 +139,8 @@
         "preferred_supplier": "Reentech",
         "item_number": "20085200",
         "image_url": "",
-        "image": "20085200"
+        "image": "20085200.png",
+        "datasheet": "https://acrobat.adobe.com/id/urn:aaid:sc:EU:d7b3966b-da2e-4d1b-9967-87d163df00d6"
       }
     },
     {
@@ -146,7 +155,8 @@
         "preferred_supplier": "",
         "item_number": "1110033762",
         "image_url": "",
-        "image": "1110033762"
+        "image": "1110033762.png",
+        "datasheet": "https://acrobat.adobe.com/id/urn:aaid:sc:EU:eb2a18d9-9ab5-4406-990e-996c2f4a5fb1"
       }
     },
     {
@@ -161,7 +171,8 @@
         "preferred_supplier": "Stauff Corporation Pty Ltd",
         "item_number": "1210026059",
         "image_url": "",
-        "image": "1210026059"
+        "image": "1210026059.png",
+        "datasheet": "https://acrobat.adobe.com/id/urn:aaid:sc:EU:e0afee57-75dd-4bd5-8cc7-1b1531715723"
       }
     },
     {
@@ -176,7 +187,8 @@
         "preferred_supplier": "Stauff Corporation Pty Ltd",
         "item_number": "6010000758",
         "image_url": "",
-        "image": "6010000758"
+        "image": "6010000758.png",
+        "datasheet": "https://acrobat.adobe.com/id/urn:aaid:sc:EU:beaad880-004e-47ec-b300-356600ec6502"
       }
     },
     {
@@ -191,7 +203,8 @@
         "preferred_supplier": "Stauff Corporation Pty Ltd",
         "item_number": "6010003586",
         "image_url": "",
-        "image": "6010003586"
+        "image": "6010003586.png",
+        "datasheet": "https://acrobat.adobe.com/id/urn:aaid:sc:EU:2c679f11-19c1-4ec2-bea1-82f3b0e15b79"
       }
     },
     {
@@ -206,7 +219,8 @@
         "preferred_supplier": "",
         "item_number": "15CN205QEVPKG164",
         "image_url": "",
-        "image": "15CN205QEVPKG164"
+        "image": "15CN205QEVPKG164.png",
+        "datasheet": "https://acrobat.adobe.com/id/urn:aaid:sc:EU:f5da3e77-15fa-44f8-91d6-1cbf7f06a68f"
       }
     },
     {
@@ -221,7 +235,8 @@
         "preferred_supplier": "Fluid Power Engineering",
         "item_number": "934330TX1",
         "image_url": "",
-        "image": "934330TX1"
+        "image": "934330TX1.png",
+        "datasheet": ""
       }
     },
     {
@@ -236,7 +251,8 @@
         "preferred_supplier": "",
         "item_number": "936703Q",
         "image_url": "",
-        "image": "936703Q"
+        "image": "936703Q.png",
+        "datasheet": ""
       }
     },
     {
@@ -251,7 +267,8 @@
         "preferred_supplier": "Fluid Power Engineering",
         "item_number": "9N400S",
         "image_url": "",
-        "image": "9N400S"
+        "image": "9N400S.png",
+        "datasheet": ""
       }
     },
     {
@@ -266,7 +283,8 @@
         "preferred_supplier": "Fluid Power Engineering",
         "item_number": "9N800S",
         "image_url": "",
-        "image": "9N800S"
+        "image": "9N800S.png",
+        "datasheet": ""
       }
     },
     {
@@ -281,7 +299,8 @@
         "preferred_supplier": "Fluid Power Engineering",
         "item_number": "A02B2FZN",
         "image_url": "",
-        "image": "A02B2FZN"
+        "image": "A02B2FZN.png",
+        "datasheet": ""
       }
     },
     {
@@ -296,7 +315,8 @@
         "preferred_supplier": "Fluid Power Engineering",
         "item_number": "A04J2HZN",
         "image_url": "",
-        "image": "A04J2HZN"
+        "image": "A04J2HZN.png",
+        "datasheet": ""
       }
     },
     {
@@ -311,7 +331,8 @@
         "preferred_supplier": "Fluid Power Engineering",
         "item_number": "A06G2PZN",
         "image_url": "",
-        "image": "A06G2PZN"
+        "image": "A06G2PZN.png",
+        "datasheet": ""
       }
     },
     {
@@ -326,7 +347,8 @@
         "preferred_supplier": "Reentech",
         "item_number": "B08-3-6T",
         "image_url": "",
-        "image": "B08-3-6T"
+        "image": "B08-3-6T.png",
+        "datasheet": ""
       }
     },
     {
@@ -341,7 +363,8 @@
         "preferred_supplier": "Fluid Power Engineering",
         "item_number": "B16-2-16B",
         "image_url": "",
-        "image": "B16-2-16B"
+        "image": "B16-2-16B.png",
+        "datasheet": ""
       }
     },
     {
@@ -356,7 +379,8 @@
         "preferred_supplier": "Reentech",
         "item_number": "C02A3CZN",
         "image_url": "",
-        "image": "C02A3CZN"
+        "image": "C02A3CZN.png",
+        "datasheet": ""
       }
     },
     {
@@ -371,7 +395,8 @@
         "preferred_supplier": "Reentech",
         "item_number": "C02A3EZN",
         "image_url": "",
-        "image": "C02A3EZN"
+        "image": "C02A3EZN.png",
+        "datasheet": ""
       }
     },
     {
@@ -386,7 +411,8 @@
         "preferred_supplier": "",
         "item_number": "FM2DDDKV",
         "image_url": "",
-        "image": "FM2DDDKV"
+        "image": "FM2DDDKV.png",
+        "datasheet": ""
       }
     },
     {
@@ -401,7 +427,8 @@
         "preferred_supplier": "",
         "item_number": "J06A2ZN",
         "image_url": "",
-        "image": "J06A2ZN"
+        "image": "J06A2ZN.png",
+        "datasheet": ""
       }
     },
     {
@@ -416,7 +443,8 @@
         "preferred_supplier": "",
         "item_number": "PR103S21",
         "image_url": "",
-        "image": "PR103S21"
+        "image": "PR103S21.png",
+        "datasheet": ""
       }
     },
     {
@@ -431,7 +459,8 @@
         "preferred_supplier": "Hydraulics Network Pty Ltd",
         "item_number": "TAG1504D",
         "image_url": "",
-        "image": "TAG1504D"
+        "image": "TAG1504D.png",
+        "datasheet": ""
       }
     },
     {
@@ -446,7 +475,8 @@
         "preferred_supplier": "Reentech",
         "item_number": "UCAB116310",
         "image_url": "",
-        "image": "UCAB116310"
+        "image": "UCAB116310.png",
+        "datasheet": ""
       }
     },
     {
@@ -461,7 +491,8 @@
         "preferred_supplier": "Hydraulics Network Pty Ltd",
         "item_number": "VRDE380",
         "image_url": "",
-        "image": "VRDE380"
+        "image": "VRDE380.png",
+        "datasheet": ""
       }
     }
   ]
