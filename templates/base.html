@@ -1,5 +1,6 @@
 {% load static %}
-{% url 'Services' as services %}
+{% url 'home' as home_url %}
+{% url 'services' as services %}
 {% url 'cart' as cart_url %}
 {% url 'items' as items_url %}
 
@@ -82,9 +83,28 @@
                                   <a class="dropdown-item" href="#">Sensors</a>
                                 </div>
                               </li>
+                             <!-- Logout Nav Link only to show if logged in -->
+                             {% if user.is_authenticated %}
+                             <li class="nav-item">
+                                <a class="nav-link" href="#">Your Account</a>
+                            </li>
+                            {% if user.is_staff %}
+                             <li class="nav-item">
+                                <a class="nav-link" href="#">Add Case Study</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Add Services</a>
+                            </li>
+                            {% endif %}
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
+                            </li>
+                            {% else %}
+                             <!-- Login Nav Link -->
                             <li class="nav-item">
                                 <a class="nav-link {% if request.path == '/account/login/' %}active{% endif %}" href="{% url 'account_login' %}">Login</a>
                             </li>
+                            {% endif %}
                             <li class="nav-item">
                                 <a class="nav-link {% if request.path == '/cart/' %}active{% endif %}" href="{% url 'cart' %}">Cart
                                     <i class="fa-solid fa-cart-shopping"></i>
