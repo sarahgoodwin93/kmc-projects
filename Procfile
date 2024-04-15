@@ -1,1 +1,1 @@
-web: gunicorn kmcprojects.wsgi
+web: gunicorn kmcprojects.wsgi:application
