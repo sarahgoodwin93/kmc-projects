@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', '')
+SECRET_KEY = os.environ.get('SECRET_KEY', '#0%kvdv=ob05(&8wsn4$6zeb4(9j)s2kctnx_f(vmd!obfn%^+')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -175,6 +175,12 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+    
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'kmcprojects'
     AWS_S3_REGION_NAME = 'eu-north-1'
