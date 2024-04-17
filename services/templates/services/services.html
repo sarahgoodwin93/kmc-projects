@@ -67,6 +67,22 @@
                             <p class="lead mb-0">{{ casestudy.body }}</p>
                             <p class="lead mb-0">{{ service.description }}</p>
                         </div>
+                        <!-- Edit button -->
+                        <div class="card-buttons">
+                            {% if user.is_authenticated and user.is_superuser %}
+                            <a href="{% url 'edit_casestudy' pk=casestudy.pk %}" class="btn btn-edit">
+                            Edit
+                            </a>
+                            {% endif %}
+                        </div>
+                        <!-- Delete button -->
+                        <div class="card-buttons">
+                            {% if user.is_authenticated and user.is_superuser %}
+                            <a href="{% url 'delete_casestudy' pk=casestudy.pk %}" class="btn btn-delete">
+                            Delete
+                            </a>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -75,7 +91,7 @@
 <!-- Add button -->
 <div class="card-buttons">
     {% if user.is_authenticated and user.is_superuser %}
-    <a href="{% url 'add_service' %}" class="btn btn-edit">
+    <a href="{% url 'add_casestudy' %}" class="btn btn-edit">
     Add New Case Study
     </a>
     {% endif %}

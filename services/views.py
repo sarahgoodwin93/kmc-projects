@@ -5,7 +5,7 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.db.models import Q
 from .models import Services, CaseStudy
-from .forms import AddServiceForm, EditServiceForm
+from .forms import AddServiceForm, EditServiceForm, AddCaseStudyForm, EditCaseStudyForm
 from django.views.generic.edit import CreateView, DeleteView, UpdateView, View
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -77,4 +77,62 @@ class DeleteServiceView(LoginRequiredMixin, DeleteView):
 
     def swim_delete(self, request):
         messages.success(self, request, "Service has been deleted")
+        return super().delete(request)
+
+
+# Add Case Study View
+class AddCaseStudyView(LoginRequiredMixin, CreateView):
+    """
+    Show the add case study page so that a superuser can add a new case study
+    to the site. Once a case study has been added the page will redirect to
+    the services page so the new case study can be viewed.
+    """
+    model = Services
+    template_name = "services/add_casestudy.html"
+    form_class = AddCaseStudyForm
+    success_url = reverse_lazy("services")
+
+    def form_valid(self, form):
+        form.instance.creator = self.request.user
+        messages.success(self.request, "Thanks for adding a new case study")
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        messages.error(self.request, "There was an error with the form.")
+        return self.render_to_response(
+            self.get_context_data(form=form, heading="Add Case Study")
+        )
+
+
+# Edit Case Study View
+class EditCaseStudyView(LoginRequiredMixin, UpdateView):
+    """
+    Shows the edit case study page so that a superuser can edit
+    the case study, once the user has edited the case study sucssefully it will
+    redirect back to the services using the success_url
+    """
+    model = CaseStudy
+    template_name = "services/edit_casestudy.html"
+    form_class = EditCaseStudyForm
+    success_url = reverse_lazy("services")
+
+    def swim_edit(self, request):
+        messages.success(self, request, "Case Study has been updated")
+        return response
+
+
+# Delete Case Study View
+class DeleteCaseStudyView(LoginRequiredMixin, DeleteView):
+    """
+    Shows the delete case study page so that the superuser can delete a case study.
+    Once the service has been deleted it will redirect back
+    to the services using the success_url
+    """
+
+    model = CaseStudy
+    template_name = "services/delete_casestudy.html"
+    success_url = reverse_lazy("services")
+
+    def swim_delete(self, request):
+        messages.success(self, request, "Case Study has been deleted")
         return super().delete(request)

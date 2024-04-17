@@ -1,5 +1,5 @@
 from django import forms
-from .models import Services
+from .models import Services, CaseStudy
 
 
 class AddServiceForm(forms.ModelForm):
@@ -27,4 +27,31 @@ class EditServiceForm(forms.ModelForm):
             "name",
             "description",
             "price",
+        ]
+
+class AddCaseStudyForm(forms.ModelForm):
+    """
+    FORM: Add Services.
+    """
+
+    class Meta:
+        model = CaseStudy
+        fields = [
+            "title",
+            "body",
+            "image",
+        ]
+
+
+class EditCaseStudyForm(forms.ModelForm):
+    """
+    FORM: Edit Services.
+    """
+
+    class Meta:
+        model = CaseStudy
+        fields = [
+            "title",
+            "body",
+            "image",
         ]
