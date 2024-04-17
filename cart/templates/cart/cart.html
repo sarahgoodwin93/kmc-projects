@@ -7,6 +7,9 @@
     <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
         <div class="row">
             <div class="col">
+                <div>
+                    Cart total: ${{ total|floatformat:2 }}
+                </div>
                 {% if cart_items %}
                     {% for added_item in cart_items %}
                         <div class="added-item-box">
@@ -25,12 +28,17 @@
                                     <p class="added-item-text">${{ added_item.added_item.price }}</p>
                                     <p class="added-item-text">Item Number: {{ added_item.added_item.item_number }}</p>
                                 </div>
+                                <div class="item-details added-item-costs">
+                                    <p class="added-item-text">Quantity: {{ added_item.quantity }}</p>
+                                    <p class="added-item-text">Total Cost: ${{ added_item.item_total_cost }}</p>
+                                    <a href="#" class="btn">Remove Item</a>
+                                </div>
                             </div>
                         </div>
                     {% endfor %}
                 {% else %}
                     <p class="lead mb-5">Your cart is empty.</p>
-                    <a href="{% url 'items' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                    <a href="{% url 'items' %}" class="btn btn-black rounded-0 text-uppercase mt-5">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>

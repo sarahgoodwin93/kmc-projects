@@ -331,13 +331,23 @@ h2 {
 }
 
 .added-item-box {
-    margin: 30px 300px;
+    position: relative;
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
+    width: 60vw;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.added-item-costs {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
 }
 
 /* Footer */
