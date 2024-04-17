@@ -11,13 +11,13 @@ def cart_contents(request):
     cart = request.session.get('cart', {})
 
     for item_id, quantity in cart.items():
-        item = get_object_or_404(Item, pk=item_id)
-        total += quantity * item.price
+        added_item = get_object_or_404(Item, pk=item_id)
+        total += quantity * added_item.price
         item_count += quantity
         cart_items.append({
             'item_id': item_id,
             'quantity': quantity,
-            'item': item,
+            'added_item': added_item,
         })
     
     context = {

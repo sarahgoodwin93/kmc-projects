@@ -5,25 +5,40 @@
 <div class="content-wrapper">
     <h1 class="site-headings">Problems Solved</h1>
     <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
-            <div class="homepage-box">
-                <div class="row">
-                    <div class="col">
-                        {% if cart_items %}
-                            <div class="table-responsive rounded">
-                                {{ cart_items }}
+        <div class="row">
+            <div class="col">
+                {% if cart_items %}
+                    {% for added_item in cart_items %}
+                        <div class="added-item-box">
+                            <div class="item-list">
+                                {% if added_item.added_item.image %}
+                                    <a href="">
+                                        <img class="added-item-img" src="{{ added_item.added_item.image.url }}" alt="{{ added_item.added_item.name }}">
+                                    </a>
+                                {% else %}
+                                    <a href="">
+                                        <img class="card-img-top img-fluid" src="" alt="{{ added_item.added_item.name }}">
+                                    </a>
+                                {% endif %}
+                                <div class="item-details">
+                                    <p class="added-item-text">{{ added_item.added_item.name }}</p>
+                                    <p class="added-item-text">${{ added_item.added_item.price }}</p>
+                                    <p class="added-item-text">Item Number: {{ added_item.added_item.item_number }}</p>
+                                </div>
                             </div>
-                        {% else %}
-                            <p class="lead mb-5">Your cart is empty.</p>
-                            <a href="{% url 'items' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="text-uppercase">Keep Shopping</span>
-                            </a>
-                        {% endif %}
-                    </div>
-                </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p class="lead mb-5">Your cart is empty.</p>
+                    <a href="{% url 'items' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Keep Shopping</span>
+                    </a>
+                {% endif %}
             </div>
-            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
