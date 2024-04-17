@@ -14,3 +14,17 @@ class AddServiceForm(forms.ModelForm):
             "description",
             "price",
         ]
+
+
+class EditServiceForm(forms.ModelForm):
+    """
+    FORM: Edit Services.
+    """
+
+    class Meta:
+        model = Services
+        fields = [
+            "name",
+            "description",
+            "price",
+        ]

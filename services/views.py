@@ -5,12 +5,11 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.db.models import Q
 from .models import Services, CaseStudy
-from .forms import AddServiceForm
+from .forms import AddServiceForm, EditServiceForm
 from django.views.generic.edit import CreateView, DeleteView, UpdateView, View
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-# Create your views here.
-
+# Services List
 def ServiceList(request):
     """
     Returns services list in :model:`services.Services``
@@ -23,6 +22,7 @@ def ServiceList(request):
     return render(request, 'services/services.html', {'services': services, 'casestudies': casestudies})
 
 
+# Add Services View
 class AddServiceView(LoginRequiredMixin, CreateView):
     model = Services
     template_name = "services/add_service.html"
@@ -40,3 +40,20 @@ class AddServiceView(LoginRequiredMixin, CreateView):
             self.get_context_data(form=form, heading="Add Service")
         )
 
+
+# Edit Services View
+class EditServiceView(LoginRequiredMixin, UpdateView):
+    """
+    Shows the edit services page so that a superuser can edit
+    the servicess, once the user has edited the service sucssefully it will
+    redirect back to the services using the success_url
+    """
+
+    model = Services
+    template_name = "services/edit_service.html"
+    form_class = EditServiceForm
+    success_url = reverse_lazy("services")
+
+    def swim_edit(self, request):
+        messages.success(self, request, "Service has been updated")
+        return response
