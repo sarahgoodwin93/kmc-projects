@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 class Contact(models.Model):
     """
+    Contact form to use for site users to contact the admin
     """
     name = models.CharField(max_length=100)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
