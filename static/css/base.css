@@ -365,6 +365,22 @@ h2 {
     flex-basis: calc(40% - 20px);
 }
 
+.remove-btn {
+    width: 100%;
+    background-color: #f99411;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .remove-btn:hover {
+    background-color: black;
+    color: #f99411;
+  }
+
 /* Footer */
 
 .footer i {

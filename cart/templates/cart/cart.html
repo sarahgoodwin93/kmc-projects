@@ -31,7 +31,7 @@
                                 <div class="item-details added-item-costs">
                                     <p class="added-item-text">Quantity: {{ added_item.quantity }}</p>
                                     <p class="added-item-text">Total Cost: ${{ added_item.item_total_cost }}</p>
-                                    <a href="{% url 'remove_from_cart' added_item.added_item.id %}">Remove</a>
+                                    <a class="text-uppercase remove-btn" href="{% url 'remove_from_cart' added_item.added_item.id %}">Remove</a>
                                 </div>
                             </div>
                         </div>
