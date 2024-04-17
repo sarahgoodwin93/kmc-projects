@@ -78,9 +78,12 @@
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                   <a class="nav-link {% if request.path == '/items/' %}active{% endif %}" href="{% url 'items' %}">View all products</a>
                                   <div class="dropdown-divider"></div>
-                                  <a class="dropdown-item" href="#">Valves</a>
-                                  <a class="dropdown-item" href="#">Clamps</a>
-                                  <a class="dropdown-item" href="#">Sensors</a>
+                                  <a class="dropdown-item" href="{% url 'items' %}?type=actuator">Actuators</a>
+                                  <a class="dropdown-item" href="{% url 'items' %}?type=connector">Connectors</a>
+                                  <a class="dropdown-item" href="{% url 'items' %}?type=electronics">Electronics</a>
+                                  <a class="dropdown-item" href="{% url 'items' %}?type=filtration">Filtration</a>
+                                  <a class="dropdown-item" href="{% url 'items' %}?type=sensors">Sensors</a>
+                                  <a class="dropdown-item" href="{% url 'items' %}?type=valve">Valves</a>
                                 </div>
                               </li>
                              <!-- Logout Nav Link only to show if logged in -->
