@@ -193,13 +193,20 @@ h2 {
 /* Items */
 
 .item-box {
-    margin: 30px 80px;
+    position: relative;
+    width: 80vw;
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .item-list {
@@ -214,6 +221,7 @@ h2 {
 
 .item-details {
     margin-left: 20px;
+    flex-basis: calc(60% - 20px);
 }
 
 .product-name {
@@ -348,6 +356,13 @@ h2 {
     position: absolute;
     right: 0;
     margin-right: 10px;
+}
+
+.add-to-cart-btn {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    flex-basis: calc(40% - 20px);
 }
 
 /* Footer */
