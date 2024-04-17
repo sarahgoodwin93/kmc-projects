@@ -5,48 +5,52 @@
 <div class="content-wrapper">
     <h1 class="about-heading">Services</h1>
     <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
-    <div class="services-box">
+
+    <div class="homepage-box">
         <div class="service-text">
-            {% for service in services %}
-                <div class="services-box">
-                    <div class="services-list">
-                        <div class="services-details">
-                            <h3 class="product-name">{{ service.name }}</h3>
-                            <p class="lead mb-0">${{ service.price }}</p>
-                            <p class="lead mb-0">{{ service.description }}</p>
+            <h1 class="homepage-text">
+                {% for service in services %}
+                    <div class="services-box">
+                        <div class="services-list">
+                            <div class="services-details">
+                                <h3 class="product-name">{{ service.name }}</h3>
+                                <p class="lead mb-0">${{ service.price }}</p>
+                                <p class="lead mb-0">{{ service.description }}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
+            </div>
         </div>
     </div>
-</div>
+
 
 <div class="content-wrapper">
     <h1 class="about-heading">Case Study</h1>
-    <div class="services-box">
+    {% for casestudy in casestudies %}
+    <div class="homepage-box">
         <div class="service-text">
-            {% for casestudy in casestudies %}
+            <h1 class="homepage-text">
                 <div class="services-box">
                     <div class="services-list">
                         <div class="services-details">
                             <h3 class="product-name">{{ casestudy.title }}</h3>
-                            <p class="lead mb-0">${{ casestudy.body }}</p>
+                            <p class="lead mb-0">{{ casestudy.body }}</p>
                             <p class="lead mb-0">{{ service.description }}</p>
-                            {% if item.image %}
+                            {% if casestudy.image %}
                             <a href="">
-                                <img class="card-img-top img-fluid item-img" src="{{ item.image.url }}" alt="{{ item.name }}">
+                                <img class="card-img-top img-fluid item-img" src="{{ casestudy.image.url }}" alt="{{ casestudy.title }}">
                             </a>
                             {% else %}
                             <a href="">
-                                <img class="card-img-top img-fluid" src="" alt="{{ item.name }}">
+                                <img class="card-img-top img-fluid" src="" alt="{{ casestudy.title }}">
                             </a>
                             {% endif %}
                         </div>
                     </div>
                 </div>
-            {% endfor %}
+            </div>
         </div>
-    </div>
+    {% endfor %}
 </div>
 {% endblock %}
