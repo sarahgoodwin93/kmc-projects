@@ -23,25 +23,30 @@
 </div>
 
 <div class="content-wrapper">
-    <h1 class="about-heading">Case Studies</h1>
-    <div class="homepage-box">
-        {% for casestudy in casestudy %}
-            <div class="case-study">
-                <h1 class="homepage-text">
-                    {{ casestudy.title }}
-                </h1>
-                <p>{{ casestudy.body }}</p>
-                {% if casestudy.image %}
-                    <a href="">
-                        <img class="card-img-top img-fluid item-img" src="{{ casestudy.image.url }}" alt="{{ casestudy.title }}">
-                    </a>
-                {% else %}
-                    <a href="">
-                        <img class="card-img-top img-fluid" src="" alt="{{ casestudy.title }}">
-                    </a>
-                {% endif %}
-            </div>
-        {% endfor %}
+    <h1 class="about-heading">Case Study</h1>
+    <div class="services-box">
+        <div class="service-text">
+            {% for casestudy in casestudies %}
+                <div class="services-box">
+                    <div class="services-list">
+                        <div class="services-details">
+                            <h3 class="product-name">{{ casestudy.title }}</h3>
+                            <p class="lead mb-0">${{ casestudy.body }}</p>
+                            <p class="lead mb-0">{{ service.description }}</p>
+                            {% if item.image %}
+                            <a href="">
+                                <img class="card-img-top img-fluid item-img" src="{{ item.image.url }}" alt="{{ item.name }}">
+                            </a>
+                            {% else %}
+                            <a href="">
+                                <img class="card-img-top img-fluid" src="" alt="{{ item.name }}">
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 </div>
 {% endblock %}

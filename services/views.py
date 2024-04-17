@@ -7,4 +7,6 @@ from .models import Services, CaseStudy
 
 def ServiceList(request):
     services = Services.objects.all()
-    return render(request, 'services/services.html', {'services': services})
+    casestudies = CaseStudy.objects.all()
+    return render(request, 'services/services.html', {'services': services, 'casestudies': casestudies})
+
