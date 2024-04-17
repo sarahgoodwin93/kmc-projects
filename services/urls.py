@@ -1,7 +1,6 @@
-from . import views
 from django.urls import path
-from .views import ServicesView, CaseStudyView
+from . import views
 
 urlpatterns = [
-    path('', views.ServicesView, name='services'),
+    path('', views.ServiceList, name='services'),
 ]
