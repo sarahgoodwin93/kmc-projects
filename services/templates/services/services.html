@@ -5,84 +5,43 @@
 <div class="content-wrapper">
     <h1 class="about-heading">Services</h1>
     <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
-    <div class="homepage-box">
+    <div class="services-box">
         <div class="service-text">
-            <h1 class="homepage-text">
-                List of Services
-            </h1>
-            <ul>
-                <li>
-                    Serivce 1
-                </li>
-                <li>
-                    Service 2
-                </li>
-                <li>
-                    Service 3
-                </li>
-            </ul>
-            </p>
+            {% for service in services %}
+                <div class="services-box">
+                    <div class="services-list">
+                        <div class="services-details">
+                            <h3 class="product-name">{{ service.name }}</h3>
+                            <p class="lead mb-0">${{ service.price }}</p>
+                            <p class="lead mb-0">{{ service.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </div>
+
 <div class="content-wrapper">
     <h1 class="about-heading">Case Studies</h1>
     <div class="homepage-box">
-        <div class="case-study">
-            <h1 class="homepage-text">
-                Case Study 1
-            </h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies orci quis lobortis condimentum. Integer in magna non dolor pellentesque mattis. 
-                Integer id suscipit elit. Nunc varius diam a volutpat elementum. Duis vestibulum metus eu nisl eleifend pharetra. 
-                Vestibulum dignissim, libero ac tincidunt placerat, lectus urna efficitur sem, sit amet fermentum est magna eu turpis. 
-                Pellentesque convallis dapibus vestibulum. Quisque vestibulum felis et nulla malesuada rhoncus. Phasellus eget cursus dolor, sed tincidunt purus. 
-                Suspendisse sagittis posuere dolor in vulputate. Donec lacus tellus, venenatis id neque et, accumsan tempor sem. Donec tincidunt condimentum mi.
-            </p>
-            <p>
-                Nullam gravida tristique ipsum. Cras sed lacinia tellus. Aliquam vitae interdum diam. Maecenas posuere dapibus tortor vel elementum. Ut a cursus leo. 
-                Phasellus egestas scelerisque hendrerit. Aenean sapien ex, dignissim vel erat id, tristique malesuada dolor. 
-                Praesent a viverra arcu. Etiam eget rutrum enim. Etiam elementum ante vel odio efficitur, vel commodo augue porta.
-            </p>
-        </div>
-    </div>
-</div>
-<div class="homepage-box">
-    <div class="case-study">
-        <h1 class="homepage-text">
-            Case Study 2
-        </h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies orci quis lobortis condimentum. Integer in magna non dolor pellentesque mattis. 
-            Integer id suscipit elit. Nunc varius diam a volutpat elementum. Duis vestibulum metus eu nisl eleifend pharetra. 
-            Vestibulum dignissim, libero ac tincidunt placerat, lectus urna efficitur sem, sit amet fermentum est magna eu turpis. 
-            Pellentesque convallis dapibus vestibulum. Quisque vestibulum felis et nulla malesuada rhoncus. Phasellus eget cursus dolor, sed tincidunt purus. 
-            Suspendisse sagittis posuere dolor in vulputate. Donec lacus tellus, venenatis id neque et, accumsan tempor sem. Donec tincidunt condimentum mi.
-        </p>
-        <p>
-            Nullam gravida tristique ipsum. Cras sed lacinia tellus. Aliquam vitae interdum diam. Maecenas posuere dapibus tortor vel elementum. Ut a cursus leo. 
-            Phasellus egestas scelerisque hendrerit. Aenean sapien ex, dignissim vel erat id, tristique malesuada dolor. 
-            Praesent a viverra arcu. Etiam eget rutrum enim. Etiam elementum ante vel odio efficitur, vel commodo augue porta.
-        </p>
-    </div>
-</div>
-<div class="homepage-box">
-    <div class="case-study">
-        <h1 class="homepage-text">
-            Case Study 3
-        </h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies orci quis lobortis condimentum. Integer in magna non dolor pellentesque mattis. 
-            Integer id suscipit elit. Nunc varius diam a volutpat elementum. Duis vestibulum metus eu nisl eleifend pharetra. 
-            Vestibulum dignissim, libero ac tincidunt placerat, lectus urna efficitur sem, sit amet fermentum est magna eu turpis. 
-            Pellentesque convallis dapibus vestibulum. Quisque vestibulum felis et nulla malesuada rhoncus. Phasellus eget cursus dolor, sed tincidunt purus. 
-            Suspendisse sagittis posuere dolor in vulputate. Donec lacus tellus, venenatis id neque et, accumsan tempor sem. Donec tincidunt condimentum mi.
-        </p>
-        <p>
-            Nullam gravida tristique ipsum. Cras sed lacinia tellus. Aliquam vitae interdum diam. Maecenas posuere dapibus tortor vel elementum. Ut a cursus leo. 
-            Phasellus egestas scelerisque hendrerit. Aenean sapien ex, dignissim vel erat id, tristique malesuada dolor. 
-            Praesent a viverra arcu. Etiam eget rutrum enim. Etiam elementum ante vel odio efficitur, vel commodo augue porta.
-        </p>
+        {% for casestudy in casestudy %}
+            <div class="case-study">
+                <h1 class="homepage-text">
+                    {{ casestudy.title }}
+                </h1>
+                <p>{{ casestudy.body }}</p>
+                {% if casestudy.image %}
+                    <a href="">
+                        <img class="card-img-top img-fluid item-img" src="{{ casestudy.image.url }}" alt="{{ casestudy.title }}">
+                    </a>
+                {% else %}
+                    <a href="">
+                        <img class="card-img-top img-fluid" src="" alt="{{ casestudy.title }}">
+                    </a>
+                {% endif %}
+            </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
