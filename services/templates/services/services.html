@@ -3,54 +3,49 @@
 
 {% block content %}
 <div class="content-wrapper">
-    <h1 class="about-heading">Services</h1>
+    <h1 class="site-headings">Services</h1>
     <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
 
-    <div class="homepage-box">
+    <div class="services-box">
         <div class="service-text">
-            <h1 class="homepage-text">
-                {% for service in services %}
-                    <div class="services-box">
-                        <div class="services-list">
-                            <div class="services-details">
-                                <h3 class="product-name">{{ service.name }}</h3>
-                                <p class="lead mb-0">${{ service.price }}</p>
-                                <p class="lead mb-0">{{ service.description }}</p>
-                            </div>
+            {% for service in services %}
+                <div class="services-inner-box">
+                    <div class="services-list">
+                        <div class="services-details">
+                            <h3 class="product-name">{{ service.name }}</h3>
+                            <p class="lead mb-0">${{ service.price }}</p>
+                            <p class="lead mb-0">{{ service.description }}</p>
                         </div>
                     </div>
-                {% endfor %}
-            </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 
 
 <div class="content-wrapper">
-    <h1 class="about-heading">Case Study</h1>
+    <h1 class="site-headings">Case Study</h1>
     {% for casestudy in casestudies %}
+    {% if casestudy.image %}
+    <a href="">
+        <img class="card-img-top img-fluid casestudy-img" src="{{ casestudy.image.url }}" alt="{{ casestudy.title }}">
+    </a>
+    {% else %}
+    <a href="">
+        <img class="card-img-top img-fluid" src="" alt="{{ casestudy.title }}">
+    </a>
+    {% endif %}
     <div class="homepage-box">
-        <div class="service-text">
             <h1 class="homepage-text">
-                <div class="services-box">
-                    <div class="services-list">
-                        <div class="services-details">
+                    <div class="items-list">
+                        <div class="item-details">
                             <h3 class="product-name">{{ casestudy.title }}</h3>
                             <p class="lead mb-0">{{ casestudy.body }}</p>
                             <p class="lead mb-0">{{ service.description }}</p>
-                            {% if casestudy.image %}
-                            <a href="">
-                                <img class="card-img-top img-fluid item-img" src="{{ casestudy.image.url }}" alt="{{ casestudy.title }}">
-                            </a>
-                            {% else %}
-                            <a href="">
-                                <img class="card-img-top img-fluid" src="" alt="{{ casestudy.title }}">
-                            </a>
-                            {% endif %}
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     {% endfor %}
 </div>
 {% endblock %}

@@ -13,6 +13,10 @@ h2 {
     text-transform: uppercase;
 }
 
+.site-headings {
+    margin-top: 10px;
+}
+
 /* Logo */
 
 .logo-img {
@@ -152,19 +156,38 @@ h2 {
 
 /* Servcies */
 
+.services-inner-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 50%;
+}
+
 .services-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     margin: 30px 80px;
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 300px;
+}
+
+.service-text {
     display: flex;
 }
 
-.services-list {
-    display: flex;
-    align-items: center;
+.casestudy-img {
+    max-width: 80%;
+    max-height: 150px;
 }
 
 /* Items */
