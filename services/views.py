@@ -27,7 +27,7 @@ class AddServiceView(LoginRequiredMixin, CreateView):
     model = Services
     template_name = "services/add_service.html"
     form_class = AddServiceForm
-    success_url = reverse_lazy("home")
+    success_url = reverse_lazy("services")
 
     def form_valid(self, form):
         form.instance.creator = self.request.user

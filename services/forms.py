@@ -12,4 +12,5 @@ class AddServiceForm(forms.ModelForm):
         fields = [
             "name",
             "description",
+            "price",
         ]
