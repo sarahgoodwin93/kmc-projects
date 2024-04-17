@@ -24,6 +24,11 @@ def ServiceList(request):
 
 # Add Services View
 class AddServiceView(LoginRequiredMixin, CreateView):
+    """
+    Show the add service page so that a superuser can add a new service
+    to the site. Once a service has been added the page will redirect to
+    the services page so the new service can be viewed.
+    """
     model = Services
     template_name = "services/add_service.html"
     form_class = AddServiceForm
@@ -48,7 +53,6 @@ class EditServiceView(LoginRequiredMixin, UpdateView):
     the servicess, once the user has edited the service sucssefully it will
     redirect back to the services using the success_url
     """
-
     model = Services
     template_name = "services/edit_service.html"
     form_class = EditServiceForm
@@ -57,3 +61,20 @@ class EditServiceView(LoginRequiredMixin, UpdateView):
     def swim_edit(self, request):
         messages.success(self, request, "Service has been updated")
         return response
+
+
+# Delete Service View
+class DeleteServiceView(LoginRequiredMixin, DeleteView):
+    """
+    Shows the delete service page so that the superuser can delete a service.
+    Once the service has been delete it will redirect back
+    to the services using the success_url
+    """
+
+    model = Services
+    template_name = "services/delete_service.html"
+    success_url = reverse_lazy("services")
+
+    def swim_delete(self, request):
+        messages.success(self, request, "Service has been deleted")
+        return super().delete(request)

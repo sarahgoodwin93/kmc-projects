@@ -24,6 +24,14 @@
                             </a>
                             {% endif %}
                         </div>
+                        <!-- Delete button -->
+                        <div class="card-buttons">
+                            {% if user.is_authenticated and user.is_superuser %}
+                            <a href="{% url 'delete_service' pk=service.pk %}" class="btn btn-delete">
+                            Delete
+                            </a>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             {% endfor %}
