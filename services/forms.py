@@ -12,7 +12,6 @@ class AddServiceForm(forms.ModelForm):
         fields = [
             "name",
             "description",
-            "price",
         ]
 
 
@@ -26,7 +25,6 @@ class EditServiceForm(forms.ModelForm):
         fields = [
             "name",
             "description",
-            "price",
         ]
 
 class AddCaseStudyForm(forms.ModelForm):

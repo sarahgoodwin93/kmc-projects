@@ -190,6 +190,15 @@ h2 {
     max-height: 150px;
 }
 
+.card-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.add-casestudy-btn {
+    padding-bottom: 20px;
+}
+
 /* Items */
 
 .item-box {

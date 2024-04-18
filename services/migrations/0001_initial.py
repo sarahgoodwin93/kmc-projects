@@ -28,7 +28,6 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('service', models.CharField(max_length=100, unique=True)),
                 ('description', models.TextField(max_length=250)),
-                ('price', models.DecimalField(decimal_places=2, max_digits=6)),
                 ('created_on', models.DateTimeField(auto_now_add=True)),
                 ('updated_on', models.BooleanField(default=False)),
             ],

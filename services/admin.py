@@ -7,7 +7,6 @@ class ServicesAdmin(admin.ModelAdmin):
         'sku',
         'name',
         'description',
-        'price',
     )
 
     ordering = ('sku',)

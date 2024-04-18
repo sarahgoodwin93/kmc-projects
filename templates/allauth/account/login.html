@@ -24,15 +24,13 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 </div>
 
 {% include "socialaccount/snippets/login_extra.html" %}
-
 {% else %}
 <p>{% blocktrans %}If you have not created an account yet, then please
 <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
 {% endif %}
-  <div class="login-wrapper">
-      <h1 class="login-heading">Welcome</h1>
-      <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
-  </div>
+<div class="login-wrapper">
+  <h1 class="login-heading">Welcome</h1>
+  <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
 </div>
 <div class="login-box">
   <div class="login-form">

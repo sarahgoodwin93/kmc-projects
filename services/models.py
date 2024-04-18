@@ -4,12 +4,11 @@ from django.db import models
 class Services(models.Model):
     """
     The Services Model stores information about the services, including
-    its title, description, price and timestamps.
+    its title, description and timestamps.
     """
     name = models.CharField(max_length=100)
     sku = models.CharField(max_length=254, null=True, blank=True, unique=True)
-    description = models.TextField(max_length=250)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    description = models.TextField(max_length=1000)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.BooleanField(default=False)
 

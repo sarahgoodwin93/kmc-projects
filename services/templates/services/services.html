@@ -13,7 +13,6 @@
                     <div class="services-list">
                         <div class="services-details">
                             <h3 class="product-name">{{ service.name }}</h3>
-                            <p class="lead mb-0">${{ service.price }}</p>
                             <p class="lead mb-0">{{ service.description }}</p>
                         </div>
                         <!-- Edit button -->
@@ -37,7 +36,7 @@
             {% endfor %}
         </div>
     </div>
-    <!-- Add button -->
+    <!-- Add button for services -->
     <div class="card-buttons">
         {% if user.is_authenticated and user.is_superuser %}
         <a href="{% url 'add_service' %}" class="btn btn-edit">
@@ -88,8 +87,8 @@
             </div>
     {% endfor %}
 </div>
-<!-- Add button -->
-<div class="card-buttons">
+<!-- Add button for case study -->
+<div class="card-buttons add-casestudy-btn">
     {% if user.is_authenticated and user.is_superuser %}
     <a href="{% url 'add_casestudy' %}" class="btn btn-edit">
     Add New Case Study
