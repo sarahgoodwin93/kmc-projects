@@ -6,14 +6,14 @@
     <h1 class="site-headings">Services</h1>
     <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
 
-    <div class="services-box">
+    <div class="services-box{% if services|length > 3 and forloop.counter0|divisibleby:3 %} wrap-after-three{% endif %}">
         <div class="service-text">
             {% for service in services %}
                 <div class="services-inner-box">
                     <div class="services-list">
                         <div class="services-details">
                             <h3 class="product-name">{{ service.name }}</h3>
-                            <p class="lead mb-0">{{ service.description }}</p>
+                            <p class="lead mb-0 service-text">{{ service.description }}</p>
                         </div>
                         <!-- Edit button -->
                         <div class="card-buttons">
