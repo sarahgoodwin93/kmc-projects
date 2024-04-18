@@ -45,7 +45,9 @@
             <p class="lead mb-0">${{ item.price }}</p>
             <p class="lead mb-0">Item Number: {{ item.item_number }}</p>
             <small class="text-muted">Preferred Supplier: {{ item.preferred_supplier }}</small>
+            <p>
             <a href="{{ item.datasheet }}" target="_blank">Datasheet</a>
+            </p>
         </div>
         <div class="add-to-cart-btn">
             <form class="form" action="{% url 'add_to_cart' item.id %}" method="POST">

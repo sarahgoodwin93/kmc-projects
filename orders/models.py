@@ -38,6 +38,13 @@ class Order(models.Model):
         """
         return uuid.uuid4().hex.upper()
 
+    def update_total(self):
+        """
+        Update total price each time a line item is added
+        """
+        self.total_price = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.save()
+
     def save(self, *args, **kwargs):
         """
         Overrides the original save method to set the order number
