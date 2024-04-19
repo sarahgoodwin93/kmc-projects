@@ -15,6 +15,8 @@ def OrderView(request):
     template = 'orders/orders.html'
     context = {
         'order_form': order_form,
+        'stripe_public_key': 'pk_test_51P7BM7RxdvIivDmZZ36WieRTd4RuHqaYl7BeqKPOywzGJCf6avcE38BK9PcXCuBAlFSEXKoKvb3jGKR7dwCoonzQ00wKGFIZvf',
+        'client_secret': 'sk_test_51P7BM7RxdvIivDmZ7s7PeCu7pfDZODnKIK79Cm43ypalOyJIYa5yUYC6DuYb5cTdACiYyfIshvnvuUiTdHcctYCp006NDqoXjZ',
     }
 
     return render(request, template, context)
