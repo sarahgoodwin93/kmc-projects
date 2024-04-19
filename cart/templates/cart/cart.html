@@ -38,13 +38,19 @@
                     {% endfor %}
                 {% else %}
                     <p class="lead mb-5">Your cart is empty.</p>
-                    <a href="{% url 'items' %}" class="btn btn-black rounded-0 text-uppercase mt-5">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a>
                 {% endif %}
+                <a href="{% url 'orders' %}" class="btn btn-black rounded-0 text-uppercase mt-5">
+                    <span class="icon">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                    <span class="text-uppercase">Checkout</span>                    
+                </a>
+                <a href="{% url 'items' %}" class="btn btn-black rounded-0 text-uppercase mt-5">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Keep Shopping</span>
+                </a>
             </div>
         </div>
     </div>

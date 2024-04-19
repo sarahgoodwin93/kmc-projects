@@ -3,11 +3,11 @@ from django.contrib import messages
 from .forms import OrderForm
 
 # Create your views here.
-def OrderView(request):
+def orders(request):
     cart = request.session.get('cart', {})
     if not cart:
         messages.error(request, "No items in the cart")
-        return redirect(reverse('items'))
+        return redirect(reverse('cart'))
     
     order_form = OrderForm()
     template = 'orders/orders.html'
