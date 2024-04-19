@@ -1,73 +1,61 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 <div class="content-wrapper">
     <h1 class="site-headings">Online Orders</h1>
     <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
-    <div class="row">
+    <div class="col">
+        <p class="text-muted">Order Summary ({{ item_count }})</p>
+        <p class="my-0">Order Total: ${{ total | floatformat:2 }}</p>
+    </div>
+    <div class="row justify-content-center">
         <div class="col">
-            <div class="added-item-box">
-                <div class="item-list">
-                    <div class="row">
-                        <div class="col-12 col-lg-6 order-lg-last mb-5">
-                            <p class="text-muted">Order Summary ({{ item_count }})</p>
-                            <div class="row">
-                                <div class="col-7 offset-2">
-                                    <p class="mb-1 mt-0 small text-muted">Item</p>
-                                </div>
-                                <div class="col-3 text-right">
-                                    <p class="mb-1 mt-0 small text-muted">Subtotal</p>
-                                </div>
+            <div class="order-list">
+                <div class="row">
+                    {% for added_item in cart_items %}
+                    <div class="added-item-box">
+                        <div class="item-list">
+                            {% if added_item.added_item.image %}
+                            <a href="">
+                                <img class="added-item-img" src="{{ added_item.added_item.image.url }}" alt="{{ added_item.added_item.name }}">
+                            </a>
+                            {% else %}
+                            <a href="">
+                                <img class="card-img-top img-fluid" src="" alt="{{ added_item.added_item.name }}">
+                            </a>
+                            {% endif %}
+                            <div class="item-details">
+                                <p class="added-item-text">{{ added_item.added_item.name }}</p>
+                                <p class="added-item-text">${{ added_item.added_item.price }}</p>
+                                <p class="added-item-text">Item Number: {{ added_item.added_item.item_number }}</p>
                             </div>
-                            {% for added_item in cart_items %}
-                            <div class="row">
-                                <div class="col-2 mb-1">
-                                    <a href="{% url 'items' %}">
-                                        {% if added_item.added_item.image %}
-                                            <img class="added-item-img" src="{{ added_item.added_item.image.url }}" alt="{{ added_item.added_item.name }}">
-                                        {% else %}
-                                            <img class="card-img-top img-fluid" src="" alt="{{ added_item.added_item.name }}">
-                                        {% endif %}
-                                    </a>
-                                </div>
-                                <div class="col-7">
-                                    <p class="added-item-text">{{ added_item.added_item.name }}</p>
-                                    <p class="added-item-text">${{ added_item.added_item.price }}</p>
-                                    <p class="added-item-text">Item Number: {{ added_item.added_item.item_number }}</p>
-                                </div>
-                                <div class="col-3 text-right">
-                                    <p class="added-item-text">Quantity: {{ added_item.quantity }}</p>
-                                    <p class="added-item-text">Total Cost: ${{ added_item.item_total_cost }}</p>
-                            </div>
-                            {% endfor %}
-                            <hr class="my-0">
-                            <div class="row text-black text-right">
-                                <div class="col-7 offset-2">
-                                    <p class="my-0">Order Total:</p>
-                                </div>
-                                <div class="col-3">
-                                    <p class="my-0">${{ total | floatformat:2 }}</p>
-                                </div>
+                            <div class="item-details added-item-costs">
+                                <p class="added-item-text">Quantity: {{ added_item.quantity }}</p>
+                                <p class="added-item-text">Total Cost: ${{ added_item.item_total_cost }}</p>
+                                <a class="text-uppercase remove-btn" href="{% url 'remove_from_order' added_item.added_item.id %}">Remove</a>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-6">
-                            <p class="text-muted">Please fill out the form below to complete your order</p>
-                            <form action="{% url 'orders' %}" method="POST" id="payment-form">
+                    </div>
+                    {% endfor %}
+                    <div class="order-form-box">
+                            <form action="{% url 'orders' %}" method="POST" id="payment-form" class="order-form">
                                 {% csrf_token %}
+                                <p class="text-muted">Please fill out the form below to complete your order</p>
                                 <fieldset class="rounded px-3 mb-5">
                                     <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
-                                    {{ form.full_name }}
-                                    {{ form.email }}
+                                    {{ order_form.full_name }}
+                                    {{ order_form.email }}
                                 </fieldset>
                                 <fieldset class="rounded px-3 mb-5">
                                     <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
-                                    {{ OrderForm.phone_number }}
-                                    {{ OrderForm.country }}
-                                    {{ OrderForm.postcode }}
-                                    {{ OrderForm.town_or_city }}
-                                    {{ OrderForm.street_address1 }}
-                                    {{ OrderForm.street_address2 }}
+                                    {{ order_form.phone_number }}
+                                    {{ order_form.country }}
+                                    {{ order_form.postcode }}
+                                    {{ order_form.town_or_city }}
+                                    {{ order_form.street_address1 }}
+                                    {{ order_form.street_address2 }}
                                     <div class="form-check form-check-inline float-right mr-0">
                                         {% if user.is_authenticated %}
                                         <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
@@ -96,7 +84,7 @@
                                         </span>
                                         <span class="font-weight-bold">Adjust Cart</span>
                                     </a>
-                                    <button id="submit-button" class="btn btn-black rounded-0">
+                                    <button id="submit-button" class="btn remove-btn">
                                         <span class="font-weight-bold">Complete Order</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>
@@ -106,7 +94,7 @@
                                         <span class="icon">
                                             <i class="fas fa-exclamation-circle"></i>
                                         </span>
-                                        <span>Your card will be charged <strong>${{ added_item.item_total_cost |floatformat:2 }}</strong></span>
+                                        <span>Your card will be charged <strong>${{ total | floatformat:2 }}</strong></span>
                                     </p>
                                 </div>
                             </form>

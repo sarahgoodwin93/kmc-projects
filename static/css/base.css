@@ -283,7 +283,6 @@ h2 {
 
   form {
     width: 100%;
-    max-width: 300px;
   }
 
   label {
@@ -395,6 +394,26 @@ h2 {
     background-color: black;
     color: #f99411;
   }
+
+/* Orders */
+
+.order-form-box {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    width: 60vw;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.order-list {
+    align-items: center;
+}
 
 /* Footer */
 
