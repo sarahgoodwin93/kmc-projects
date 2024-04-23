@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '#0%kvdv=ob05(&8wsn4$6zeb4(9j)s2kctnx_
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-sarahgoodwi-kmcprojects-2f614thin9r.ws-eu110.gitpod.io', 
-'.herokuapp.com', 'localhost']
+'.herokuapp.com', 'localhost', 'https://kmc-projects-686d2f98b9c9.herokuapp.com',]
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-sarahgoodwi-kmcprojects-2f614thin9r.ws-eu110.gitpod.io']
 
