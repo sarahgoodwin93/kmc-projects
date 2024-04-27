@@ -58,13 +58,12 @@
         <img class="card-img-top img-fluid" src="" alt="{{ casestudy.title }}">
     </a>
     {% endif %}
-    <div class="homepage-box">
-            <h1 class="homepage-text">
+    <div class="casestudy-box">
+            <h1 class="casestudy-text">
                     <div class="items-list">
                         <div class="item-details">
                             <h3 class="product-name">{{ casestudy.title }}</h3>
-                            <p class="lead mb-0">{{ casestudy.body }}</p>
-                            <p class="lead mb-0">{{ service.description }}</p>
+                            <p class="lead mb-0 casestudy-text">{{ casestudy.body | safe }}</p>
                         </div>
                         <!-- Edit button -->
                         <div class="card-buttons">

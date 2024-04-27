@@ -191,6 +191,31 @@ h2 {
     font-size: .9em;
 }
 
+.casestudy-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.casestudy-text {
+    font-size: 15px;
+    color: black;
+    text-align: left;
+}
+
+.casestudy-text p,
+.casestudy-text li {
+    text-transform: none;
+}
+
 .casestudy-img {
     max-width: 80%;
     max-height: 150px;
