@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 class Services(models.Model):
@@ -23,7 +24,7 @@ class CaseStudy(models.Model):
     """
     title = models.CharField(max_length=100)
     sku = models.CharField(max_length=254, null=True, unique=True)
-    body = models.TextField()
+    body = RichTextField(blank=True, null=True)
     image = models.ImageField(null=True, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.BooleanField(default=False)

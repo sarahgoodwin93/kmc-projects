@@ -353,6 +353,9 @@ https://aidankmcbride.medium.com/css-tips-and-tricks-81d3c641428
 - json:
 https://codebeautify.org/blog/how-to-create-json-file/
 
+- text editor:
+https://www.youtube.com/watch?v=mF5jzSXb1dc
+
 # Acknowledgements
 
 - Mentor, Lauren-Nicole, for all her help and support, the useful resources she provided and for being a friendly face throughout! Could not have done this project without her!!

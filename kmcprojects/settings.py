@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'crispy_forms',
+    'ckeditor',
     'home',
     'services',
     'cart',
@@ -135,20 +136,6 @@ WSGI_APPLICATION = 'kmcprojects.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-
-#else:
-#    DATABASES = {
-#        'default': {
-#            'ENGINE': 'django.db.backends.sqlite3',
-#            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#        }
-#    }
-
-
-# Print the value of DATABASE_URL
-print("DATABASE_URL:", os.environ.get("DATABASE_URL"))
-
-# Parse DATABASE_URL to configure the database connection
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
