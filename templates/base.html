@@ -93,7 +93,7 @@
                              <!-- Logout Nav Link only to show if logged in -->
                              {% if user.is_authenticated %}
                              <li class="nav-item">
-                                <a class="nav-link" href="#">Your Account</a>
+                                <a class="nav-link" href="{% url 'users' %}">Your Account</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
