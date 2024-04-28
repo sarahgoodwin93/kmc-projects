@@ -8,7 +8,7 @@ class ItemAdmin(admin.ModelAdmin):
         'name',
         'type',
         'price',
-        'preferred_supplier',
+        'manufactured_by',
         'item_number',
         'image',
     )
