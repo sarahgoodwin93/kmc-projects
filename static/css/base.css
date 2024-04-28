@@ -495,6 +495,11 @@ footer {
     height: 2px;
 }
 
+.checkout-btn-success:hover {
+    background-color: #f99411; 
+    color: white;
+}
+
 /* Order Success */
 
 .order-success-box {

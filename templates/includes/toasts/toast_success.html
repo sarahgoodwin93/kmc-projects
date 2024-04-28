@@ -10,4 +10,12 @@
     <div class="toast-body bg-white">
         {{ message }}        
     </div>
+    {% if total %}
+    <a href="{% url 'cart' %}" class="btn btn-black btn-block rounded-0 checkout-btn-success">
+        <span class="text-uppercase">Go To Secure Checkout</span>
+        <span class="icon">
+            <i class="fas fa-lock"></i>
+        </span>
+    </a>
+    {% endif %}
 </div>
