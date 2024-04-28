@@ -7,6 +7,7 @@ from django.conf import settings
 from django_countries.fields import CountryField
 
 from items.models import Item
+from users.models import UserDetails
 
 """
 The base of this code was taken and modified from the walkthrough 
@@ -23,6 +24,8 @@ class Order(models.Model):
     and has the total price of the order.
     """
     order_number = models.CharField(max_length=32, null=False, editable=False)
+    user_details = models.ForeignKey(UserDetails, on_delete=models.SET_NULL,
+                                     null=True, blank=True, related_name='user_orders')
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
