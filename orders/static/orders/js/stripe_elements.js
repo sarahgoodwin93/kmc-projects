@@ -6,8 +6,16 @@
     https://stripe.com/docs/stripe-js
 */
 
-var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
-var clientSecret = $('#id_client_secret').text().slice(1, -1);
+/*
+The base of this code was taken and modified from the walkthrough 
+project Boutiuqe Ado > The Checkout App > Stripe.
+Additional code comments have been added to show understanding.
+Parts have been removed that were not relevant to this site and some
+naming has been changed to better suit KMC Projects.
+*/
+
+var stripe_public_key = $('#id_stripe_public_key').text().slice(1, -1);
+var client_secret = $('#id_client_secret').text().slice(1, -1);
 var stripe = Stripe(stripe_public_key);
 var elements = stripe.elements();
 var style = {
