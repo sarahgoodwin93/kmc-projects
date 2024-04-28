@@ -2,14 +2,17 @@ asgiref==3.8.1
 boto3==1.34.84
 botocore==1.34.84
 cloudinary==1.36.0
+countries==0.2.0
 dj-database-url==0.5.0
 dj3-cloudinary-storage==0.0.6
 Django==4.2.11
 django-allauth==0.57.2
 django-ckeditor==6.7.1
 django-ckeditor-5==0.2.12
+django-countries==7.6.1
 django-crispy-forms==2.1
 django-js-asset==2.2.0
+django-phone-field==1.8.1
 django-storages==1.14.2
 gunicorn==20.1.0
 jmespath==1.0.1

@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'crispy_forms',
     'ckeditor',
+    'django_countries',
+    'phone_field',
     'home',
     'services',
     'cart',
