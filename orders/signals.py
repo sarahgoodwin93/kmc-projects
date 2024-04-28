@@ -19,7 +19,7 @@ def update_on_save(sender, instance, created, **kwargs):
     instance.order.update_total()
 
 @receiver(post_delete, sender=OrderLineItem)
-def update_on_save(sender, instance, **kwargs):
+def update_on_delete(sender, instance, **kwargs):
     """
     Signal handler called after an OrderLineItem is deleted.
     Updates the total price of the associated Order when an 
