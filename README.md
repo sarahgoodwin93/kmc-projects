@@ -159,7 +159,38 @@ Tasks
 
 ## Wireframes
 
-![Wireframe Image]( "")
+Wireframes were created for each different page type, Home, Services, Products and Forms.
+The Products wireframe was used as a base to create the cart & checkout pages.
+The forms wireframe was used as a base to create the login, logout, sign up, contact us and newsletter pages.
+This was done to keep consistancy across the site. 
+
+<details>
+<summary> Wireframe Home</summary>
+
+![Wireframe Image Home](media/README-images/wireframe-home.png "home wireframe")
+
+</details>
+
+<details>
+<summary> Wireframe Services</summary>
+
+![Wireframe Image Services](media/README-images/wireframe-services.png "services wireframe")
+
+</details>
+
+<details>
+<summary> Wireframe Items</summary>
+
+![Wireframe Image Products](media/README-images/wireframe-products.png "products wireframe")
+
+</details>
+
+<details>
+<summary> Wireframe Forms</summary>
+
+![Wireframe Image](media/README-images/wireframe-forms.png "forms wireframe")
+
+</details>
 
 
 ## Database Schema
