@@ -11,6 +11,8 @@ KMC Projects offers a comprehensive range of services tailored to meet the diver
 
 They provide a distribution list of hydraulic products. Whether you're sourcing components for a new project or replacing parts in existing systems, our inventory ensures that you have access to top-quality products that meet your requirements.
 
+Throughout this README both KMC Projects and Kevin McCaffrey will be referred to as 'the client'.
+
 ## Table of Contents
 
 - [Key Project Goals](#key-project-goals)
@@ -164,6 +166,7 @@ The Products wireframe was used as a base to create the cart & checkout pages.
 The forms wireframe was used as a base to create the login, logout, sign up, contact us and newsletter pages.
 This was done to keep consistancy across the site. 
 
+Wireframe can be down in these drop downs:
 <details>
 <summary> Wireframe Home</summary>
 
@@ -199,14 +202,32 @@ This was done to keep consistancy across the site.
 
 ## Typography
 
+Proxima Nova was chosen from Adobe Fonts for its clean and elegant design. It is characterized by its rounded strokes and subtle variations in stroke width, giving it a warm and friendly appearance. As the client wanted a clean, minimal and industral look, proxima nova seemed like a perfect fit. 
+It suits well with the logo that was already created for the business.  
+
 
 ## Colour Palette
 
-![Color palette Image]( "")
+![Color palette Image](media/README-images/colour-pallete.png "colour pallette image")
+
+KMCs hero colour is #f99411, this was taken from their logo which was designed in by [JayKay Art](https://www.jay-kay.co/ "link to jaykay art homepage")
+
+The colour pallet was craeted using the logo and the clients instructions to keep the site minimual and clean.
+Different shades of grey were chosen to make the orange stand out and provide a nice contrast while keeping the look industral. 
+
+The colour pallette also allows images added to the site to stand out.
 
 ### Logo
 
-![Logo Image]( " ")
+![Logo Image](media/README-images/logo-readme.png "image of logo")
+
+The logo was designed in by [JayKay Art](https://www.jay-kay.co/ "link to jaykay art homepage") and was already a part of the KMC Project business. It was the only design assets the client provided and much of the sites looks and feel came from inspriation of the logo. 
+
+Under the logo the tagline 'Hydraulic Design, Consultancy, Project Management & Training' clearly states the key services of the business and the two are often found together.
+
+The favicon is taken from the logo itself.
+
+![Favicon Image](media/README-images/favicon-readme.png "image of favicon")
 
 ## Design Choices
 
