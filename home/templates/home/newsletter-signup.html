@@ -5,8 +5,10 @@
 {% block content %}
 <div class="content-wrapper">
     <h1 class="home-heading">Problems Solved</h1>
+    <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
     <div class="homepage-box-form">
         <h2 class="form-heading">Sign Up to our Newsletter</h2>
+        <p>Hear about our latest jobs, upcoming work and how you can get the best out of your business.</p>
             <!-- Contact Form -->
             <form class="mb-5" method="POST" enctype="multipart/form-data">
             {% csrf_token %}

@@ -17,6 +17,10 @@ h2 {
     margin-top: 10px;
 }
 
+a {
+    color: #f99411;
+}
+
 /* Logo */
 
 .logo-img {
@@ -345,7 +349,6 @@ h2 {
   }
 
 /* Login */
-
 .login-box {
     display: flex;
     align-items: center;
@@ -369,6 +372,47 @@ h2 {
 
 .login-wrapper {
     text-align: center;
+}
+
+.create-account {
+    margin-top: 20px;
+}
+
+.login-form {
+    width: 70%;
+    overflow: hidden;
+}
+
+.form-field.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.form-field.remember-me input[type="checkbox"],
+input[type=checkbox], input[type=radio] {
+    margin-left: 5px;
+    flex: none;
+    width: auto;
+}
+
+.form-field.remember-me label {
+    margin-right: 10px;
+    display: flex;
+}
+
+.form-field.remember-me a.forgot-password {
+    margin-left: auto;
+}
+
+.primaryAction {
+    float: right;
+    padding: 5px 10px;
+    background-color: #f99411;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: none;
 }
 
 /* Sign Up */
