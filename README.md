@@ -17,6 +17,7 @@ Throughout this README both KMC Projects and Kevin McCaffrey will be referred to
 
 - [Key Project Goals](#key-project-goals)
 - [Business Model](#business-model)
+    - [Target Audience](#target-audience)
 - [Agile Development](#agile-development)
 - [User Stories](#user-stories)
     - [Epic](#epic)
@@ -63,6 +64,12 @@ For business to business, the site provides business a contact form to get in to
 
 Both businesses and customers can create a login in order to see their purchase histroy. 
 
+## Target Audience
+
+KMC Projects target audience focus on the hydraulic industry, businesses involved in construction, manufacturing, infrastructure development, and related sectors. Their clients often know what they need before coming to the site.
+The audience main goals are to
+- Contact KMC Project
+- Find parts they are already looking for
 
 # Agile Development
 
