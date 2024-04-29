@@ -19,31 +19,27 @@ Throughout this README both KMC Projects and Kevin McCaffrey will be referred to
 - [Business Model](#business-model)
 - [Agile Development](#agile-development)
 - [User Stories](#user-stories)
-    - Epic
-    - Future Stories
+    - [Epic](#epic)
+    - [Future Stories](#future-stories)
 - [User Experience](#user-experience)
-    - Wireframes
-    - Database Schema
-    - Typography
-    - Colour Palette
-    - Logo
-    - Design Choices
+    - [Wireframes](#wireframes)
+    - [Database Schema](#database-schema)
+    - [Typography](#typographt)
+    - [Colour Palette](#colour-palette)
+    - [Logo](#logo)
 - [Features](#features)
-    - Existing Features
-        - Non-Logged in User
-        - Logged in User
-        - Staff User
-    - Future Features
+    - [Existing Features](#existing-features)
+    - [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
 - [Deployment](#deployment)
-    - Cloning The Repository
-    - Deploying on GitHub Pages
-    - The ElephantSQL Database
+    - [Cloning The Repository](#cloning-the-repository)
+    - [Deploying on GitHub Pages](#deploying-on-github-pages)
+    - [The SQL Database]()
 - [Credits](#credits)
-    - Content
-    - Images
-    - Education
+    - [Content](#credits)
+    - [Images](#images)
+    - [Education](#education)
 - [Acknowledgements](#acknowledgements)
 
 # Key Project Goals
@@ -76,7 +72,25 @@ User stories were labelled using the MoSCoW method.
 
 The user stories are as follows:
 
-## Epic
+### EPICS
+
+## Epic HOME
+
+### USER STORY: View list of items for purchase
+
+- As a site user I can view a list of the items for purchase so that select which items I wish to add to my cart.
+    - When a user opens the products page they see a list of the items
+    - The user sees all items available so they can choose which to see more details bout
+    - The user can add to their cart straight from the products page
+
+### USER STORY: Adding items to cart
+
+- As a site user I can add item to my cart so that I can review them before purchase
+    - A user should be able to add items to their cart easily
+    - A user can view their cart total from anywhere on the platform
+    - The user can see their cart total
+
+## Epic SERVICES
 
 ### Story
 
@@ -89,7 +103,7 @@ Tasks
 - 
 -
 
-## Epic
+## Epic CASE STUDY
 
 ### Story
 
@@ -102,7 +116,7 @@ Tasks
 - 
 -
 
-## Epic
+## Epic SITE ACCESS
 
 ### Story
 
@@ -115,7 +129,7 @@ Tasks
 - 
 -
 
-## Epic
+## Epic PRODUCTS
 
 ### Story
 
@@ -128,20 +142,7 @@ Tasks
 - 
 -
 
-## Epic
-
-### Story
-
-- As an XXXXX, I can XXXX so that XXXX
-    - AC1 - 
-    - AC2 - 
-    - AC 3 - 
-
-Tasks 
-- 
--
-
-## Epic
+## Epic ADMIN
 
 ### Story
 
@@ -155,7 +156,6 @@ Tasks
 -
 
 ## Future Stories
-
 
 # User Experience
 
@@ -201,10 +201,10 @@ Wireframe can be down in these drop downs:
 The data schema was created using [drawSQL](https://drawsql.app/ "drawsql website homepage") before the project was started to get the flow and function of the models.
 
 There are 4 custom models in this project
-- The Services Model
-- The CaseStudy Model
+- The Services Model (full CRUD)
+- The CaseStudy Model (full CRUD)
 - The Contact Model
-- The Boutique Ado Walkthrough Model
+- The NewsLetterSignUp Model
 
 There are also  models that have been amended from the Boutique Ado Walkthrough to fit the requirements of the site
 - The Item Model (based on the Products model)
@@ -244,32 +244,31 @@ The favicon is taken from the logo itself.
 
 ![Favicon Image](media/README-images/favicon-readme.png "image of favicon")
 
-## Design Choices
-
-![Swim Card]( " ")
-
 [Back to Top](#kmc-projects)
 
 # Features
 
 ## Existing Features
 
-## Non-Logged in User
-
-### The Landing page
+### Home
 
 ![Homepage]( " ")
 
+### Navbar
+
+### Footer
+
 ### Services
 
-
-### Case History and Reviews
-
+### Case Study
 
 ### Products
 
+### Cart
 
-### Login
+### Checkout
+
+### Login, Logout and Sign Up
 
 ![login]( " ")
 
@@ -288,41 +287,19 @@ An example of some of the errors:
 
 The text at the bottom lets users know who already have an account that they can sign in using the login page.
 
-### Cart
-
-## Logged in User
-
-### Order History
-
-![order history]( "")
-
-### Account Information
-
-![]( " ")
-
-
-![]( " ")
-
-
 ### Logout
 
 ![logout]( " logout image ")
 
 The logout page checks if the user does wish to sign out of the site.
 
-## Staff User
+### Admin Access
 
-### Add Items
+### Account
 
-![]( " add items form image ")
+### Order History
 
-## Edit and Delete buttons
-
-![edit and delete buttons]( " edit and delete button image ")
-
-## Delete Items
-
-![delete warning]( " delete item image ")
+![order history]( "")
 
 ## Future Features
 
@@ -394,19 +371,11 @@ To deploy this page to Heroku from its GitPod repository, the following steps we
 12. Go to Deploy and scroll down, click on 'Deploy Branch' to manually deploy
 13. Once the app has deployed, click 'Open App' at the top of the page
 
-## The ElephantSQL Database
-ElephantSQL PostgreSQL Database was used for this project, to set up a database the following steps were taken:
+## The CI Database
+CI Database was used for this project, to set up a database the following steps were taken:
 
 1. Sign up or log in to ElephantSQL with your GitHub account.
-2. Click on "Create New Instance".
-3. Enter a name for the instance
-4. Select "Tiny Turtle (Free)" free plan.
-5. Click "Select Region".
-6. Select a data centre near you.
-7. Click "Review".
-8. Ensure that all details are correct and then click "Create instance".
-9. Copy the database URL
-10. Add the database into the setting.py file
+2. 
 
 You will also need to add the database to your Django settings.py file:
 
@@ -426,6 +395,7 @@ Wording for the site was all created by Sarah Goodwin conjunction with Kevin McC
 
 ### Images
 
+Images were created in Canva, suppplied by the client or taken from google images.
 
 ## Education
 
