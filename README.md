@@ -21,6 +21,8 @@ Throughout this README both KMC Projects and Kevin McCaffrey will be referred to
 - [User Stories](#user-stories)
     - [Epic](#epic)
     - [Future Stories](#future-stories)
+- [Web Marketing](#web-marketing)
+    - [SEO Implementation](#seo-implementation)
 - [User Experience](#user-experience)
     - [Wireframes](#wireframes)
     - [Database Schema](#database-schema)
@@ -156,6 +158,52 @@ Tasks
 -
 
 ## Future Stories
+
+# Web Marketing
+
+For this project the following web marketing strategies were used:
+
+- SEO and content marketing
+- Social media marketing
+- Email newsletter subscription
+
+## SEO Implementation
+
+To implement SEO in this project, various techniques were used. These include using semantic HTML, avoiding excessive keyword repetition, integrating keywords naturally within website content, providing descriptive alt attributes for images, incorporating metadata descriptions and keywords at the head level of the project, and using the 'noopener' attribute in the 'rel' tag. Additionally, we ensure that external links have descriptive 'aria-label' attributes for enhanced accessibility.
+
+The keywords are short-tailed and long-tailed and are as follows:
+
+Short-tailed Keywords:
+ - Hydraulic Design
+ - Consultancy
+ - Project Management
+ - Training
+ - Problem-solving
+ - Fluid power
+ - Engineering
+ - Hydraulic Solutions
+
+Long-tailed Keywords:
+- Hydraulic Design Excellence
+- Hydraulic Consultancy Services
+- Project Management for Hydraulic Systems
+- Hydraulic Training Programs
+- Innovative Hydraulic Solutions
+- Precision Hydraulic Engineering
+- Efficient Hydraulic Systems
+- Expert Hydraulic Engineers
+- Hydraulic Product Distribution List
+- Quality Hydraulic Products for Purchase
+
+A robots.txt file is included at the project's root level. This file instructs search engine crawlers about the URLs they can access on the website. Its primary purpose is to prevent the site from being overwhelmed by excessive requests. It's important to note that robots.txt isn't intended to exclude web pages from Google; rather, it serves as a tool for managing crawler access.
+
+The project's root level also includes a sitemap.xml file. This file serves as a catalog of a website's crucial pages, ensuring that Google can locate and index them effectively. It aids search engines in comprehending the structure of your website. It's crucial for Google to index all significant pages of your website. However, certain pages may lack internal links, making them challenging for search engines to discover. A sitemap can expedite the process of content discovery in such cases.
+
+## Social Media Marketing
+
+Facebook was used as the primary social media platform for web marketing due to its extensive user base and broad demographic reach. The objective of establishing a Facebook business page is to attract the attention of potential customers and to showcase the company's products and services effectively. A real business facebook account was created and at the time of submission was active it can be found here [KMC Projects Facebook](https://www.facebook.com/profile.php?id=61558802589438 "KMC Project Facebook page")
+
+![KMC Project Facebook](media/README-images/facebook-img.png "KMC Project Facebook page")
 
 # User Experience
 

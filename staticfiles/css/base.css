@@ -13,6 +13,14 @@ h2 {
     text-transform: uppercase;
 }
 
+.site-headings {
+    margin-top: 10px;
+}
+
+a {
+    color: #f99411;
+}
+
 /* Logo */
 
 .logo-img {
@@ -150,16 +158,99 @@ h2 {
     font-weight: bold;
 }
 
-/* Items */
+/* Servcies */
 
-.item-box {
+.services-inner-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 50%;
+}
+
+.services-box {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
     margin: 30px 80px;
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 300px;
+    box-sizing: border-box;
+}
+
+.services-box.wrap-after-three {
+    flex-wrap: wrap;
+}
+
+.service-text {
     display: flex;
+    font-size: .9em;
+}
+
+.casestudy-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.casestudy-text {
+    font-size: 15px;
+    color: black;
+    text-align: left;
+}
+
+.casestudy-text p,
+.casestudy-text li {
+    text-transform: none;
+}
+
+.casestudy-img {
+    max-width: 80%;
+    max-height: 150px;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.add-casestudy-btn {
+    padding-bottom: 20px;
+}
+
+/* Items */
+
+.item-box {
+    position: relative;
+    width: 80vw;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .item-list {
@@ -174,6 +265,7 @@ h2 {
 
 .item-details {
     margin-left: 20px;
+    flex-basis: calc(60% - 20px);
 }
 
 .product-name {
@@ -220,7 +312,6 @@ h2 {
 
   form {
     width: 100%;
-    max-width: 300px;
   }
 
   label {
@@ -228,7 +319,7 @@ h2 {
     display: block; 
   }
 
-  input, textarea {
+  input, textarea, select {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -258,7 +349,6 @@ h2 {
   }
 
 /* Login */
-
 .login-box {
     display: flex;
     align-items: center;
@@ -282,6 +372,128 @@ h2 {
 
 .login-wrapper {
     text-align: center;
+}
+
+.create-account {
+    margin-top: 20px;
+}
+
+.login-form {
+    width: 70%;
+    overflow: hidden;
+}
+
+.form-field.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.form-field.remember-me input[type="checkbox"],
+input[type=checkbox], input[type=radio] {
+    margin-left: 5px;
+    flex: none;
+    width: auto;
+}
+
+.form-field.remember-me label {
+    margin-right: 10px;
+    display: flex;
+}
+
+.form-field.remember-me a.forgot-password {
+    margin-left: auto;
+}
+
+.primaryAction {
+    float: right;
+    padding: 5px 10px;
+    background-color: #f99411;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: none;
+}
+
+/* Sign Up */
+
+.sign-up-box {
+    text-align: left;
+    margin: 30px 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart */
+
+.added-item-img {
+    max-width: 80px;
+}
+
+.added-item-box {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    width: 60vw;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.added-item-costs {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+}
+
+.add-to-cart-btn {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    flex-basis: calc(40% - 20px);
+}
+
+.remove-btn {
+    width: 100%;
+    background-color: #f99411;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .remove-btn:hover {
+    background-color: black;
+    color: #f99411;
+  }
+
+/* Orders */
+
+.order-form-box {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    width: 60vw;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.order-list {
+    align-items: center;
 }
 
 /* Footer */
@@ -321,6 +533,50 @@ footer {
     color: white;
 }
 
+
+/* Messages */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+.checkout-btn-success:hover {
+    background-color: #f99411; 
+    color: white;
+}
+
+/* Order Success */
+
+.order-success-box {
+    text-align: left;
+    margin: 30px 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-confirmation-wrapper {
+    width: 100%;
+    padding: 10px;
+}
+
+.order-confirmation-wrapper .row {
+    margin-bottom: 5px;
+}
+
 /* Media Queries for mobile */
 
 @media (max-width: 995px) {
@@ -347,10 +603,33 @@ footer {
         padding-top: 150px;
     }
 
+    .login-wrapper {
+        padding-top: 50px;
+    }
+
+    .login-form {
+        width: 100%;
+        font-size: medium;
+    }
+
     .homepage-box,
     .about-box,
-    .item-box {
+    .order-success-box,
+    .login-box,
+    .sign-up-box,
+    .casestudy-box,
+    .services-box,
+    .added-item-box {
         margin: 30px 10px;
+    }
+
+    .order-form-box {
+        width: 80%;
+    }
+
+    .order-list {
+        display: flex;
+        justify-content: center;
     }
 
     .about-img,
@@ -367,5 +646,18 @@ footer {
     .search-items {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .services-box {
+        flex-wrap: wrap;
+    }
+
+    .service-text {
+        flex-wrap: wrap;
+    }
+
+    .services-inner-box {
+        width: 100%;
     }
 }
