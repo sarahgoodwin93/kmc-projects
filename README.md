@@ -1,11 +1,20 @@
 # [KMC Projects](https://kmc-projects-686d2f98b9c9.herokuapp.com/ "KMC Projects deployed site")
 
+![am-i-responsive-image](media/README-images/am-i-responsive.png "am-i-responsive-image")
+
 - Introduction
 - [Live Site Link](https://kmc-projects-686d2f98b9c9.herokuapp.com/ "KMC Projects deployed site")
+
+KMC Projects is a real world business founded by Kevin McCaffrey. The site has been created to showcase the work and serives that KMC Projects provides, offer an easy contact for clients to get in touch, and a database of products that KMC Projects distributes that clients can purchase. 
+
+KMC Projects offers a comprehensive range of services tailored to meet the diverse needs of commercial companies in the hydraulic industry. From hydraulic design and consultancy to project management and training, they are dedicated to delivering innovative solutions that ensure precision, efficiency, and success.
+
+They provide a distribution list of hydraulic products. Whether you're sourcing components for a new project or replacing parts in existing systems, our inventory ensures that you have access to top-quality products that meet your requirements.
 
 ## Table of Contents
 
 - [Key Project Goals](#key-project-goals)
+- [Business Model](#business-model)
 - [Agile Development](#agile-development)
 - [User Stories](#user-stories)
     - Epic
@@ -37,16 +46,25 @@
 
 # Key Project Goals
 
-The goals of the sites functionality are:
+The main goal of the site is to offer a one-stop-shop for clients of KMC Projects. This main goal can be split into smaller goals, they include
+- Being able to be able to contact KMC Projects and enquire about working with them.
+- See what kind of services KMC Projects offer
+- Read about case studies
+- Purchase parts from the distribution products list
+- Login and see their purchase histroy 
 
-- 
--
--
--
+# Business Model
+
+The business model is both a business-to-customer and business-to-business as they work both with individual professionsals, companies and clients.
+
+For business to customer, the site provides a list of products to purchase, the customer can do this without being a client of KMC Projects and can purchase as a one off item.
+
+For business to business, the site provides business a contact form to get in touch with KMC project in order to work with them. Businesses can also purchase from the prodcuts page.
+
+Both businesses and customers can create a login in order to see their purchase histroy. 
 
 
 # Agile Development
-
 
 User stories were labelled using the MoSCoW method.
 
@@ -355,6 +373,10 @@ https://codebeautify.org/blog/how-to-create-json-file/
 
 - text editor:
 https://www.youtube.com/watch?v=mF5jzSXb1dc
+
+- choice fields
+https://docs.djangoproject.com/en/5.0/ref/models/fields/
+https://www.geeksforgeeks.org/how-to-align-checkboxes-and-their-labels-on-cross-browsers-using-css/
 
 # Acknowledgements
 
