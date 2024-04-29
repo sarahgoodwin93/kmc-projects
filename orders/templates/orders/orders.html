@@ -8,7 +8,7 @@
 
 {% block content %}
 <div class="content-wrapper">
-    <h1 class="site-headings">Online Orders</h1>
+    <h1 class="site-headings">Online Order</h1>
     <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
     <div class="col">
         <p class="text-muted">Order Summary ({{ item_count }})</p>
@@ -17,7 +17,7 @@
     <div class="row justify-content-center">
         <div class="col">
             <div class="order-list">
-                <div class="row">
+                <div class="row order-list">
                     {% for added_item in cart_items %}
                     <div class="added-item-box">
                         <div class="item-list">

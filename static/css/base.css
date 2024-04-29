@@ -603,11 +603,33 @@ footer {
         padding-top: 150px;
     }
 
+    .login-wrapper {
+        padding-top: 50px;
+    }
+
+    .login-form {
+        width: 100%;
+        font-size: medium;
+    }
+
     .homepage-box,
     .about-box,
-    .item-box,
-    .order-success-box {
+    .order-success-box,
+    .login-box,
+    .sign-up-box,
+    .casestudy-box,
+    .services-box,
+    .added-item-box {
         margin: 30px 10px;
+    }
+
+    .order-form-box {
+        width: 80%;
+    }
+
+    .order-list {
+        display: flex;
+        justify-content: center;
     }
 
     .about-img,
@@ -624,9 +646,18 @@ footer {
     .search-items {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .services-box {
         flex-wrap: wrap;
+    }
+
+    .service-text {
+        flex-wrap: wrap;
+    }
+
+    .services-inner-box {
+        width: 100%;
     }
 }
