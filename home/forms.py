@@ -1,5 +1,5 @@
 from django import forms
-from .models import Contact
+from .models import Contact, NewsletterSignUp
 
 
 class ContactForm(forms.ModelForm):
@@ -14,3 +14,17 @@ class ContactForm(forms.ModelForm):
             "email",
             "message",
         ]
+
+
+class NewsLetterForm(forms.ModelForm):
+    """
+    FORM: Newsletter.
+    """
+
+    class Meta:
+        model = NewsletterSignUp
+        fields = [
+            "name",
+            "email",
+        ]
+
