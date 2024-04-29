@@ -415,6 +415,9 @@ https://www.youtube.com/watch?v=mF5jzSXb1dc
 https://docs.djangoproject.com/en/5.0/ref/models/fields/
 https://www.geeksforgeeks.org/how-to-align-checkboxes-and-their-labels-on-cross-browsers-using-css/
 
+- Superusers
+https://stackoverflow.com/questions/15998140/how-to-limit-a-view-to-superuser-only 
+
 # Acknowledgements
 
 - Mentor, Lauren-Nicole, for all her help and support, the useful resources she provided and for being a friendly face throughout! Could not have done this project without her!!

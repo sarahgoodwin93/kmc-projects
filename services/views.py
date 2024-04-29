@@ -7,7 +7,9 @@ from django.db.models import Q
 from .models import Services, CaseStudy
 from .forms import AddServiceForm, EditServiceForm, AddCaseStudyForm, EditCaseStudyForm
 from django.views.generic.edit import CreateView, DeleteView, UpdateView, View
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import UserPassesTestMixin
+from django.contrib.auth.decorators import user_passes_test
+
 
 # Services List
 def ServiceList(request):
@@ -22,12 +24,21 @@ def ServiceList(request):
     return render(request, 'services/services.html', {'services': services, 'casestudies': casestudies})
 
 
+# Check SuperUser
+def is_superuser(user):
+    """
+    Check if the user is a superuser.
+    """
+    return user.is_authenticated and user.is_superuser
+
+
 # Add Services View
-class AddServiceView(LoginRequiredMixin, CreateView):
+class AddServiceView(UserPassesTestMixin, CreateView):
     """
     Show the add service page so that a superuser can add a new service
     to the site. Once a service has been added the page will redirect to
     the services page so the new service can be viewed.
+    Tests if the user is a superuse
     """
     model = Services
     template_name = "services/add_service.html"
@@ -44,10 +55,13 @@ class AddServiceView(LoginRequiredMixin, CreateView):
         return self.render_to_response(
             self.get_context_data(form=form, heading="Add Service")
         )
+    
+    def test_func(self):
+        return self.request.user.is_superuser
 
 
 # Edit Services View
-class EditServiceView(LoginRequiredMixin, UpdateView):
+class EditServiceView(UserPassesTestMixin, UpdateView):
     """
     Shows the edit services page so that a superuser can edit
     the servicess, once the user has edited the service sucssefully it will
@@ -62,9 +76,12 @@ class EditServiceView(LoginRequiredMixin, UpdateView):
         messages.success(self, request, "Service has been updated")
         return response
 
+    def test_func(self):
+        return self.request.user.is_superuser
+
 
 # Delete Service View
-class DeleteServiceView(LoginRequiredMixin, DeleteView):
+class DeleteServiceView(UserPassesTestMixin, DeleteView):
     """
     Shows the delete service page so that the superuser can delete a service.
     Once the service has been delete it will redirect back
@@ -79,9 +96,12 @@ class DeleteServiceView(LoginRequiredMixin, DeleteView):
         messages.success(self, request, "Service has been deleted")
         return super().delete(request)
 
+    def test_func(self):
+        return self.request.user.is_superuser
+
 
 # Add Case Study View
-class AddCaseStudyView(LoginRequiredMixin, CreateView):
+class AddCaseStudyView(UserPassesTestMixin, CreateView):
     """
     Show the add case study page so that a superuser can add a new case study
     to the site. Once a case study has been added the page will redirect to
@@ -103,9 +123,12 @@ class AddCaseStudyView(LoginRequiredMixin, CreateView):
             self.get_context_data(form=form, heading="Add Case Study")
         )
 
+    def test_func(self):
+        return self.request.user.is_superuser
+
 
 # Edit Case Study View
-class EditCaseStudyView(LoginRequiredMixin, UpdateView):
+class EditCaseStudyView(UserPassesTestMixin, UpdateView):
     """
     Shows the edit case study page so that a superuser can edit
     the case study, once the user has edited the case study sucssefully it will
@@ -119,10 +142,13 @@ class EditCaseStudyView(LoginRequiredMixin, UpdateView):
     def swim_edit(self, request):
         messages.success(self, request, "Case Study has been updated")
         return response
+    
+    def test_func(self):
+        return self.request.user.is_superuser
 
 
 # Delete Case Study View
-class DeleteCaseStudyView(LoginRequiredMixin, DeleteView):
+class DeleteCaseStudyView(UserPassesTestMixin, DeleteView):
     """
     Shows the delete case study page so that the superuser can delete a case study.
     Once the service has been deleted it will redirect back
@@ -136,3 +162,6 @@ class DeleteCaseStudyView(LoginRequiredMixin, DeleteView):
     def swim_delete(self, request):
         messages.success(self, request, "Case Study has been deleted")
         return super().delete(request)
+    
+    def test_func(self):
+        return self.request.user.is_superuser
