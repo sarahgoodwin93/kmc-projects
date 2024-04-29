@@ -7,6 +7,7 @@ class ContactAdmin(admin.ModelAdmin):
         'name',
         'user',
         'email',
+        'service_needed',
         'message',
         'created_on',
     )

@@ -315,7 +315,7 @@ h2 {
     display: block; 
   }
 
-  input, textarea {
+  input, textarea, select {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;

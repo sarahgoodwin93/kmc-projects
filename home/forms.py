@@ -12,6 +12,7 @@ class ContactForm(forms.ModelForm):
         fields = [
             "name",
             "email",
+            "service_needed",
             "message",
         ]
 

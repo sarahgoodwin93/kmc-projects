@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.urls import reverse_lazy, reverse
 from django.views import generic
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 from .models import Contact, NewsletterSignUp
 from .forms import ContactForm, NewsLetterForm
 from django.views.generic.edit import CreateView
