@@ -234,6 +234,10 @@ a {
     padding-bottom: 20px;
 }
 
+.django-ckeditor-widget {
+    width: 100%;
+}
+
 /* Items */
 
 .item-box {
@@ -478,7 +482,8 @@ input[type=checkbox], input[type=radio] {
 
 /* Orders */
 
-.order-form-box {
+.order-form-box,
+.user-details-form-box {
     position: relative;
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid #ccc;

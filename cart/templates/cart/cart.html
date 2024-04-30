@@ -39,12 +39,14 @@
                     {% else %}
                         <p class="lead mb-5">Your cart is empty.</p>
                     {% endif %}
+                {% if cart_items %}
                 <a href="{% url 'orders' %}" class="btn btn-black rounded-0 text-uppercase mt-5 checkout-btn-success">
                     <span class="icon">
                         <i class="fas fa-lock"></i>
                     </span>
                     <span class="text-uppercase">Checkout</span>                    
                 </a>
+                {% endif %}
                 <a href="{% url 'items' %}" class="btn btn-black rounded-0 text-uppercase mt-5">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
