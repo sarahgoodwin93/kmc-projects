@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'django_countries',
     'phone_field',
+    'django_extensions',
     'home',
     'services',
     'cart',
