@@ -10,7 +10,7 @@
     <div class="toast-body bg-white">
         {{ message }}        
     </div>
-    {% if total %}
+    {% if total and not on_profile_page %}
     <a href="{% url 'cart' %}" class="btn btn-black btn-block rounded-0 checkout-btn-success">
         <span class="text-uppercase">Go To Secure Checkout</span>
         <span class="icon">
