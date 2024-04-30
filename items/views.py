@@ -8,6 +8,7 @@ from .models import Item, Type
 def items(request):
     """ A view to return the items page and be able to search for items """
 
+    on_items_page = True
     items = Item.objects.all()
     query = None
     type = None
@@ -31,6 +32,7 @@ def items(request):
         'items': items,
         'search_term': query,
         'current_type': type,
+        'on_items_page': on_items_page,
     }
 
     return render(request, 'items/items.html', context)
