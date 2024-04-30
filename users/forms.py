@@ -22,6 +22,7 @@ class UserDetailsForm(forms.ModelForm):
         """
         super().__init__(*args, **kwargs)
         placeholders = {
+            'default_name': 'Full Name',
             'default_email': 'Email Address',
             'default_phone_number': 'Phone Number',
             'default_country': 'Country',
@@ -31,7 +32,7 @@ class UserDetailsForm(forms.ModelForm):
             'default_street_address2': 'Street Address 2',
         }
 
-        self.fields['default_email'].widget.attrs['autofocus'] = True
+        self.fields['default_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if self.fields[field].required:
                 placeholder = f'{placeholders[field]} *'
