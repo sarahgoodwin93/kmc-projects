@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.conf import settings
+from django.contrib.auth.models import AnonymousUser
+
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
@@ -94,24 +96,26 @@ def order_success(request, order_number):
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
-    profile = UserDetails.objects.get(user=request.user)
-    order.user_details = profile
-    order.save()
+    if request.user.is_authenticated:
+        # User is authenticated, proceed with accessing user details
+        profile = UserDetails.objects.get(user=request.user)
+        order.user_details = profile
+        order.save()
 
-    if save_info:
-        user_data = {
-                'default_name': order.full_name,
-                'default_email' : order.email,
-                'default_phone_number': order.phone_number,
-                'default_country': order.country,
-                'default_postcode': order.postcode,
-                'default_town_or_city': order.town_or_city,
-                'default_street_address1': order.street_address1,
-                'default_street_address2': order.street_address2,
-        }
-        user_details_form = UserDetailsForm(user_data, instance=profile)
-        if user_details_form.is_valid():
-            user_details_form.save()
+        if save_info:
+            user_data = {
+                    'default_name': order.full_name,
+                    'default_email' : order.email,
+                    'default_phone_number': order.phone_number,
+                    'default_country': order.country,
+                    'default_postcode': order.postcode,
+                    'default_town_or_city': order.town_or_city,
+                    'default_street_address1': order.street_address1,
+                    'default_street_address2': order.street_address2,
+            }
+            user_details_form = UserDetailsForm(user_data, instance=profile)
+            if user_details_form.is_valid():
+                user_details_form.save()
 
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \

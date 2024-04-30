@@ -1,0 +1,27 @@
+Hi {{ order.full_name }},
+
+Thank you for your order!
+
+Please see your order details below, email us at hello.kmcprojects@gmail.com for any changes needed to the order.
+
+{% for item in order.lineitems.all %}
+    {{ item.item.name }}
+    {{ item.quantity }} x ${{ item.item.price }} each
+{% endfor %}
+
+
+Delivering To:
+Full Name: {{ order.full_name }}
+Address 1: {{ order.street_address1 }}
+Address 2: {{ order.street_address1 }}
+Town or City: {{ order.town_or_city }}
+Postal Code: {{ order.postcode }}
+Country: {{ order.country }}
+
+Phone Number: {{ order.phone_number }}
+
+Billing Info:
+Order Total: ${{ order.total_price }}
+
+Kind regards,
+KMC Projects
