@@ -52,7 +52,7 @@
         <div class="add-to-cart-btn">
             <form class="form" action="{% url 'add_to_cart' item.id %}" method="POST">
                 {% csrf_token %}
-                <div class="form-row">
+                <div class="form-row quantity">
                     <div class="col-12">
                         <p class="mt-3"><strong>Quantity:</strong></p>
                         <div class="form-group w-50">
@@ -71,4 +71,5 @@
     </div>
 </div>
 {% endfor %}
+<a class="back-to-items-bottom" href="{% url 'items' %}">Back to all products</a>
 {% endblock %}

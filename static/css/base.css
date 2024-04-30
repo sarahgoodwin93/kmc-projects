@@ -14,7 +14,7 @@ h2 {
 }
 
 .site-headings {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 a {
@@ -289,7 +289,16 @@ a {
     color: #f99411;
 }
 
-.back-to-items:hover {
+.back-to-items-bottom {
+    padding: 5px;
+    color: #f99411;
+    display: flex;
+    justify-content: right;
+    margin-right: 20px;
+}
+
+.back-to-items:hover,
+.back-to-items-bottom:hover {
     color: black;
     text-decoration: none;
 }
@@ -664,5 +673,53 @@ footer {
 
     .services-inner-box {
         width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .item-box {
+        display: block;
+    }
+
+    .item-list {
+        flex-direction: column;
+    }
+    .item-details {
+        margin-left: 0;
+        flex-basis: 100%;
+        margin-bottom: -20px;
+    }
+
+    .item-details h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .item-details p {
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+
+    .add-to-cart-btn {
+        position: relative;
+        margin-top: 10px;
+    }
+    .add-to-cart-btn form {
+        width: 100%;
+    }
+    .add-to-cart-btn input[type="number"],
+    .add-to-cart-btn input[type="submit"] {
+        padding: 8px 12px;
+        font-size: 12px; 
+    }
+
+    .form-group.w-50 {
+        margin-bottom: -30px;
+    }
+
+    .item-img {
+        max-width: 100px;
+        margin-bottom: 10px;
     }
 }
