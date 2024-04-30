@@ -46,46 +46,45 @@
     </div>
 
 
-<div class="content-wrapper">
-    <h1 class="site-headings">Case Study</h1>
-    {% for casestudy in casestudies %}
-    {% if casestudy.image %}
-    <a href="">
-        <img class="card-img-top img-fluid casestudy-img" src="{{ casestudy.image.url }}" alt="{{ casestudy.title }}">
-    </a>
-    {% else %}
-    <a href="">
-        <img class="card-img-top img-fluid casestudy-img" src="{% static 'images/placeholder-img.png' %}" alt="placeholder image">
-    </a>
-    {% endif %}
-    <div class="casestudy-box">
-            <h1 class="casestudy-text">
-                    <div class="items-list">
-                        <div class="item-details">
-                            <h3 class="product-name">{{ casestudy.title }}</h3>
-                            <p class="lead mb-0 casestudy-text">{{ casestudy.body | safe }}</p>
-                        </div>
-                        <!-- Edit button -->
-                        <div class="card-buttons">
-                            {% if user.is_authenticated and user.is_superuser %}
-                            <a href="{% url 'edit_casestudy' pk=casestudy.pk %}" class="btn btn-edit">
+    <div class="content-wrapper">
+        <h1 class="site-headings">Case Study</h1>
+        {% for casestudy in casestudies %}
+        <div class="casestudy-box">
+            <div class="items-list">
+                {% if casestudy.image %}
+                <div class="casestudy-img">
+                    <img class="card-img-top img-fluid" src="{{ casestudy.image.url }}" alt="{{ casestudy.title }}">
+                </div>
+                {% else %}
+                <div class="casestudy-img">
+                    <img class="card-img-top img-fluid" src="{% static 'images/placeholder-img.png' %}" alt="placeholder image">
+                </div>
+                {% endif %}
+                <br>
+                <div class="item-details">
+                    <h3 class="product-name">{{ casestudy.title }}</h3>
+                    <p class="lead mb-0 casestudy-text">{{ casestudy.body | safe }}</p>
+                    <!-- Edit button -->
+                    <div class="card-buttons">
+                        {% if user.is_authenticated and user.is_superuser %}
+                        <a href="{% url 'edit_casestudy' pk=casestudy.pk %}" class="btn btn-edit">
                             Edit
-                            </a>
-                            {% endif %}
-                        </div>
-                        <!-- Delete button -->
-                        <div class="card-buttons">
-                            {% if user.is_authenticated and user.is_superuser %}
-                            <a href="{% url 'delete_casestudy' pk=casestudy.pk %}" class="btn btn-delete">
+                        </a>
+                        {% endif %}
+                    </div>
+                    <!-- Delete button -->
+                    <div class="card-buttons">
+                        {% if user.is_authenticated and user.is_superuser %}
+                        <a href="{% url 'delete_casestudy' pk=casestudy.pk %}" class="btn btn-delete">
                             Delete
-                            </a>
-                            {% endif %}
-                        </div>
+                        </a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
-    {% endfor %}
-</div>
+        </div>
+        {% endfor %}
+    </div>
 <!-- Add button for case study -->
 <div class="card-buttons add-casestudy-btn">
     {% if user.is_authenticated and user.is_superuser %}

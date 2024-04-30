@@ -197,10 +197,9 @@ a {
 
 .casestudy-box {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     margin: 30px 80px;
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid #ccc;
@@ -221,8 +220,8 @@ a {
 }
 
 .casestudy-img {
-    max-width: 80%;
-    max-height: 150px;
+    flex: 0 0 auto;
+    margin-right: 20px;
 }
 
 .card-buttons {
