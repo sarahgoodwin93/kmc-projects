@@ -473,6 +473,11 @@ https://www.geeksforgeeks.org/how-to-align-checkboxes-and-their-labels-on-cross-
 - Superusers
 https://stackoverflow.com/questions/15998140/how-to-limit-a-view-to-superuser-only 
 
+- Send emails
+https://docs.djangoproject.com/en/5.0/topics/email/
+https://simpleisbetterthancomplex.com/tutorial/2016/06/13/how-to-send-email.html
+https://github.com/AnaMelisaGo/portfolio-5-green-planet/tree/1f5410657463b6c116d5fb6d87a9875348d427f8/checkout/templates/checkout/confirmation_emails
+
 # Acknowledgements
 
 - Mentor, Lauren-Nicole, for all her help and support, the useful resources she provided and for being a friendly face throughout! Could not have done this project without her!!

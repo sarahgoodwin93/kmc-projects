@@ -3,6 +3,8 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.conf import settings
 from django.contrib.auth.models import AnonymousUser
+from django.template.loader import render_to_string
+from django.core.mail import send_mail
 
 
 from .forms import OrderForm
@@ -38,6 +40,10 @@ def OrderView(request):
                     messages.error(request, "One of the items in your cart wasn't found in our database. Please reach out for assistance!")
                     order.delete()
                     return redirect(reverse('cart'))
+
+            # Send confirmation email
+            send_confirmation_email(order)
+
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('order_success', args=[order.order_number]))
     else:
@@ -86,6 +92,14 @@ def OrderView(request):
     }
 
     return render(request, template, context)
+
+
+def send_confirmation_email(order):
+    subject = 'orders/confirmation_emails/confirmation_email_subject.txt'
+    email_template_name = 'orders/confirmation_emails/confirmation_email_body.txt'
+    context = {'order': order}
+    email_body = render_to_string(email_template_name, context)
+    send_mail(subject, email_body, settings.DEFAULT_FROM_EMAIL, [order.email])
 
 # Order Success
 
