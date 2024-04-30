@@ -445,6 +445,10 @@ input[type=checkbox], input[type=radio] {
     color: black;
 }
 
+.form-field-error {
+    color: red;
+}
+
 /* Sign Up */
 
 .sign-up-box {
