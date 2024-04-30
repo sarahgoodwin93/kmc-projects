@@ -5,54 +5,61 @@
 <div class="content-wrapper">
     <h1 class="site-headings">Your Items</h1>
     <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
-        <div class="row added-item-box">
-            <div class="col">
-                <div>
-                    Cart total: ${{ total|floatformat:2 }}
-                </div>
-                {% if cart_items %}
-                    {% for added_item in cart_items %}
-                        <div class="added-item-box">
-                            <div class="item-list">
-                                {% if added_item.added_item.image %}
-                                    <a href="">
-                                        <img class="added-item-img" src="{{ added_item.added_item.image.url }}" alt="{{ added_item.added_item.name }}">
-                                    </a>
-                                {% else %}
-                                    <a href="">
-                                        <img class="card-img-top img-fluid" src="" alt="{{ added_item.added_item.name }}">
-                                    </a>
-                                {% endif %}
-                                <div class="item-details">
-                                    <p class="added-item-text">{{ added_item.added_item.name }}</p>
-                                    <p class="added-item-text">${{ added_item.added_item.price }}</p>
-                                    <p class="added-item-text">Item Number: {{ added_item.added_item.item_number }}</p>
-                                </div>
-                                <div class="item-details added-item-costs">
-                                    <p class="added-item-text">Quantity: {{ added_item.quantity }}</p>
-                                    <p class="added-item-text">Total Cost: ${{ added_item.item_total_cost }}</p>
-                                    <a class="text-uppercase remove-btn" href="{% url 'remove_from_cart' added_item.added_item.id %}">Remove</a>
-                                </div>
-                            </div>
+    <div class="row added-item-box">
+        <div class="col">
+            <div>
+                Cart total: ${{ total|floatformat:2 }}
+            </div>
+            <div class="row justify-content-center">
+                <div class="col">
+                    <div class="order-list">
+                        <div class="row order-list">
+                            {% if cart_items %}
+                                {% for added_item in cart_items %}
+                                    <div class="added-item-box">
+                                        <div class="item-list">
+                                            {% if added_item.added_item.image %}
+                                                <a href="">
+                                                    <img class="added-item-img" src="{{ added_item.added_item.image.url }}" alt="{{ added_item.added_item.name }}">
+                                                </a>
+                                            {% else %}
+                                                <a href="">
+                                                    <img class="card-img-top img-fluid" src="" alt="{{ added_item.added_item.name }}">
+                                                </a>
+                                            {% endif %}
+                                            <div class="item-details">
+                                                <p class="added-item-text">{{ added_item.added_item.name }}</p>
+                                                <p class="added-item-text">${{ added_item.added_item.price }}</p>
+                                                <p class="added-item-text">Item Number: {{ added_item.added_item.item_number }}</p>
+                                            </div>
+                                            <div class="item-details added-item-costs">
+                                                <p class="added-item-text">Quantity: {{ added_item.quantity }}</p>
+                                                <p class="added-item-text">Total Cost: ${{ added_item.item_total_cost }}</p>
+                                                <a class="text-uppercase remove-btn" href="{% url 'remove_from_cart' added_item.added_item.id %}">Remove</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            {% else %}
+                                <p class="lead mb-5">Your cart is empty.</p>
+                            {% endif %}
+                            {% if cart_items %}
+                                <a href="{% url 'orders' %}" class="btn btn-black rounded-0 text-uppercase mt-5 checkout-btn-success">
+                                    <span class="icon">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                    <span class="text-uppercase">Checkout</span>                    
+                                </a>
+                            {% endif %}
+                            <a href="{% url 'items' %}" class="btn btn-black rounded-0 text-uppercase mt-5">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Keep Shopping</span>
+                            </a>
                         </div>
-                    {% endfor %}
-                    {% else %}
-                        <p class="lead mb-5">Your cart is empty.</p>
-                    {% endif %}
-                {% if cart_items %}
-                <a href="{% url 'orders' %}" class="btn btn-black rounded-0 text-uppercase mt-5 checkout-btn-success">
-                    <span class="icon">
-                        <i class="fas fa-lock"></i>
-                    </span>
-                    <span class="text-uppercase">Checkout</span>                    
-                </a>
-                {% endif %}
-                <a href="{% url 'items' %}" class="btn btn-black rounded-0 text-uppercase mt-5">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span class="text-uppercase">Keep Shopping</span>
-                </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
