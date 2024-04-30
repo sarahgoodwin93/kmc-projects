@@ -1,26 +1,21 @@
 {% extends "base.html" %}
 {% load i18n %}
-{% block head_title %}{% trans "Sign Out" %}
-{% endblock head_title %}
+{% load account socialaccount %}
+{% block head_title %}{% trans "Sign Out" %}{% endblock head_title %}
 {% block content %}
+
 <h1>{% trans "Sign Out" %}</h1>
 
-<p>{% trans 'Are you sure you want to sign out?' %}</p>
-<div class="login-wrapper">
-  <h1 class="login-heading">See you soon!</h1>
-  <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
-</div>
-<div class="login-box">
-  <div class="login-form">
-    <form method="post" action="{% url 'account_logout' %}">
+<div class="content-wrapper">
+  <h1 class="home-heading">Thank you</h1>
+  <div class="homepage-box-form">
+      <h2 class="form-heading">Logout</h2>
+
+    <form class="logout" method="POST" action="{% url 'account_logout' %}">
       {% csrf_token %}
-      {% if redirect_field_value %}
-      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-      {% endif %}
-      <button type="submit">{% trans 'Sign Out' %}</button>
-    </form>
+      <p>{% trans 'Are you sure you want to sign out?' %}</p>
+      <button class="primaryActionlogout" type="submit">{% trans 'Sign Out' %}</button>
   </div>
 </div>
-
 
 {% endblock content %}

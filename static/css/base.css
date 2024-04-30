@@ -428,6 +428,23 @@ input[type=checkbox], input[type=radio] {
     border: none;
 }
 
+.primaryActionlogout,
+.primaryActiondelete {
+    padding: 5px 10px;
+    background-color: #f99411;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: none;
+}
+
+.primaryAction:hover,
+.primaryActionlogout:hover,
+.primaryActiondelete:hover {
+    color: black;
+}
+
 /* Sign Up */
 
 .sign-up-box {
