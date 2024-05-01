@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'items',
     'orders',
     'users',
+    'newsletter',
 
     'storages',
 ]
