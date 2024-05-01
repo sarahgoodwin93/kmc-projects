@@ -97,6 +97,24 @@ a {
     color: black;
 }
 
+/* Contact List */
+
+.contact-box {
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 30px 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+}
+
+.contact-box p {
+    text-align: left;
+}
+
 /* Homepage Text */
 
 .homepage-box {
@@ -671,6 +689,7 @@ footer {
     }
 
     .homepage-box,
+    .contact-box,
     .about-box,
     .order-success-box,
     .login-box,

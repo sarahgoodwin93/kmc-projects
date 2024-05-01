@@ -5,25 +5,21 @@
 <div class="content-wrapper">
     <!-- Heading -->
     <h1 class="site-headings">Contacts</h1>
-
+    <p>Find who wants to get in touch</p>
     <!-- Contacts Section -->
-    <div class="services-box">
-        <div class="service-text">
-            {% for contact in contacts %}
-                <div class="services-inner-box">
-                    <div class="services-list">
-                        <div class="services-details">
-                            <!-- Contact Name -->
-                            <h3 class="product-name">{{ contact.name }}</h3>
-                            <!-- Contact Email -->
-                            <p class="lead mb-0">${{ contact.email }}</p>
-                            <!-- Contact Message -->
-                            <p class="lead mb-0">{{ contact.message }}</p>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
+    {% for contact in contacts %}
+    <div class="contact-box">
+        <div class="col-12 col-lg-10 col-xl-8">
+            <!-- Contact Name -->
+            <p class="lead mb-0">Name: {{ contact.name }}</p>
+            <!-- Contact Email -->
+            <p class="lead mb-0">Email: {{ contact.email }}</p>
+            <!-- Contact Service -->
+            <p class="lead mb-0">Service: {{ contact.service_needed }}</p>
+            <!-- Contact Message -->
+            <p class="lead mb-0">Message:{{ contact.message }}</p>
         </div>
     </div>
+    {% endfor %}
 </div>
 {% endblock %}
