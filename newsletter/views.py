@@ -23,7 +23,7 @@ class NewsletterView(View):
         return render(request, 'newsletter/newsletter-signup.html', {'form': form})
 
 def send_confirmation_email(email):
-    subject_template_name = 'Thanks for signing up'
+    subject_template_name = 'newsletter/newsletter-subject.html'
     email_template_name = 'newsletter/confirmation_email_body.txt'
     context = {'email': email}
     
