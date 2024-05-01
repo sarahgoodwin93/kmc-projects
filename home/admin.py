@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Contact
 
-# Register your models here.
+# Admin adjustments for Contact Form.
 class ContactAdmin(admin.ModelAdmin):
     list_display = (
         'name',

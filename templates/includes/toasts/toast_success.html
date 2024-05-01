@@ -1,17 +1,25 @@
 <div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
     <div class="arrow-up arrow-success"></div>
+    <!-- Green background indicating the sucess -->
     <div class="w-100 toast-capper bg-success"></div>
+    <!-- Header section of the toast -->
     <div class="toast-header bg-white text-dark">
+        <!-- Title indicating the success -->
         <strong class="mr-auto">Success!</strong>
+        <!-- Button to close the toast -->
         <button type="button" class="ml-2 mb-1 close text-dark" data-dismiss="toast" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
+    <!-- Body section of the toast containing the message -->
     <div class="toast-body bg-white">
+        <!-- Sucess message -->
         {{ message }}        
     </div>
+    <!-- If item add to cart show the below, if not do not show -->
     {% if total and not on_profile_page and on_items_page %}
         {% if cart_items %}
+            <!-- Button to go to secure checkout page -->
             <a href="{% url 'cart' %}" class="btn btn-black btn-block rounded-0 checkout-btn-success">
                 <span class="text-uppercase">Go To Secure Checkout</span>
                 <span class="icon">

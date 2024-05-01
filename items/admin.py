@@ -1,7 +1,7 @@
 from django.contrib import admin
 from . models import Item, Type
 
-# Register your models here.
+# Admin adjustments for Items.
 class ItemAdmin(admin.ModelAdmin):
     list_display = (
         'sku',

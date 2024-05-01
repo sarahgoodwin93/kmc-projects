@@ -3,10 +3,13 @@ from django.contrib import messages
 from django.db.models import Q
 from .models import Item, Type
 
-# Create your views here.
 
+# Items list view.
 def items(request):
-    """ A view to return the items page and be able to search for items """
+    """ 
+    A view to return the items page and be able to search for items 
+    by their name or their item number
+    """
 
     on_items_page = True
     items = Item.objects.all()

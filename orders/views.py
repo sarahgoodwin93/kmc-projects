@@ -16,13 +16,27 @@ from cart.context import cart_contents
 
 import stripe
 
+"""
+The base of this code was taken and modified from the walkthrough 
+project Boutiuqe Ado > The Checkout App.
+Additional code comments have been added to show understanding.
+Parts have been removed that were not relevant to this site and some
+naming has been changed to better suit KMC Projects.  
+"""
+
 # Create your views here.
 # Order and stripe view
 def OrderView(request):
+    """
+    View for processing orders and handling payment with Stripe.
+    """
+
+    # Retrieve Stripe API keys from settings
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
     if request.method == 'POST':
+        # Process order form submission
         form = OrderForm(request.POST)
         if form.is_valid():
             order = form.save()
@@ -93,20 +107,22 @@ def OrderView(request):
 
     return render(request, template, context)
 
-
 def send_confirmation_email(order):
+    """
+    Sends a confirmation email to the user after placing an order.
+    """
+
     subject = 'orders/confirmation_emails/confirmation_email_subject.txt'
     email_template_name = 'orders/confirmation_emails/confirmation_email_body.txt'
     context = {'order': order}
     email_body = render_to_string(email_template_name, context)
     send_mail(subject, email_body, settings.DEFAULT_FROM_EMAIL, [order.email])
 
-# Order Success
-
 def order_success(request, order_number):
     """
-    Handle successful orders
+    View for handling successful orders.
     """
+
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
@@ -145,11 +161,10 @@ def order_success(request, order_number):
 
     return render(request, template, context)
 
-
-# Remove from Order View
-
 def remove_from_order(request, item_id):
-    """ Remove item from order """
+    """
+    View for removing an item from the order.
+    """
 
     item = get_object_or_404(Item, pk=item_id)
     cart = request.session.get('cart', {})
@@ -163,4 +178,5 @@ def remove_from_order(request, item_id):
 
     success_url = reverse("orders")
     return HttpResponseRedirect(success_url)
+
     

@@ -62,7 +62,196 @@ a {
     color: #f99411;
 }
 
-/* Home Page */
+/* Site boxes */
+
+.homepage-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+}
+
+.contact-box {
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 30px 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+}
+
+.about-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.services-inner-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 50%;
+}
+
+.services-box {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 300px;
+    box-sizing: border-box;
+}
+
+.casestudy-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin: 30px 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.item-box {
+    position: relative;
+    width: 80vw;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.homepage-box-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+.login-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 500px;
+}
+
+.added-item-box {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    width: 60vw;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cart-emtpy-box {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    width: 60vw;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-box {
+    text-align: left;
+    margin: 30px 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-success-box {
+    text-align: left;
+    margin: 30px 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-form-box,
+.user-details-form-box {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    width: 60vw;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Homepage */
 
 .content-wrapper {
     padding-top: 100px;
@@ -99,38 +288,11 @@ a {
 
 /* Contact List */
 
-.contact-box {
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 30px 80px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #ccc;
-    padding: 5px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: auto;
-}
-
 .contact-box p {
     text-align: left;
 }
 
 /* Homepage Text */
-
-.homepage-box {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 30px 80px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: auto;
-}
 
 .homepage-text {
     font-size: 15px;
@@ -153,19 +315,6 @@ a {
     height: auto;
 }
 
-.about-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 30px 80px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 .about-img,
 .about-text {
     flex: 0 0 calc(50% - 10px);
@@ -183,32 +332,6 @@ a {
 
 /* Servcies */
 
-.services-inner-box {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    width: 50%;
-}
-
-.services-box {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    justify-content: center;
-    text-align: center;
-    margin: 30px 80px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    min-height: 300px;
-    box-sizing: border-box;
-}
-
 .services-box.wrap-after-three {
     flex-wrap: wrap;
 }
@@ -216,19 +339,6 @@ a {
 .service-text {
     display: flex;
     font-size: .9em;
-}
-
-.casestudy-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    margin: 30px 80px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .casestudy-text {
@@ -261,23 +371,6 @@ a {
 }
 
 /* Items */
-
-.item-box {
-    position: relative;
-    width: 80vw;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
 
 .item-list {
     display: flex;
@@ -330,73 +423,47 @@ a {
 .form-heading {
     text-align: center;
     margin-bottom: 20px;
-  }
-
-  .homepage-box-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 30px 80px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-
-  form {
-    width: 100%;
-  }
-
-  label {
-    margin-bottom: 5px;
-    display: block; 
-  }
-
-  input, textarea, select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-
-  textarea {
-    resize: vertical;
-  }
-
-  input[type="submit"] {
-    width: 100%;
-    background-color: #f99411;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-
-  input[type="submit"]:hover {
-    background-color: black;
-    color: #f99411;
-  }
-
-/* Login */
-.login-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 30px 80px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 500px;
 }
 
+form {
+width: 100%;
+}
+
+label {
+margin-bottom: 5px;
+display: block; 
+}
+
+input, textarea, select {
+width: 100%;
+padding: 8px;
+margin-bottom: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+
+textarea {
+resize: vertical;
+}
+
+input[type="submit"] {
+width: 100%;
+background-color: #f99411;
+color: white;
+border: none;
+cursor: pointer;
+border-radius: 4px;
+padding: 10px;
+box-sizing: border-box;
+}
+
+input[type="submit"]:hover {
+background-color: black;
+color: #f99411;
+}
+
+/* Login */
 .login-heading {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -474,50 +541,10 @@ input[type=checkbox], input[type=radio] {
 
 /* Sign Up */
 
-.sign-up-box {
-    text-align: left;
-    margin: 30px 80px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 /* Cart */
 
 .added-item-img {
     max-width: 80px;
-}
-
-.added-item-box {
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    width: 60vw;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.cart-emtpy-box {
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    width: 60vw;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    justify-content: center;
-    align-items: center;
 }
 
 .added-item-costs {
@@ -550,21 +577,6 @@ input[type=checkbox], input[type=radio] {
   }
 
 /* Orders */
-
-.order-form-box,
-.user-details-form-box {
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    width: 60vw;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
 
 .order-list {
     align-items: center;
@@ -631,16 +643,6 @@ footer {
 }
 
 /* Order Success */
-
-.order-success-box {
-    text-align: left;
-    margin: 30px 80px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
 .order-confirmation-wrapper {
     width: 100%;

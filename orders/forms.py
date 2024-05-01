@@ -10,7 +10,13 @@ naming has been changed to better suit KMC Projects.
 """
 
 class OrderForm(forms.ModelForm):
+    """
+    Form for handling order information.
+    """
     class Meta:
+        """
+        Defines metadata for the form.
+        """
         model = Order
         fields = ('full_name', 'email', 'phone_number',
                   'street_address1', 'street_address2',
@@ -24,6 +30,7 @@ class OrderForm(forms.ModelForm):
         field is required. 
         """
         super().__init__(*args, **kwargs)
+        # Define placeholders for form fields
         placeholders = {
             'full_name': 'Full Name',
             'email': 'Email Address',
@@ -35,7 +42,10 @@ class OrderForm(forms.ModelForm):
             'street_address2': 'Street Address 2',
         }
 
+        # Set autofocus on the full name field
         self.fields['full_name'].widget.attrs['autofocus'] = True
+
+        # Iterate through fields to set placeholders, add star if required
         for field in self.fields:
             if self.fields[field].required:
                 placeholder = f'{placeholders[field]} *'

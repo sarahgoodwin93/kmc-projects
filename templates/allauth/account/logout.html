@@ -1,20 +1,28 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load account socialaccount %}
-{% block head_title %}{% trans "Sign Out" %}{% endblock head_title %}
+
+{% block head_title %}
+  {% trans "Sign Out" %}
+{% endblock head_title %}
+
 {% block content %}
 
+<!-- Sign Out heading -->
 <h1>{% trans "Sign Out" %}</h1>
 
 <div class="content-wrapper">
+  <!-- Thank you message -->
   <h1 class="home-heading">Thank you</h1>
   <div class="homepage-box-form">
-      <h2 class="form-heading">Logout</h2>
-
+      <!-- Logout form -->
+      <h2 class="form-heading">{% trans "Logout" %}</h2>
     <form class="logout" method="POST" action="{% url 'account_logout' %}">
       {% csrf_token %}
       <p>{% trans 'Are you sure you want to sign out?' %}</p>
+      <!-- Sign Out button -->
       <button class="primaryActionlogout" type="submit">{% trans 'Sign Out' %}</button>
+    </form>
   </div>
 </div>
 

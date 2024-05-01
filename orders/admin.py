@@ -1,12 +1,12 @@
 from django.contrib import admin
 from .models import Order, OrderLineItem
 
-# Register your models here.
+# Admin adjustments for OrderLineItemAdminInline
 class OrderLineItemAdminInline(admin.TabularInline):
     model = OrderLineItem
     readonly_fields = ('lineitem_total',)
 
-
+# Admin adjustments for Order Model.
 class OrderAdmin(admin.ModelAdmin):
     inlines = (OrderLineItemAdminInline,)
 

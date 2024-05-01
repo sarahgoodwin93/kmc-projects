@@ -3,27 +3,33 @@
 {% load crispy_forms_tags %}
 
 {% block extra_css %}
+    <!-- Include additional CSS -->
     <link rel="stylesheet" href="{% static 'orders/css/orders.css' %}">
 {% endblock %}
 
 {% block content %}
 <div class="content-wrapper">
+    <!-- Heading and Contact Button -->
     <h1 class="site-headings">Thanks for your order</h1>
     <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
     <hr>
     <div class="col">
+        <!-- Information about the order -->
         <p class="text-muted">Your order information is below, you will receive a confirmation email shortly to {{ order.email }}</p>
     </div>
     <div class="order-success-box">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-10 col-xl-8">
+                <!-- Order Confirmation Details -->
                 <div class="order-confirmation-wrapper p-2">
+                    <!-- Order Info -->
                     <div class="row">
                         <div class="col">
                             <span class="font-weight-bold">Order Info:</span>
                         </div>
                     </div>
 
+                    <!-- Order Number -->
                     <div class="row border-bottom">
                         <div class="col-12 col-md-4">
                             <small class="mb-0 text-muted">Order Number</small>
@@ -33,6 +39,7 @@
                         </div>
                     </div>
 
+                    <!-- Order Date -->
                     <div class="row border-bottom">
                         <div class="col-12 col-md-4">
                             <small class="mb-0 text-muted">Order Date</small>
@@ -42,12 +49,14 @@
                         </div>
                     </div>
 
+                    <!-- Order Details -->
                     <div class="row">
                         <div class="col">
                             <span class="font-weight-bold">Order Details:</span>
                         </div>
                     </div>
 
+                    <!-- List of ordered items -->
                     {% for item in order.lineitems.all %}
                     <div class="row border-bottom">
                         <div class="col-12 col-md-4">
@@ -61,12 +70,14 @@
                     </div>
                     {% endfor %}
 
+                    <!-- Delivery Information -->
                     <div class="row">
                         <div class="col">
                             <span class="font-weight-bold">Delivering To:</span>
                         </div>
                     </div>
 
+                    <!-- Full Name -->
                     <div class="row border-bottom">
                         <div class="col-12 col-md-4">
                             <small class="mb-0">Full Name</small>
@@ -76,6 +87,7 @@
                         </div>
                     </div>
 
+                    <!-- Address 1 -->
                     <div class="row border-bottom">
                         <div class="col-12 col-md-4">
                             <small class="mb-0">Address 1</small>
@@ -85,6 +97,7 @@
                         </div>
                     </div>
 
+                    <!-- Address 2 (if available) -->
                     {% if order.street_address2 %}
                     <div class="row border-bottom">
                         <div class="col-12 col-md-4">
@@ -96,6 +109,7 @@
                     </div>
                     {% endif %}
 
+                    <!-- Town or City -->
                     <div class="row border-bottom">
                         <div class="col-12 col-md-4">
                             <small class="mb-0">Town or City</small>
@@ -105,6 +119,7 @@
                         </div>
                     </div>
 
+                    <!-- Postal Code (if available) -->
                     {% if order.postcode %}
                     <div class="row border-bottom">
                         <div class="col-12 col-md-4">
@@ -116,6 +131,7 @@
                     </div>
                     {% endif %}
 
+                    <!-- Country -->
                     <div class="row border-bottom">
                         <div class="col-12 col-md-4">
                             <small class="mb-0">Country</small>
@@ -125,6 +141,7 @@
                         </div>
                     </div>
 
+                    <!-- Phone Number -->
                     <div class="row border-bottom">
                         <div class="col-12 col-md-4">
                             <small class="mb-0">Phone Number</small>
@@ -134,12 +151,14 @@
                         </div>
                     </div>
 
+                    <!-- Billing Information -->
                     <div class="row">
                         <div class="col">
                             <span class="font-weight-bold">Billing Info:</span>
                         </div>
                     </div>
 
+                    <!-- Order Total -->
                     <div class="row border-bottom">
                         <div class="col-12 col-md-4">
                             <small class="mb-0">Order Total</small>
@@ -149,6 +168,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Back to Home Button -->
                 <a href="{% url 'home' %}" class="btn btn-black rounded-0 text-uppercase mt-5">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>

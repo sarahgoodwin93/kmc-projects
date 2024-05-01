@@ -6,6 +6,10 @@
     https://stripe.com/docs/stripe-js
 */
 
+/* 
+    This code was taken from the walkthrough project for
+    Boutique Ado for the Stripe set up and styling
+*/
 
 .StripeElement{
   box-sizing: border-box;

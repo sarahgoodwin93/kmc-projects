@@ -1,11 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# Create your models here.
 # Contact Model for business.
 class Contact(models.Model):
     """
-    Contact form to use for site users to contact the admin
+    Contact form to use for site users to contact KMC Projects
+    A dropdown list of the services offered to help direct their
+    enquiry. 
     """
     CONSULTING = 'Consulting'
     PROJECT_MANAGEMENT = 'Project Management'

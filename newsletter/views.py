@@ -8,6 +8,7 @@ from django.conf import settings
 
 from .forms import NewsLetterForm
 
+# Newletter view with email confrimation
 class NewsletterView(View):
     """ Newsletter form sign up """
     def get(self, request):

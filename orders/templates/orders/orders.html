@@ -3,24 +3,29 @@
 {% load crispy_forms_tags %}
 
 {% block extra_css %}
+    <!-- Include additional CSS -->
     <link rel="stylesheet" href="{% static 'orders/css/orders.css' %}">
 {% endblock %}
 
 {% block content %}
 <div class="content-wrapper">
+    <!-- Heading and Contact Button -->
     <h1 class="site-headings">Online Order</h1>
     <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
     <div class="col">
+        <!-- Order Summary -->
         <p class="text-muted">Order Summary ({{ item_count }})</p>
         <p class="my-0">Order Total: ${{ total | floatformat:2 }}</p>
     </div>
     <div class="row justify-content-center">
         <div class="col">
             <div class="order-list">
+                <!-- Display added items -->
                 <div class="row order-list">
                     {% for added_item in cart_items %}
                     <div class="added-item-box">
                         <div class="item-list">
+                            <!-- Item Image -->
                             {% if added_item.added_item.image %}
                             <a href="">
                                 <img class="added-item-img" src="{{ added_item.added_item.image.url }}" alt="{{ added_item.added_item.name }}">
@@ -31,79 +36,88 @@
                             </a>
                             {% endif %}
                             <div class="item-details">
+                                <!-- Item Details -->
                                 <p class="added-item-text">{{ added_item.added_item.name }}</p>
                                 <p class="added-item-text">${{ added_item.added_item.price }}</p>
                                 <p class="added-item-text">Item Number: {{ added_item.added_item.item_number }}</p>
                             </div>
                             <div class="item-details added-item-costs">
+                                <!-- Item Quantity and Total Cost -->
                                 <p class="added-item-text">Quantity: {{ added_item.quantity }}</p>
                                 <p class="added-item-text">Total Cost: ${{ added_item.item_total_cost }}</p>
+                                <!-- Remove Button -->
                                 <a class="text-uppercase remove-btn" href="{% url 'remove_from_order' added_item.added_item.id %}">Remove</a>
                             </div>
                         </div>
                     </div>
                     {% endfor %}
+                    <!-- Order Form -->
                     <div class="order-form-box">
-                            <form action="{% url 'orders' %}" method="POST" id="payment-form" class="order-form">
-                                {% csrf_token %}
-                                <p class="my-0">Order Total: ${{ total | floatformat:2 }}</p>
-                                <p class="text-muted">Please fill out the form below to complete your order</p>
-                                <fieldset class="rounded px-3 mb-5">
-                                    <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
-                                    {{ order_form.full_name }}
-                                    {{ order_form.email }}
-                                </fieldset>
-                                <fieldset class="rounded px-3 mb-5">
-                                    <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
-                                    {{ order_form.phone_number }}
-                                    {{ order_form.country }}
-                                    {{ order_form.postcode }}
-                                    {{ order_form.town_or_city }}
-                                    {{ order_form.street_address1 }}
-                                    {{ order_form.street_address2 }}
-                                    <div class="form-check form-check-inline float-right mr-0">
-                                        {% if user.is_authenticated %}
-                                        <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
-                                        <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
-                                        {% else %}
-                                        <label class="form-check-label" for="id-save-info">
-                                            <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
-                                            <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
-                                        </label>
-                                        {% endif %}
-                                    </div>
-                                </fieldset>
-                                <fieldset class="px-3">
-                                    <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
-                                    <!-- A Stripe card element will go here -->
-                                    <div class="mb-3" id="card-element"></div>
-
-                                    <!-- Used to display form errors -->
-                                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
-                                </fieldset>
-
-                                <div class="submit-button text-right mt-5 mb-2">                    
-                                    <a href="{% url 'cart' %}" class="btn btn-outline-black rounded-0">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-left"></i>
-                                        </span>
-                                        <span class="font-weight-bold">Adjust Cart</span>
-                                    </a>
-                                    <button id="submit-button" class="btn remove-btn">
-                                        <span class="font-weight-bold">Complete Order</span>
-                                        <span class="icon">
-                                            <i class="fas fa-lock"></i>
-                                        </span>
-                                    </button>
-                                    <p class="small text-danger my-0">
-                                        <span class="icon">
-                                            <i class="fas fa-exclamation-circle"></i>
-                                        </span>
-                                        <span>Your card will be charged <strong>${{ total | floatformat:2 }}</strong></span>
-                                    </p>
+                        <form action="{% url 'orders' %}" method="POST" id="payment-form" class="order-form">
+                            {% csrf_token %}
+                            <!-- Order Total -->
+                            <p class="my-0">Order Total: ${{ total | floatformat:2 }}</p>
+                            <!-- Order Details -->
+                            <p class="text-muted">Please fill out the form below to complete your order</p>
+                            <!-- Customer Information -->
+                            <fieldset class="rounded px-3 mb-5">
+                                <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
+                                {{ order_form.full_name }}
+                                {{ order_form.email }}
+                            </fieldset>
+                            <!-- Delivery Information -->
+                            <fieldset class="rounded px-3 mb-5">
+                                <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
+                                {{ order_form.phone_number }}
+                                {{ order_form.country }}
+                                {{ order_form.postcode }}
+                                {{ order_form.town_or_city }}
+                                {{ order_form.street_address1 }}
+                                {{ order_form.street_address2 }}
+                                <!-- Save Information Checkbox -->
+                                <div class="form-check form-check-inline float-right mr-0">
+                                    {% if user.is_authenticated %}
+                                    <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
+                                    <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+                                    {% else %}
+                                    <label class="form-check-label" for="id-save-info">
+                                        <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
+                                        <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                                    </label>
+                                    {% endif %}
                                 </div>
-                            </form>
-                        </div>
+                            </fieldset>
+                            <!-- Payment Information -->
+                            <fieldset class="px-3">
+                                <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                                <!-- Stripe card element will go here -->
+                                <div class="mb-3" id="card-element"></div>
+                                <!-- Display form errors -->
+                                <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                            </fieldset>
+                            <!-- Buttons -->
+                            <div class="submit-button text-right mt-5 mb-2">                    
+                                <a href="{% url 'cart' %}" class="btn btn-outline-black rounded-0">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="font-weight-bold">Adjust Cart</span>
+                                </a>
+                                <button id="submit-button" class="btn remove-btn">
+                                    <span class="font-weight-bold">Complete Order</span>
+                                    <span class="icon">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                </button>
+                                <!-- Display order total -->
+                                <p class="small text-danger my-0">
+                                    <span class="icon">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                    </span>
+                                    <span>Your card will be charged <strong>${{ total | floatformat:2 }}</strong></span>
+                                </p>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -113,8 +127,10 @@
 {% endblock %}
 
 {% block postloadjs %}
+    <!-- Include Stripe public key and client secret -->
     {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
+    <!-- Include Stripe elements script -->
     <script src="{% static 'orders/js/stripe_elements.js' %}"></script>
 {% endblock %}

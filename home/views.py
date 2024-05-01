@@ -8,14 +8,14 @@ from .forms import ContactForm
 from django.views.generic.edit import CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-# Create your views here.
-
+# Homepage View
 def index(request):
     """ A view to return the index page """
 
     return render(request, 'home/index.html')
 
 
+# Contact Form View
 class ContactFormView(CreateView):
     """ A view to return the contact page """
     model = Contact
@@ -35,6 +35,7 @@ class ContactFormView(CreateView):
         )
 
 
+# Contact List View
 def ContactListView(request):
     """ A view to show the admin a list of who has contacted them """
     contacts = Contact.objects.all()

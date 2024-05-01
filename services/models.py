@@ -1,7 +1,7 @@
 from django.db import models
 from ckeditor.fields import RichTextField
 
-# Create your models here.
+# Services Model
 class Services(models.Model):
     """
     The Services Model stores information about the services, including
@@ -17,6 +17,7 @@ class Services(models.Model):
         return self.name
 
 
+# Case Study Model
 class CaseStudy(models.Model):
     """
     The CaseStudy Model stores information about the case studies, including
