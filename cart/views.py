@@ -7,7 +7,10 @@ from items.models import Item
 
 # Create your views here.
 def cart_view(request):
-    """ A view to return the cart page """
+    """ 
+    Return cart page with items added to the cart
+    Or show No items in cart if none have been added
+    """
     return render(request, 'cart/cart.html')
 
 
@@ -30,7 +33,9 @@ def add_to_cart(request, item_id):
 
 
 def update_cart(request, item_id):
-    """Adjust the quantity of the specified item to the specified amount"""
+    """
+    Adjust the quantity item and give a success message
+    """
 
     item = get_object_or_404(Item, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -49,7 +54,9 @@ def update_cart(request, item_id):
 
 
 def remove_from_cart(request, item_id):
-    """ Remove item from cart """
+    """ 
+    Remove item from cart and give success message
+    """
 
     item = get_object_or_404(Item, pk=item_id)
     cart = request.session.get('cart', {})

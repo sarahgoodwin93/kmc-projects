@@ -3,16 +3,21 @@
 
 {% block content %}
 <div class="content-wrapper">
+    <!-- Heading -->
     <h1 class="site-headings">Contacts</h1>
 
+    <!-- Contacts Section -->
     <div class="services-box">
         <div class="service-text">
             {% for contact in contacts %}
                 <div class="services-inner-box">
                     <div class="services-list">
                         <div class="services-details">
+                            <!-- Contact Name -->
                             <h3 class="product-name">{{ contact.name }}</h3>
+                            <!-- Contact Email -->
                             <p class="lead mb-0">${{ contact.email }}</p>
+                            <!-- Contact Message -->
                             <p class="lead mb-0">{{ contact.message }}</p>
                         </div>
                     </div>

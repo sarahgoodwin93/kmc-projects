@@ -95,7 +95,7 @@
                              <!-- Logout Nav Link only to show if logged in -->
                              {% if user.is_authenticated %}
                              <li class="nav-item">
-                                <a class="nav-link" href="{% url 'users' %}">Your Account</a>
+                                <a class="nav-link {% if request.path == '/users/' %}active{% endif %}" href="{% url 'users' %}">Your Account</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
@@ -104,6 +104,11 @@
                              <!-- Login Nav Link -->
                             <li class="nav-item">
                                 <a class="nav-link {% if request.path == '/account/login/' %}active{% endif %}" href="{% url 'account_login' %}">Login</a>
+                            </li>
+                            {% endif %}
+                            {% if user.is_authenticated and user.is_superuser %}
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == '/contact_list/' %}active{% endif %}" href="{% url 'contact_list' %}">Contacts</a>
                             </li>
                             {% endif %}
                             <li class="nav-item">

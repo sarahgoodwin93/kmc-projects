@@ -38,4 +38,5 @@ class ContactFormView(CreateView):
 def ContactListView(request):
     """ A view to show the admin a list of who has contacted them """
     contact = Contact.objects.all()
+    template_name = "home/contact_list.html"
     return render(request, 'home/contact_list', {'contact': contact})

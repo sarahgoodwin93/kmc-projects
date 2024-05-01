@@ -1,0 +1,7 @@
+Hi {{ order.full_name }},
+
+Thanks for signing up to our newsletter.
+
+We'll be in touch soon with more updates!
+
+The KMC Project Team

@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="content-wrapper">
-    <!-- Page Heading -->
+    <!-- Heading -->
     <h1 class="site-headings">Your Items</h1>
     <!-- Contact Us Button -->
     <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
@@ -30,7 +30,7 @@
                                             {% else %}
                                                 <!-- Default Image if No Image Available -->
                                                 <a href="">
-                                                    <img class="card-img-top img-fluid" src="" alt="{{ added_item.added_item.name }}">
+                                                    <img class="card-img-top img-fluid" src="{% static 'images/placeholder-item-img' %}" alt="{{ added_item.added_item.name }}">
                                                 </a>
                                             {% endif %}
                                             <!-- Item Details -->
