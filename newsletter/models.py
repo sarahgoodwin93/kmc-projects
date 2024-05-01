@@ -8,7 +8,7 @@ class NewsletterSignUp(models.Model):
     Contact form for users to sign up to the newsletter
     """
     name = models.CharField(max_length=100)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)  # noqa
     email = models.EmailField(unique=True)
     created_on = models.DateTimeField(auto_now_add=True)
 

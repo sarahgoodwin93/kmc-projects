@@ -8,6 +8,7 @@ from .forms import ContactForm
 from django.views.generic.edit import CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
+
 # Homepage View
 def index(request):
     """ A view to return the index page """
@@ -22,10 +23,10 @@ class ContactFormView(CreateView):
     template_name = "home/contact.html"
     form_class = ContactForm
     success_url = reverse_lazy("home")
-    
+
     def form_valid(self, form):
         form.instance.creator = self.request.user
-        messages.success(self.request, "Thanks for contacting us, we'll be in touch soon")
+        messages.success(self.request, "Thanks for contacting us, we'll be in touch soon")  # noqa
         return super().form_valid(form)
 
     def form_invalid(self, form):

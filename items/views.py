@@ -6,8 +6,8 @@ from .models import Item, Type
 
 # Items list view.
 def items(request):
-    """ 
-    A view to return the items page and be able to search for items 
+    """
+    A view to return the items page and be able to search for items
     by their name or their item number
     """
 
@@ -25,10 +25,10 @@ def items(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "No items found, please enter the name or item number")
+                messages.error(request, "No items found, please enter the name or item number")  # noqa
                 return redirect(reverse('items'))
-            
-            queries = Q(name__icontains=query) | Q(item_number__icontains=query)
+
+            queries = Q(name__icontains=query) | Q(item_number__icontains=query)  # noqa
             items = items.filter(queries)
 
     context = {

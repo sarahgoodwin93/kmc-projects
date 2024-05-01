@@ -6,12 +6,13 @@ from django.dispatch import receiver
 from django_countries.fields import CountryField
 
 """
-The base of this code was taken and modified from the walkthrough 
+The base of this code was taken and modified from the walkthrough
 project Boutiuqe Ado > The Checkout App > Profile App - Part 2.
 Additional code comments have been added to show understanding.
 Parts have been removed that were not relevant to this site and some
-naming has been changed to better suit KMC Projects.  
+naming has been changed to better suit KMC Projects.
 """
+
 
 class UserDetails(models.Model):
     """
@@ -21,12 +22,12 @@ class UserDetails(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     default_name = models.CharField(null=True, blank=True)
     default_email = models.EmailField(max_length=254, null=False, blank=True)
-    default_phone_number = models.CharField(max_length=20, null=True, blank=True)
-    default_country = CountryField(max_length=56, blank_label='Country *', null=True, blank=True)
+    default_phone_number = models.CharField(max_length=20, null=True, blank=True)  # noqa
+    default_country = CountryField(max_length=56, blank_label='Country *', null=True, blank=True)  # noqa
     default_postcode = models.CharField(max_length=20, null=True, blank=True)
-    default_town_or_city = models.CharField(max_length=40, null=True, blank=True)
-    default_street_address1 = models.CharField(max_length=80, null=True, blank=True)
-    default_street_address2 = models.CharField(max_length=80, null=True, blank=True)
+    default_town_or_city = models.CharField(max_length=40, null=True, blank=True)  # noqa
+    default_street_address1 = models.CharField(max_length=80, null=True, blank=True)  # noqa
+    default_street_address2 = models.CharField(max_length=80, null=True, blank=True)  # noqa
 
     def __str__(self):
         return self.user.username

@@ -27,6 +27,7 @@ class EditServiceForm(forms.ModelForm):
             "description",
         ]
 
+
 class AddCaseStudyForm(forms.ModelForm):
     """
     FORM: Add Services.

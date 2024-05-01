@@ -2,12 +2,13 @@ from django import forms
 from .models import Order
 
 """
-The base of this code was taken and modified from the walkthrough 
+The base of this code was taken and modified from the walkthrough
 project Boutiuqe Ado > The Checkout App > Admin, Signals & Forms Part 2.
 Additional code comments have been added to show understanding.
 Parts have been removed that were not relevant to this site and some
-naming has been changed to better suit KMC Projects.  
+naming has been changed to better suit KMC Projects.
 """
+
 
 class OrderForm(forms.ModelForm):
     """
@@ -26,8 +27,8 @@ class OrderForm(forms.ModelForm):
         """
         Customizes the form's initialization.
         Sets placeholders and autofocus to start on the full name field.
-        Iterates through the form adding a star to the placeholder if the 
-        field is required. 
+        Iterates through the form adding a star to the placeholder if the
+        field is required.
         """
         super().__init__(*args, **kwargs)
         # Define placeholders for form fields
@@ -54,4 +55,3 @@ class OrderForm(forms.ModelForm):
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
-

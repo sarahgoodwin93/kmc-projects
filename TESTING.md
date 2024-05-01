@@ -102,15 +102,17 @@ All python code that was written for this project by Sarah Goodwin was developed
 
 <details>
 
+<details>
+
 <summary> Home App </summary>
 
 | **Python file** | **RUN THROUGH VALIDATOR** | **ANY ERRORS** | **ERRORS RESOLVED** |
 | --------------- | -------------------------- | --------------- | ------------------- |
-| admin.py        |                           |                 |                     |
-| forms.py        |                           |                 |                     |
-| models.py       |                           |                 |                     |
-| urls.py         |                           |                 |                     |
-| views.py        |                           |                 |                     |
+| admin.py        | Yes                        | no | N/A |
+| forms.py        | Yes                        | line too long (83 > 79 characters)| Added # noqa and all clear |
+| models.py       | Yes                        | line too long (83 > 79 characters)| Added # noqa and all clear |
+| urls.py         | Yes                        |no | N/A |
+| views.py        | Yes                        |blank line contains whitespace | yes |
 
 </details>
 
@@ -120,11 +122,11 @@ All python code that was written for this project by Sarah Goodwin was developed
 
 | **Python file** | **RUN THROUGH VALIDATOR** | **ANY ERRORS** | **ERRORS RESOLVED** |
 | --------------- | -------------------------- | --------------- | ------------------- |
-| admin.py        |                           |                 |                     |
-| forms.py        |                           |                 |                     |
-| models.py       |                           |                 |                     |
-| urls.py         |                           |                 |                     |
-| views.py        |                           |                 |                     |
+| admin.py        | Yes                        |no | N/A |
+| forms.py        | Yes                        | no | N/A |
+| models.py       | Yes                        | line too long (83 > 79 characters)| Added # noqa and all clear |
+| urls.py         | Yes                        |no | N/A |
+| views.py        | Yes                        | trailing whitespace, line too long (83 > 79 characters) | yes |
 
 </details>
 
@@ -132,13 +134,13 @@ All python code that was written for this project by Sarah Goodwin was developed
 
 <summary> Newsletter App </summary>
 
-| **Python file** | **RUN THROUGH VALIDATOR** | **ANY ERRORS** | **ERRORS RESOLVED** |
-| --------------- | -------------------------- | --------------- | ------------------- |
-| admin.py        |                           |                 |                     |
-| forms.py        |                           |                 |                     |
-| models.py       |                           |                 |                     |
-| urls.py         |                           |                 |                     |
-| views.py        |                           |                 |                     |
+| **Python file** | **RUN THROUGH VALIDATOR** | **ANY ERRORS**       | **ERRORS RESOLVED**   |
+| --------------- | -------------------------- | --------------------- | --------------------- |
+| admin.py        | Yes                        |no | N/A |
+| forms.py        | Yes                        | Line too long (89 > 79 characters) | Added # noqa and all clear |
+| models.py       | Yes                        | no | N/A |
+| urls.py         | Yes                        | no | N/A |
+| views.py        | Yes                        | expected 2 blank lines, found 1, line too long (83 > 79 characters), line too long (85 > 79 characters), trailing whitespace | yes |
 
 </details>
 
@@ -148,12 +150,12 @@ All python code that was written for this project by Sarah Goodwin was developed
 
 | **Python file** | **RUN THROUGH VALIDATOR** | **ANY ERRORS** | **ERRORS RESOLVED** |
 | --------------- | -------------------------- | --------------- | ------------------- |
-| admin.py        |                           |                 |                     |
-| forms.py        |                           |                 |                     |
-| models.py       |                           |                 |                     |
-| urls.py         |                           |                 |                     |
-| views.py        |                           |                 |                     |
-| signals.py      |                           |                 |                     |
+| admin.py        | Yes                        | expected 2 blank lines, found 1, continuation line under-indented for visual indent, line too long (83 > 79 characters)| yes|
+| forms.py        | Yes                        |trailing whitespace |yes |
+| models.py       | Yes                        |E501 line too long (various lengths)| Added # noqa and all clear |
+| urls.py         | Yes                        |line too long (89 > 79 characters)| Added # noqa and all clear |
+| views.py        | Yes                        | E501 line too long (various lengths)| Added # noqa and all clear |
+| signals.py      | Yes                        |trailing whitespace |yes |
 
 </details>
 
@@ -163,11 +165,11 @@ All python code that was written for this project by Sarah Goodwin was developed
 
 | **Python file** | **RUN THROUGH VALIDATOR** | **ANY ERRORS** | **ERRORS RESOLVED** |
 | --------------- | -------------------------- | --------------- | ------------------- |
-| admin.py        |                           |                 |                     |
-| forms.py        |                           |                 |                     |
-| models.py       |                           |                 |                     |
-| urls.py         |                           |                 |                     |
-| views.py        |                           |                 |                     |
+| admin.py        | Yes                        |no | N/A |
+| forms.py        | Yes                        | no | N/A |
+| models.py       | Yes                        | no | N/A |
+| urls.py         | Yes                        |E501 line too long (various lengths)| Added # noqa and all clear |
+| views.py        | Yes                        | E501 line too long (various lengths)| Added # noqa and all clear |
 
 </details>
 
@@ -177,11 +179,11 @@ All python code that was written for this project by Sarah Goodwin was developed
 
 | **Python file** | **RUN THROUGH VALIDATOR** | **ANY ERRORS** | **ERRORS RESOLVED** |
 | --------------- | -------------------------- | --------------- | ------------------- |
-| admin.py        |                           |                 |                     |
-| forms.py        |                           |                 |                     |
-| models.py       |                           |                 |                     |
-| urls.py         |                           |                 |                     |
-| views.py        |                           |                 |                     |
+| admin.py        | Yes                        | trailing whitespace,  expected 2 blank lines, found 1 | yes |
+| forms.py        | Yes                        |E501 line too long (various lengths)| Added # noqa and all clear |
+| models.py       | Yes                        |no | N/A |
+| urls.py         | Yes                        | no | N/A |
+| views.py        | Yes                        | no | N/A |
 
 </details>
 
@@ -191,7 +193,9 @@ All python code that was written for this project by Sarah Goodwin was developed
 
 | **Python file** | **RUN THROUGH VALIDATOR** | **ANY ERRORS** | **ERRORS RESOLVED** |
 | --------------- | -------------------------- | --------------- | ------------------- |
-| settings.py     |                           |                 |                     |
+| settings.py     | Yes                        | Line too long (89 > 79 characters), line too long (91 > 79 characters) | Added # noqa and all clear |
+| views.py        | Yes                        |expected 2 blank lines, found 1 | yes |
+
 
 </details>
 

@@ -5,10 +5,15 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.db.models import Q
 from .models import Services, CaseStudy
-from .forms import AddServiceForm, EditServiceForm, AddCaseStudyForm, EditCaseStudyForm
 from django.views.generic.edit import CreateView, DeleteView, UpdateView, View
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.contrib.auth.decorators import user_passes_test
+from .forms import (
+    AddServiceForm,
+    EditServiceForm,
+    AddCaseStudyForm,
+    EditCaseStudyForm,
+)
 
 
 # Services List
@@ -21,7 +26,7 @@ def ServiceList(request):
     """
     services = Services.objects.all()
     casestudies = CaseStudy.objects.all()
-    return render(request, 'services/services.html', {'services': services, 'casestudies': casestudies})
+    return render(request, 'services/services.html', {'services': services, 'casestudies': casestudies})  # noqa
 
 
 # Check SuperUser
@@ -55,7 +60,7 @@ class AddServiceView(UserPassesTestMixin, CreateView):
         return self.render_to_response(
             self.get_context_data(form=form, heading="Add Service")
         )
-    
+
     def test_func(self):
         return self.request.user.is_superuser
 
@@ -142,7 +147,7 @@ class EditCaseStudyView(UserPassesTestMixin, UpdateView):
     def swim_edit(self, request):
         messages.success(self, request, "Case Study has been updated")
         return response
-    
+
     def test_func(self):
         return self.request.user.is_superuser
 
@@ -150,9 +155,10 @@ class EditCaseStudyView(UserPassesTestMixin, UpdateView):
 # Delete Case Study View
 class DeleteCaseStudyView(UserPassesTestMixin, DeleteView):
     """
-    Shows the delete case study page so that the superuser can delete a case study.
-    Once the service has been deleted it will redirect back
-    to the services using the success_url
+    Shows the delete case study page so that the superuser
+    can delete a case study. Once the service has been
+    deleted it will redirect back to the services using
+    the success_url
     """
 
     model = CaseStudy
@@ -162,6 +168,6 @@ class DeleteCaseStudyView(UserPassesTestMixin, DeleteView):
     def swim_delete(self, request):
         messages.success(self, request, "Case Study has been deleted")
         return super().delete(request)
-    
+
     def test_func(self):
         return self.request.user.is_superuser

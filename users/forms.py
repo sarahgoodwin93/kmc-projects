@@ -2,18 +2,18 @@ from django import forms
 from .models import UserDetails
 
 """
-The base of this code was taken and modified from the walkthrough 
+The base of this code was taken and modified from the walkthrough
 project Boutiuqe Ado > The Checkout App > Admin, Signals & Forms Part 2.
 Additional code comments have been added to show understanding.
 Parts have been removed that were not relevant to this site and some
-naming has been changed to better suit KMC Projects.  
+naming has been changed to better suit KMC Projects.
 """
+
 
 class UserDetailsForm(forms.ModelForm):
     class Meta:
         model = UserDetails
         exclude = ('user',)
-        
 
     def __init__(self, *args, **kwargs):
         """

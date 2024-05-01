@@ -17,12 +17,13 @@ from cart.context import cart_contents
 import stripe
 
 """
-The base of this code was taken and modified from the walkthrough 
+The base of this code was taken and modified from the walkthrough
 project Boutiuqe Ado > The Checkout App.
 Additional code comments have been added to show understanding.
 Parts have been removed that were not relevant to this site and some
-naming has been changed to better suit KMC Projects.  
+naming has been changed to better suit KMC Projects.
 """
+
 
 # Create your views here.
 # Order and stripe view
@@ -51,7 +52,7 @@ def OrderView(request):
                     )
                     order_line_item.save()
                 except Item.DoesNotExist:
-                    messages.error(request, "One of the items in your cart wasn't found in our database. Please reach out for assistance!")
+                    messages.error(request, "One of the items in your cart wasn't found in our database. Please reach out for assistance!")  # noqa
                     order.delete()
                     return redirect(reverse('cart'))
 
@@ -59,13 +60,13 @@ def OrderView(request):
             send_confirmation_email(order)
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('order_success', args=[order.order_number]))
+            return redirect(reverse('order_success', args=[order.order_number]))  # noqa
     else:
         cart = request.session.get('cart', {})
         if not cart:
             messages.error(request, "No items in the cart")
             return redirect(reverse('cart'))
-        
+
         current_order = cart_contents(request)
         total_order = current_order['total']
         stripe_total = round(total_order * 100)
@@ -94,8 +95,8 @@ def OrderView(request):
             order_form = OrderForm()
 
     if not stripe_public_key:
-        messages.warning(request, 'Stripe public key is missing. Did you forget to set it in your environment?')
-    
+        messages.warning(request, 'Stripe public key is missing. Did you forget to set it in your environment?')  # noqa
+
     template = 'orders/orders.html'
     context = {
         'order_form': order_form,
@@ -107,16 +108,18 @@ def OrderView(request):
 
     return render(request, template, context)
 
+
 def send_confirmation_email(order):
     """
     Sends a confirmation email to the user after placing an order.
     """
 
     subject = 'orders/confirmation_emails/confirmation_email_subject.txt'
-    email_template_name = 'orders/confirmation_emails/confirmation_email_body.txt'
+    email_template_name = 'orders/confirmation_emails/confirmation_email_body.txt'  # noqa
     context = {'order': order}
     email_body = render_to_string(email_template_name, context)
     send_mail(subject, email_body, settings.DEFAULT_FROM_EMAIL, [order.email])
+
 
 def order_success(request, order_number):
     """
@@ -135,7 +138,7 @@ def order_success(request, order_number):
         if save_info:
             user_data = {
                     'default_name': order.full_name,
-                    'default_email' : order.email,
+                    'default_email': order.email,
                     'default_phone_number': order.phone_number,
                     'default_country': order.country,
                     'default_postcode': order.postcode,
@@ -161,6 +164,7 @@ def order_success(request, order_number):
 
     return render(request, template, context)
 
+
 def remove_from_order(request, item_id):
     """
     View for removing an item from the order.
@@ -178,5 +182,3 @@ def remove_from_order(request, item_id):
 
     success_url = reverse("orders")
     return HttpResponseRedirect(success_url)
-
-    

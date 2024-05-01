@@ -1,6 +1,7 @@
 from django import forms
 from .models import Contact
 
+
 # Contact form for businesses to register intrest.
 class ContactForm(forms.ModelForm):
     """
@@ -15,4 +16,3 @@ class ContactForm(forms.ModelForm):
             "service_needed",
             "message",
         ]
-

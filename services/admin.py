@@ -1,6 +1,7 @@
 from django.contrib import admin
 from . models import Services, CaseStudy
 
+
 # Admin adjustments for Services List.
 class ServicesAdmin(admin.ModelAdmin):
     list_display = (
@@ -22,6 +23,7 @@ class CaseStudyAdmin(admin.ModelAdmin):
     )
 
     ordering = ('sku',)
+
 
 admin.site.register(Services, ServicesAdmin)
 admin.site.register(CaseStudy, CaseStudyAdmin)

@@ -1,6 +1,7 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 
+
 # Type Model for items.
 class Type(models.Model):
     """
@@ -17,7 +18,7 @@ class Item(models.Model):
     """
     Model for the item details
     """
-    type = models.ForeignKey('Type', null=True, blank=True, on_delete=models.SET_NULL)
+    type = models.ForeignKey('Type', null=True, blank=True, on_delete=models.SET_NULL)  # noqa
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()

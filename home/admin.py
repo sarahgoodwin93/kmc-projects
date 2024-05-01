@@ -1,5 +1,7 @@
+
 from django.contrib import admin
 from .models import Contact
+
 
 # Admin adjustments for Contact Form.
 class ContactAdmin(admin.ModelAdmin):
@@ -13,5 +15,6 @@ class ContactAdmin(admin.ModelAdmin):
     )
 
     ordering = ('created_on',)
+
 
 admin.site.register(Contact, ContactAdmin)

@@ -1,6 +1,7 @@
 from django.contrib import admin
 from . models import Item, Type
 
+
 # Admin adjustments for Items.
 class ItemAdmin(admin.ModelAdmin):
     list_display = (
