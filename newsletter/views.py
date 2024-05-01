@@ -1,26 +1,31 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
-from django.urls import reverse_lazy, reverse
-from django.http import HttpResponseRedirect
+from django.shortcuts import render, redirect
+from django.urls import reverse
 from django.contrib import messages
-from .models import NewsletterSignUp
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.conf import settings
+
 from .forms import NewsLetterForm
-from django.views.generic.edit import CreateView
 
-# Create your views here.
-class NewsletterView(CreateView):
-    """ A view to return the newsletter signup page """
-    model = NewsletterSignUp
-    template_name = "newsletter/newsletter-signup.html"
-    form_class = NewsLetterForm
-    success_url = reverse_lazy("home")
+def NewsletterView(request):
+    if request.method == 'POST':
+        form = NewsLetterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            send_confirmation_email(form.cleaned_data['email'])
+            messages.success(request, "Thank you for signing up for our newsletter!")
+            return redirect(reverse('home')) 
+    else:
+        form = NewsLetterForm()
+
+    return render(request, 'newsletter/newsletter_signup.html', {'form': form})
+
+def send_confirmation_email(email):
+    subject_template_name = 'Thanks for signing up'
+    email_template_name = 'newsletter/confirmation_email_body.txt'
+    context = {'email': email}
     
-    def form_valid(self, form):
-        form.instance.creator = self.request.user
-        messages.success(self.request, "Thanks for signing up to our newsletter")
-        return super().form_valid(form)
+    subject = render_to_string(subject_template_name, context).strip()
+    email_body = render_to_string(email_template_name, context)
 
-    def form_invalid(self, form):
-        messages.error(self.request, "There was an error with the form.")
-        return self.render_to_response(
-            self.get_context_data(form=form, heading="Newsletter")
-        )
+    send_mail(subject, email_body, settings.DEFAULT_FROM_EMAIL, [email])

@@ -20,7 +20,6 @@ Throughout this README both KMC Projects and Kevin McCaffrey will be referred to
     - [Target Audience](#target-audience)
 - [Agile Development](#agile-development)
 - [User Stories](#user-stories)
-    - [Epic](#epic)
     - [Future Stories](#future-stories)
 - [Web Marketing](#web-marketing)
     - [SEO Implementation](#seo-implementation)
@@ -81,88 +80,30 @@ User stories were labelled using the MoSCoW method.
 
 The user stories are as follows:
 
-### EPICS
+## User Stories
 
-## Epic HOME
+### Generic User (Guest):
+- As a guest user, I can browse through the services offered by KMC Projects so that I can understand the scope of the company's expertise.
+- As a guest user, I can view case studies on past projects completed by KMC Projects so that I can assess the quality of their work.
+- As a guest user, I can access the site's product list to explore the range of products offered by KMC Projects.
+- As a guest user, I can access the site's content to learn about the company's mission, values, and team member.
+- As a guest user, I can sign up to the newsletter to keep up to date with the company's latest news and updates.
+- As a guest user, I can use the contact form to get in touch with KMC Projects.
 
-### USER STORY: View list of items for purchase
+### Registered (Logged in) User:
+- As a logged-in user, I can create and manage my account profile on KMC Projects so that I can personalize my experience on the site.
+- As a logged-in user, I can view my order history from past orders
+- As a logged-in user, I can update my delivery information to save for future orders
 
-- As a site user I can view a list of the items for purchase so that select which items I wish to add to my cart.
-    - When a user opens the products page they see a list of the items
-    - The user sees all items available so they can choose which to see more details bout
-    - The user can add to their cart straight from the products page
+### Admin User:
+- As an admin user, I can add new services to the offerings provided by KMC Projects
+- As an admin user, I can create and update case studies showcasing successful projects completed by KMC Projects.
 
-### USER STORY: Adding items to cart
-
-- As a site user I can add item to my cart so that I can review them before purchase
-    - A user should be able to add items to their cart easily
-    - A user can view their cart total from anywhere on the platform
-    - The user can see their cart total
-
-## Epic SERVICES
-
-### Story
-
-- As an XXXXX, I can XXXX so that XXXX
-    - AC1 - 
-    - AC2 - 
-    - AC 3 - 
-
-Tasks 
-- 
--
-
-## Epic CASE STUDY
-
-### Story
-
-- As an XXXXX, I can XXXX so that XXXX
-    - AC1 - 
-    - AC2 - 
-    - AC 3 - 
-
-Tasks 
-- 
--
-
-## Epic SITE ACCESS
-
-### Story
-
-- As an XXXXX, I can XXXX so that XXXX
-    - AC1 - 
-    - AC2 - 
-    - AC 3 - 
-
-Tasks 
-- 
--
-
-## Epic PRODUCTS
-
-### Story
-
-- As an XXXXX, I can XXXX so that XXXX
-    - AC1 - 
-    - AC2 - 
-    - AC 3 - 
-
-Tasks 
-- 
--
-
-## Epic ADMIN
-
-### Story
-
-- As an XXXXX, I can XXXX so that XXXX
-    - AC1 - 
-    - AC2 - 
-    - AC 3 - 
-
-Tasks 
-- 
--
+### Shopper:
+- As a shopper, I can search for specific products or services offered by KMC Projects to find what I need efficiently.
+- As a shopper, I can add items to my cart and proceed to checkout seamlessly on KMC Projects.
+- As a shopper, I can save my delivery information 
+- As a shopper, I can add item to my cart so that I can review them before purchase
 
 ## Future Stories
 
