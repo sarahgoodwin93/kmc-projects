@@ -18,7 +18,7 @@ def NewsletterView(request):
     else:
         form = NewsLetterForm()
 
-    return render(request, 'newsletter/newsletter_signup.html', {'form': form})
+    return render(request, 'newsletter/newsletter-signup.html', {'form': form})
 
 def send_confirmation_email(email):
     subject_template_name = 'Thanks for signing up'

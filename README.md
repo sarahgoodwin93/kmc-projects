@@ -207,6 +207,7 @@ Wireframe can be down in these drop downs:
 ## Database Schema
 
 The data schema was created using [drawSQL](https://drawsql.app/ "drawsql website homepage") before the project was started to get the flow and function of the models.
+Some of the fields in the below images do not reflect the final data types used – please see the app for the true data types.
 
 There are 4 custom models in this project
 - The Services Model (full CRUD)
@@ -214,13 +215,15 @@ There are 4 custom models in this project
 - The Contact Model
 - The NewsLetterSignUp Model
 
+![Data Schema Image](media/README-images/custom-models.png "custom models")
+
 There are also  models that have been amended from the Boutique Ado Walkthrough to fit the requirements of the site
 - The Item Model (based on the Products model)
 - The Order Model (based on the Order model)
 - The OrderLineItem Model (based on the OrderLineItem model)
 - The UserDetials (based on the UserProfile model)
 
-![Data Schema Image](media/README-images/custom-models.png "custom models")
+A full data schema was used using `django-extensions` > `pydot` > `python manage.py graph_models -a > all_models.dot` visualising the dot file with [GraphvizOnline](https://dreampuf.github.io/GraphvizOnline/ "GraphvizOnline website")
 
 
 ## Typography
