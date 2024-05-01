@@ -5,7 +5,7 @@
 <div class="content-wrapper">
     <h1 class="site-headings">Your Items</h1>
     <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
-    <div class="row added-item-box">
+    <div class="row">
         <div class="col">
             <div>
                 Cart total: ${{ total|floatformat:2 }}
@@ -13,7 +13,7 @@
             <div class="row justify-content-center">
                 <div class="col">
                     <div class="order-list">
-                        <div class="row order-list">
+                        <div class="order-list cart-list">
                             {% if cart_items %}
                                 {% for added_item in cart_items %}
                                     <div class="added-item-box">
@@ -41,7 +41,9 @@
                                     </div>
                                 {% endfor %}
                             {% else %}
+                            <div class="row cart-emtpy-box">
                                 <p class="lead mb-5">Your cart is empty.</p>
+                            </div>
                             {% endif %}
                             {% if cart_items %}
                                 <a href="{% url 'orders' %}" class="btn btn-black rounded-0 text-uppercase mt-5 checkout-btn-success">

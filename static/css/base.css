@@ -480,6 +480,22 @@ input[type=checkbox], input[type=radio] {
     margin-bottom: 10px;
 }
 
+.cart-emtpy-box {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    width: 60vw;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
 .added-item-costs {
     position: absolute;
     right: 0;
@@ -652,18 +668,21 @@ footer {
     .login-box,
     .sign-up-box,
     .casestudy-box,
-    .services-box,
-    .added-item-box {
+    .services-box {
         margin: 30px 10px;
     }
 
-    .order-form-box {
+    .order-form-box,
+    .added-item-box {
         width: 80%;
     }
 
-    .order-list {
+    .order-list,
+    .cart-list {
         display: flex;
         justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     .about-img,
