@@ -39,6 +39,7 @@ a {
 
 .navbar-toggler-icon {
     background-color: #f99411;
+    color: black;
 }
 
 .navbar {
@@ -110,8 +111,7 @@ a {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 300px;
-    overflow: auto;
+    height: auto;
 }
 
 .homepage-text {
@@ -639,6 +639,8 @@ footer {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
+        position: relative;
+        padding: 0;
     }
 
     .navbar-toggler {
