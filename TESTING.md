@@ -48,10 +48,28 @@ After testing all errors were fixed and document checking complete was shown for
 
 ![document checking complete](documentation/testing-images/document-ok.png "")
 
-| **SOURCE CODE TEMPLATE** | **RUN THROUGH VALIDATOR** | **ANY ERRORS** | **ERRORS RESOLVED** |
-| -------- | ---------- | --------------- | -----------|
-|  |  |  |  |
-
+| **TEMPLATE FILE** | **RUN THROUGH VALIDATOR** | **ANY ERRORS** | **ERRORS RESOLVED** |
+| ----------------- | ------------------------- | --------------- | ------------------- |
+| base.html         | yes                       | no              | N/A                 |
+| index.html        | yes                       | no              | N/A                 |
+| contact_list.html | yes                       | no            | N/A  |
+| contact.html      | yes                       | no              | N/A                 |
+| cart.html         | yes                       | no             | N/A |
+| items.html        | yes                       | no             | N/A        |
+| newsletter.html   | yes                       | no              | N/A                 |
+| orders.html       | yes                       | no              | N/A                 |
+| order_success.html| yes                       | no              | N/A                 |
+| services.html     | yes                       | no              | N/A                 |
+| add_casestudy.html| yes                       | no              | N/A                 |
+| delete_casestudy.html| yes                    | no              | N/A                 |
+| edit_casestudy.html| yes                      | no              | N/A                 |
+| add_service.html  | yes                       | no              | N/A                 |
+| delete_service.html| yes                     | no              | N/A                 |
+| edit_service.html | yes                      | no              | N/A                 |
+| users.html        | yes                       | no              | N/A                 |
+| login.html        | yes                       | no              | N/A                 |
+| signup.html       | yes                       | yes             | N/A |
+| password_reset.html| yes                      | no              | N/A                 |
 
 ## W3C CSS Validation Results
 
@@ -59,11 +77,12 @@ All custom CSS has been run through the [W3C CSS Validator](https://jigsaw.w3.or
 
 No errors were found when running CSS through w3c validator
 
-![css w3c](documentation/testing-images/css-errors.png "css validator image")
+![css w3c](media/testing-images/css-errors.png "css validator image")
+
 
 ## JSHint Validation Results
 
-
+No javascript was written by Sarah Goodwin for this project, all javascript that has been included is credited to stripe and the Boutquie Ado project
 
 ## CI Python Linter Validation Results
 
