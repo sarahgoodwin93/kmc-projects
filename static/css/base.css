@@ -672,8 +672,7 @@ footer {
         margin: 30px 10px;
     }
 
-    .order-form-box,
-    .added-item-box {
+    .order-form-box {
         width: 80%;
     }
 
@@ -737,7 +736,7 @@ footer {
 
     .item-details p {
         font-size: 10px;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     .add-to-cart-btn {
@@ -760,5 +759,31 @@ footer {
     .item-img {
         max-width: 100px;
         margin-bottom: 10px;
+    }
+
+    .added-item-box {
+        width: 80vw;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .added-item-img {
+        max-width: 100px;
+    }
+
+    .item-details {
+        flex-basis: 60%;
+        margin-left: 10px;
+    }
+
+    .added-item-costs {
+        position: static;
+        margin: 10px 0;
+        text-align: right;
+    }
+
+    .remove-btn {
+        width: auto;
+        margin-top: 20px;
     }
 }
