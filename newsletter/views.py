@@ -1,3 +1,4 @@
+from django.views import View
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.contrib import messages
@@ -7,18 +8,19 @@ from django.conf import settings
 
 from .forms import NewsLetterForm
 
-def NewsletterView(request):
-    if request.method == 'POST':
+class NewsletterView(View):
+    def get(self, request):
+        form = NewsLetterForm()
+        return render(request, 'newsletter/newsletter-signup.html', {'form': form})
+
+    def post(self, request):
         form = NewsLetterForm(request.POST)
         if form.is_valid():
             form.save()
             send_confirmation_email(form.cleaned_data['email'])
             messages.success(request, "Thank you for signing up for our newsletter!")
             return redirect(reverse('home')) 
-    else:
-        form = NewsLetterForm()
-
-    return render(request, 'newsletter/newsletter-signup.html', {'form': form})
+        return render(request, 'newsletter/newsletter-signup.html', {'form': form})
 
 def send_confirmation_email(email):
     subject_template_name = 'Thanks for signing up'
