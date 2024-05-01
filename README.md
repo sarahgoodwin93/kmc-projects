@@ -107,6 +107,18 @@ The user stories are as follows:
 
 ## Future Stories
 
+### Registered (Logged in) User:
+- As a future registered user, I would be able to see my contact form responses and make amends to them
+
+### Admin User:
+- As a future admin user, I would be able to view a list of the contact forms that site users had filled out without going to the django admin panel
+- As a future admin user, I would be able to view a list of the newsletter signsups without going to the django admin panel
+- As a future admin user, I would be able to edit the products list page without going to the django admin panel
+
+### Shopper:
+- As a future shopper, I would be able to request certain parts be made avalaible 
+- As a future shopper, I would be notified if a new product was made avalaible 
+
 # Web Marketing
 
 For this project the following web marketing strategies were used:
