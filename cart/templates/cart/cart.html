@@ -3,48 +3,59 @@
 
 {% block content %}
 <div class="content-wrapper">
+    <!-- Page Heading -->
     <h1 class="site-headings">Your Items</h1>
+    <!-- Contact Us Button -->
     <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
     <div class="row">
         <div class="col">
             <div>
+                <!-- Cart Total -->
                 Cart total: ${{ total|floatformat:2 }}
             </div>
             <div class="row justify-content-center">
                 <div class="col">
                     <div class="order-list">
                         <div class="order-list cart-list">
+                            <!-- Cart Items -->
                             {% if cart_items %}
                                 {% for added_item in cart_items %}
                                     <div class="added-item-box">
                                         <div class="item-list">
+                                            <!-- Item Image -->
                                             {% if added_item.added_item.image %}
                                                 <a href="">
                                                     <img class="added-item-img" src="{{ added_item.added_item.image.url }}" alt="{{ added_item.added_item.name }}">
                                                 </a>
                                             {% else %}
+                                                <!-- Default Image if No Image Available -->
                                                 <a href="">
                                                     <img class="card-img-top img-fluid" src="" alt="{{ added_item.added_item.name }}">
                                                 </a>
                                             {% endif %}
+                                            <!-- Item Details -->
                                             <div class="item-details">
                                                 <p class="added-item-text">{{ added_item.added_item.name }}</p>
                                                 <p class="added-item-text">${{ added_item.added_item.price }}</p>
                                                 <p class="added-item-text">Item Number: {{ added_item.added_item.item_number }}</p>
                                             </div>
+                                            <!-- Item Costs -->
                                             <div class="item-details added-item-costs">
                                                 <p class="added-item-text">Quantity: {{ added_item.quantity }}</p>
                                                 <p class="added-item-text">Total Cost: ${{ added_item.item_total_cost }}</p>
+                                                <!-- Remove Button -->
                                                 <a class="text-uppercase remove-btn" href="{% url 'remove_from_cart' added_item.added_item.id %}">Remove</a>
                                             </div>
                                         </div>
                                     </div>
                                 {% endfor %}
                             {% else %}
+                            <!-- Empty Cart Message -->
                             <div class="row cart-emtpy-box">
                                 <p class="lead mb-5">Your cart is empty.</p>
                             </div>
                             {% endif %}
+                            <!-- Checkout and Continue Shopping Buttons -->
                             {% if cart_items %}
                                 <a href="{% url 'orders' %}" class="btn btn-black rounded-0 text-uppercase mt-5 checkout-btn-success">
                                     <span class="icon">
