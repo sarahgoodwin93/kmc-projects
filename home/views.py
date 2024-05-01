@@ -25,7 +25,7 @@ class ContactFormView(CreateView):
     
     def form_valid(self, form):
         form.instance.creator = self.request.user
-        messages.success(self.request, "Thanks for contacting us")
+        messages.success(self.request, "Thanks for contacting us, we'll be in touch soon")
         return super().form_valid(form)
 
     def form_invalid(self, form):

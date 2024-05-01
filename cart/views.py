@@ -29,6 +29,25 @@ def add_to_cart(request, item_id):
     return redirect(redirect_url)
 
 
+def update_cart(request, item_id):
+    """Adjust the quantity of the specified item to the specified amount"""
+
+    item = get_object_or_404(Item, pk=item_id)
+    quantity = int(request.POST.get('quantity'))
+    cart = request.session.get('cart', {})
+
+    if quantity > 0:
+        cart[item_id] = quantity
+        messages.success(request, f'{item.name} has been updated')
+    else:
+        cart.pop(item_id, None)
+        messages.success(request, f'Removed {item.name} from your cart')
+
+    request.session['cart'] = cart
+    print("Stored Messages:", messages.get_messages(request))
+    return redirect(reverse('cart'))
+
+
 def remove_from_cart(request, item_id):
     """ Remove item from cart """
 
