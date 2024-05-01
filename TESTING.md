@@ -102,8 +102,6 @@ All python code that was written for this project by Sarah Goodwin was developed
 
 <details>
 
-<details>
-
 <summary> Home App </summary>
 
 | **Python file** | **RUN THROUGH VALIDATOR** | **ANY ERRORS** | **ERRORS RESOLVED** |
@@ -201,7 +199,7 @@ All python code that was written for this project by Sarah Goodwin was developed
 
 Final testing showed:
 
-![CI Python Linter](documentation/testing-images/linter-no-errors.png "python linter image")
+![CI Python Linter](testing-images/linter-no-errors.png "python linter image")
 
 # Manual Testing
 

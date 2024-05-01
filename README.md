@@ -299,19 +299,52 @@ The hamburger opens clearly showing the call to actions.
 
 ### Footer
 
-![Homepage]( " ")
+![Footer](media/README-images/footer.png "footer screenshot ")
+
+The footer has links to contact details, both the business phone number and the contact us form.
+
+It has links to social media for KMC Project and/or Kevin McCaffrey the director.
+It has a Newsletter sign up form for those who wish to be kept up to date with the business.
+
+It has access to the site creator’s github.
+
 
 ### Services
 
-![Homepage]( " ")
+![Services](media/README-images/services.png "services screenshot ")
+
+The services page gives users an idea of some of the services to discuss with KMC Projects in the contact form. It goes through 3 of their main offerings. 
+- Hydraulic Consultancy Services
+- Project Management for Hydraulic Systems
+- Hydraulic Training Programs
+
+For SEO these titles were changes from Consultancy, Project Management & Training. 
+
+The price of these services has not been included as every service is bespoke to each client and the job specs must be discussed before a quote is offered.
+
 
 ### Case Study
 
-![Homepage]( " ")
+![Case Study](media/README-images/casestudy.png "case study screenshot")
+
+The case study showcases some of the work KMC Project is involved in, giving users an idea of the type of work they could expect if they were to become a clients. 
 
 ### Products
 
-![Homepage]( " ")
+![Products](media/README-images/products.png "products screenshot")
+
+The products page has the option the view all products or to view by product type.
+Users can search by product name or item number. When in discussions with Kevin from KMC Projects about the products page, he said his clients knew the item number they would be looking for and would not come to the site in search of a price or to browse types of an item. This is why the products page is clean and simple, just the way KMC Projects wanted it.
+
+Users have the option to add the item to their carts, and choose how many items they wish to add. 
+The products themselves list
+- The name
+- The price in NZD
+- The item number which is unique to each item
+- The manufacturer
+- A datasheet pdf 
+
+The products page is responsive and changes for mobile users
 
 ### Cart
 
@@ -358,7 +391,11 @@ The logout page checks if the user does wish to sign out of the site.
 
 ### Account
 
-![Homepage]( " ")
+![Account Page]( " ")
+
+Users can save their delivery information on their account page and this will pull through to the orders page.
+They will also be able to see their order history in a drop down list, showing the date they made the order and then the details.
+
 
 ### Order History
 
