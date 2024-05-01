@@ -225,6 +225,7 @@ There are also  models that have been amended from the Boutique Ado Walkthrough 
 
 A full data schema was used using `django-extensions` > `pydot` > `python manage.py graph_models -a > all_models.dot` visualising the dot file with [GraphvizOnline](https://dreampuf.github.io/GraphvizOnline/ "GraphvizOnline website")
 
+![All Data Schema Image](media/README-images/models.png "all models")
 
 ## Typography
 
@@ -263,21 +264,62 @@ The favicon is taken from the logo itself.
 
 ### Home
 
-![Homepage]( " ")
+![Homepage](media/README-images/home.png "home screenshot")
+
+The homepage clearly shows the logo, the tag line, the company values and gives easy access to the nav bar. 
+It provides access to one of the sites main functions for contacting KMC Projects and gives the user knowledge they have landed in the right place by showing 'Problems Solved', one of KMC mottos. 
+
+The homepage shows a bright image of hydraulic cyclinders giving users another visual sense of the site.
+The homepage is responsive on all screen sizes.
+
+#### About
+
+![About](media/README-images/about.png "about screenshot ")
+
+Also on the homepage there is an about section, giving some more details into the director of the company, providing trust with the users. 
+
+The about section is responsive on mobile with the image of Kevin moving above the text for better UX.
 
 ### Navbar
 
+![Navbar](media/README-images/nav-bar.png "nav bar screenshot")
+
+The nav bar is clean and simple, providing clear call to actions for users to access the site from. 
+From the nav bar users can tell if they are logged in or not due to the changing navigation. 
+
+![Navbar-logged in nav-bar](media/README-images/logged-in-navbar.png "logged-in navbar screenshot")
+
+The nav bar is resposnive on mobile and reduces to a hamburger menu on smaller screen sizes.
+
+![Navbar-hamburger](media/README-images/hamburger.png "hamburger screenshot")
+
+The hamburger opens clearly showing the call to actions. 
+
+![Navbar-hamburger open](media/README-images/hamburger-open.png "hamburger-open screenshot")
+
 ### Footer
+
+![Homepage]( " ")
 
 ### Services
 
+![Homepage]( " ")
+
 ### Case Study
+
+![Homepage]( " ")
 
 ### Products
 
+![Homepage]( " ")
+
 ### Cart
 
+![Homepage]( " ")
+
 ### Checkout
+
+![Homepage]( " ")
 
 ### Login, Logout and Sign Up
 
@@ -286,6 +328,12 @@ The favicon is taken from the logo itself.
 If the username and password are not correct this error will show.
 
 ![username error]( " ")
+
+### Forgot Password
+
+![Homepage]( " ")
+
+![Homepage]( " ")
 
 ### Register
 
@@ -306,7 +354,11 @@ The logout page checks if the user does wish to sign out of the site.
 
 ### Admin Access
 
+![Homepage]( " ")
+
 ### Account
+
+![Homepage]( " ")
 
 ### Order History
 
