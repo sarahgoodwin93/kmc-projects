@@ -3,6 +3,7 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from items.models import Item
 
+
 def cart_contents(request):
 
     cart_items = []
@@ -21,7 +22,7 @@ def cart_contents(request):
             'added_item': added_item,
             'item_total_cost': item_total_cost
         })
-    
+
     context = {
         'cart_items': cart_items,
         'total': total,

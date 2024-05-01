@@ -75,12 +75,9 @@ All python code that was written for this project by Sarah Goodwin was developed
 
 | **Python file** | **RUN THROUGH VALIDATOR** | **ANY ERRORS** | **ERRORS RESOLVED** |
 | --------------- | -------------------------- | --------------- | ------------------- |
-| admin.py        |                           |                 |                     |
-| forms.py        |                           |                 |                     |
-| models.py       |                           |                 |                     |
-| urls.py         |                           |                 |                     |
-| views.py        |                           |                 |                     |
-| context.py      |                           |                 |                     |
+| context.py      | yes | expected 2 blank lines, found 1, blank line contains whitespace, no newline at end of file | yes |
+| urls.py         | yes |no newline at end of file | yes |
+| views.py        | yes |expected 2 blank lines, found 1, no newline at end of file | yes |
 
 </details>
 
