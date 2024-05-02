@@ -41,12 +41,23 @@ All HTML code has been run through the [W3C HTML Validator](https://validator.w3
 <details>
 <summary> W3C HTML Errors Found and fixed</summary>
 
+![class error](media/testing-images/class-error.png "class error")
+
+![css error](media/testing-images/css-error.png "css error")
+
+![p-elements error](media/testing-images/p-element-error.png "p-element error")
+
+![placeholder error](media/testing-images/placeholder-error.png "placeholder error")
+
+![tel error](media/testing-images/tel-error.png "tel error")
+
+![type error](media/testing-images/type-error.png "type error")
 
 </details>
 
 After testing all errors were fixed and document checking complete was shown for all pages
 
-![document checking complete](documentation/testing-images/document-ok.png "")
+![document checking complete](media/testing-images/document-ok.png "")
 
 | **TEMPLATE FILE** | **RUN THROUGH VALIDATOR** | **ANY ERRORS** | **ERRORS RESOLVED** |
 | ----------------- | ------------------------- | --------------- | ------------------- |
@@ -199,7 +210,7 @@ All python code that was written for this project by Sarah Goodwin was developed
 
 Final testing showed:
 
-![CI Python Linter](testing-images/linter-no-errors.png "python linter image")
+![CI Python Linter](media/testing-images/linter-no-errors.png "python linter image")
 
 # Manual Testing
 
@@ -209,11 +220,11 @@ Final testing showed:
 
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
+| Cart page|Opened site url	| items appearing in cart |Worked as expected | N/A|
+|No item| |                 |            |         |
+|Remove Item|            |                 |            |         |
+| Checkout button|            |                 |            |         |
+| Keep shopping button|            |                 |            |         |
 
 </details>
 
