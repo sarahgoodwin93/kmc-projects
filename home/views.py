@@ -7,6 +7,8 @@ from .models import Contact
 from .forms import ContactForm
 from django.views.generic.edit import CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import UserPassesTestMixin
+from django.contrib.auth.decorators import user_passes_test
 
 
 # Homepage View
@@ -36,8 +38,16 @@ class ContactFormView(CreateView):
         )
 
 
+# Check SuperUser
+def is_superuser(user):
+    """
+    Check if the user is a superuser.
+    """
+    return user.is_authenticated and user.is_superuser
+
+
 # Contact List View
-def ContactListView(request):
+def ContactListView(UserPassesTestMixin, request):
     """ A view to show the admin a list of who has contacted them """
     contacts = Contact.objects.all()
     return render(request, 'home/contact_list.html', {'contacts': contacts})

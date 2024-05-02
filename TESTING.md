@@ -331,9 +331,9 @@ Final testing showed:
 
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
-| 404 Error |  |  |  |  |
-| URL Access |  |  |  |  |
-| URL Access |  |  |  |  |
+| 404 Error |Typed /hello at end of url | 404 error page to show | Worked as expected | N/A |
+| URL Access |Typed /services/add at end of url | 404 error page to show | Taken back to login page | Warning could be added to show to user what happened rather than redirect |
+| URL Access | Typed /contact/list at end of url | 404 error page to show | Taken back to login page | Warning could be added to show to user what happened rather than redirect |
 
 ## Responsiveness testing
 
