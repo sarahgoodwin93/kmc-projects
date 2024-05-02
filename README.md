@@ -414,7 +414,7 @@ The admin superuser access allows admin users to create, read, update and delete
 Users can save their delivery information on their account page and this will pull through to the orders page.
 They will also be able to see their order history in a drop down list, showing the date they made the order and then the details.
 
-![Order History Page](media/README-images/order-histroy.png "order history screenshot ")
+![Order History Page](media/README-images/order-history.png "order history screenshot ")
 
 ## Future Features
 
@@ -565,6 +565,10 @@ Wording for the site was all created by Sarah Goodwin conjunction with Kevin McC
 ### Images
 
 Images were created in Canva, suppplied by the client or taken from google images.
+
+### Code
+
+Certain parts of the project were taken from the Boutique ado walkthrough project and stripe documentation. These have been clearly commented within the code.   
 
 ## Education
 
