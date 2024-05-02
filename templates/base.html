@@ -156,13 +156,14 @@
                         Contact Details:
                     </li>
                     <li class="d-flex flex-row align-items-center">
-                        <i class="fas fa-phone-alt mr-2"></i><a href="tel: +61477020336">Phone: +61 477 020 336</a>
+                        <i class="fas fa-phone-alt mr-2"></i><a href="tel:%20+61477020336">Phone:+61 477 020 336</a>
                     </li>
                     <li class="d-flex flex-row align-items-center">
                         <i class="fas fa-envelope mr-2"></i> <a href="{% url 'contact' %}">Contact Us</a>
                     </li>
+                </ul>
+                <ul class="list-unstyled d-flex flex-column">
                     <!-- Social media links -->
-                    <br>
                     <li class="d-flex flex-row align-items-center">
                         Connect with us on social:
                     </li>
@@ -173,7 +174,7 @@
                         <a href="https://www.linkedin.com/in/kevmccaffrey?originalSubdomain=nz" target="_blank" rel="noopener" aria-label="Linkedin Kevin McCaffrey"><i class="fab fa-linkedin mr-2"></i> LinkedIn</a>
                     </li>
                     <li class="d-flex flex-row align-items-center">
-                        <a href="{% url 'newsletter' %}" rel="noopener" aria-label="Newsletter contact form"><i class="fa-solid fa-envelope"></i> Newsletter Sign Up</a>
+                        <a href="{% url 'newsletter' %}" rel="noopener" aria-label="Newsletter contact form"><i class="fa-solid fa-envelope"></i>  Newsletter Sign Up</a>
                     </li>
                 </ul>
             </div>
@@ -208,7 +209,7 @@
 {% endblock %}
 
 {% block postloadjs %}
-<script type="text/javascript">
+<script>
     // Show toasts
     $('.toast').toast('show');
 </script> 

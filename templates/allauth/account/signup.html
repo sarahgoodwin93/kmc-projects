@@ -31,7 +31,25 @@
     <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
       {% csrf_token %}
       <!-- Display form fields -->
-      {{ form.as_p }}
+      <label for="id_username">{% trans "Username" %}:</label>
+      <input type="text" name="username" id="id_username" required placeholder="{% trans 'Enter your username' %}">
+      <label for="id_email">{% trans "Email address" %}:</label>
+      <input type="email" name="email" id="id_email" required placeholder="{% trans 'Enter your email address' %}">
+      <label for="id_email2">{% trans "Confirm email address" %}:</label>
+      <input type="email" name="email2" id="id_email2" required placeholder="{% trans 'Confirm your email address' %}">
+      <label for="id_password1">{% trans "Password" %}:</label>
+      <input type="password" name="password1" id="id_password1" required placeholder="{% trans 'Enter your password' %}">
+      <!-- Password requirements -->
+      <p>{% trans "Password must contain the following:" %}</p>
+      <ul>
+        <li>{% trans "At least 8 characters" %}</li>
+        <li>{% trans "At least one uppercase letter" %}</li>
+        <li>{% trans "At least one lowercase letter" %}</li>
+        <li>{% trans "At least one number" %}</li>
+        <li>{% trans "At least one special character" %}</li>
+      </ul>
+      <label for="id_password2">{% trans "Confirm Password" %}:</label>
+      <input type="password" name="password2" id="id_password2" required placeholder="{% trans 'Confirm your password' %}">
       <!-- Redirect field value -->
       {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />

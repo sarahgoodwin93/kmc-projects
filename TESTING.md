@@ -50,26 +50,26 @@ After testing all errors were fixed and document checking complete was shown for
 
 | **TEMPLATE FILE** | **RUN THROUGH VALIDATOR** | **ANY ERRORS** | **ERRORS RESOLVED** |
 | ----------------- | ------------------------- | --------------- | ------------------- |
-| base.html         | yes                       | no              | N/A                 |
-| index.html        | yes                       | no              | N/A                 |
+| base.html         | yes                       | The type attribute is unnecessary for JavaScript resources. | yes                 |
+| index.html        | yes                       | Error: Bad value tel: +61477020336 for attribute href on element a: Illegal character in scheme data: space is not allowed, Element br not allowed as child of element ul in this context.| yes  |
 | contact_list.html | yes                       | no            | N/A  |
 | contact.html      | yes                       | no              | N/A                 |
 | cart.html         | yes                       | no             | N/A |
 | items.html        | yes                       | no             | N/A        |
 | newsletter.html   | yes                       | no              | N/A                 |
-| orders.html       | yes                       | no              | N/A                 |
+| orders.html       | yes                       | Attribute placeholder not allowed on element select at this point. |  |
 | order_success.html| yes                       | no              | N/A                 |
-| services.html     | yes                       | no              | N/A                 |
-| add_casestudy.html| yes                       | no              | N/A                 |
+| services.html     | yes                       | No p element in scope but a p end tag seen.|  |
+| add_casestudy.html| yes                       | No p element in scope but a p end tag seen. | |
 | delete_casestudy.html| yes                    | no              | N/A                 |
-| edit_casestudy.html| yes                      | no              | N/A                 |
+| edit_casestudy.html| yes                      | No p element in scope but a p end tag seen. | |
 | add_service.html  | yes                       | no              | N/A                 |
 | delete_service.html| yes                     | no              | N/A                 |
 | edit_service.html | yes                      | no              | N/A                 |
-| users.html        | yes                       | no              | N/A                 |
+| users.html        | yes                       | Duplicate attribute class, Attribute placeholder not allowed on element select at this point | yes                |
 | login.html        | yes                       | no              | N/A                 |
-| signup.html       | yes                       | yes             | N/A |
-| password_reset.html| yes                      | no              | N/A                 |
+| signup.html       | yes                       | End tag p implied, but there were open elements, Unclosed element span, Stray end tag span, No p element in scope but a p end tag seen.| changed form from {{ form.as_p }} to manually edit |
+| password_reset.html| yes                      |  Trailing slash on void elements has no effect and interacts badly with unquoted attribute values| yes|
 
 ## W3C CSS Validation Results
 
