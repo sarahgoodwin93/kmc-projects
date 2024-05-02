@@ -22,7 +22,6 @@ Return to [README.md](README.md)
 - [Responsiveness Testing](#responsiveness-testing)
 - [Browser Compatibility](#browser-compatibility)
 - [User Testing](#user-testing)
-  - [Things to Implement from User Testing](#things-to-implement-from-user-testing)
 - [Accessibility Testing](#accessibility-testing)
   - [Lighthouse](#lighthouse)
 - [Known Bugs](#known-bugs)
@@ -43,7 +42,7 @@ All HTML code has been run through the [W3C HTML Validator](https://validator.w3
 
 ![class error](media/testing-images/class-error.png "class error")
 
-![css error](media/testing-images/css-error.png "css error")
+![css error](media/testing-images/css-errors.png "css error")
 
 ![p-elements error](media/testing-images/p-element-error.png "p-element error")
 
@@ -344,10 +343,6 @@ Feedback from the form
 * Users found it easy to create an account and navigate the website 
 * Users found it easy to add item to cart and proceed with checkout
 
-### Things to implement from user testing
-
-* Make logo clickable and redirect to homepage
-
 # Accessibility Testing
 
 ## Lighthouse
@@ -377,9 +372,9 @@ Examples of results are as follows:
 </details>
 
 <details>
-<summary> Products </summary>
+<summary> Items </summary>
 
-![prodcuts lighthouse](media/testing-images/products-lighthouse " products lighthouse image")
+![items lighthouse](media/testing-images/items-lighthouse " items lighthouse image")
 
 </details>
 
@@ -408,11 +403,9 @@ Examples of results are as follows:
 
 # Known Bugs
 
-Djanog summernote has a known bug that it adds extra paragraph tags to the body content in your posts. 
+These two error are coming from within the django tempalting and not able to be accessed to edit and resolve.
 
 ![p-elements error](media/testing-images/p-element-error.png "p-element error")
-
-More details can be found [here](https://github.com/summernote/summernote/issues/2418 "summernot issue")
 
 The same applied for placeholders
 
@@ -420,6 +413,6 @@ The same applied for placeholders
 
 ## Unresolved 
 
-Django summernote bug listed above.
+Two errors listed above.
 
 Return to [README.md](README.md)

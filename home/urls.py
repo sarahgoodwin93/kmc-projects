@@ -9,6 +9,6 @@ from .views import (
 
 urlpatterns = [
     path('', views.index, name='home'),
-    path('home/contact', ContactFormView.as_view(), name='contact'),
-    path('home/contact/list', views.ContactListView, name='contact_list'),
+    path('home/contact/', ContactFormView.as_view(), name='contact'),
+    path('home/contact/list/', ContactListView.as_view(), name='contact_list'),
 ]

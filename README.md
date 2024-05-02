@@ -348,60 +348,83 @@ The products page is responsive and changes for mobile users
 
 ### Cart
 
-![Homepage]( " ")
+![Cart](media/README-images/cart.png "cart image")
+
+The cart page allows users to review and manage their selected items before proceeding to checkout. Users can easily view all items in their cart, and remove items if needed. After reviewing their selections, users can choose to continue shopping or proceed to checkout. 
+This functionality provides users with control over their shopping experience, ensuring a smooth process from selection to purchase.
 
 ### Checkout
 
-![Homepage]( " ")
+![Checkout](media/README-images/checkout.png "checkout image ")
+
+The checkout page is where users finalize their purchases. Users can review the items in their cart, remove any unwanted items, and view the total cost of their order. Users can input their delivery details, which if added from the account page will caryy across. 
+Users can choose to save their delivery details, if they are not logged in they will be prompted to sign up or login if they use to save their details.
+
+![Checkout](media/README-images/stripe.png "checkout image ")
+
+To complete the transaction, users can securely pay with their credit or debit card using the integrated Stripe payment gateway. 
 
 ### Login, Logout and Sign Up
 
-![login]( " ")
+![login](media/README-images/login.png "login screenshot ")
 
-If the username and password are not correct this error will show.
+The login page provides users with a secure gateway to access their accounts. Users can enter their credentials, including their email address and password, to authenticate their identity. If incorrect credentials are entered, error messages will prompt users to retry, ensuring the security of their accounts.
 
-![username error]( " ")
+![login](media/README-images/login-error.png "login error screenshot ")
+
+![lgout](media/README-images/logout.png "logout error screenshot ")
+
+The logout page allows users to securely log out of their accounts. With a simple click, users can end their current session, ensuring the privacy and security of their account information.
 
 ### Forgot Password
 
-![Homepage]( " ")
+![forgot password](media/README-images/password-reset.png "forgot password screenshot ")
 
-![Homepage]( " ")
+The forgot password page offers users a way to reset their passwords if forgotten. Users can enter their email address, and instructions for resetting their password will be sent to their inbox. 
 
 ### Register
 
-![register]( " ")
+![singup](media/README-images/sign-up.png " ")
 
 It offers them space for a username, password and then rechecks the password to ensure it matches and there were no errors.
 An example of some of the errors:
 
-![register form errors]( " ")
+![register form errors](media/README-images/password-short.png "password error screenshot ")
 
-The text at the bottom lets users know who already have an account that they can sign in using the login page.
+![register form errors](media/README-images/email-error-msg.png "email error screenshot ")
 
-### Logout
-
-![logout]( " logout image ")
-
-The logout page checks if the user does wish to sign out of the site.
+![register form errors](media/README-images/already-registered.png "registered error screenshot ")
 
 ### Admin Access
 
-![Homepage]( " ")
+![Admin navbar](media/README-images/admin-navbar.png "admin nav-bar ")
+
+![case study navbar](media/README-images/add-edit-delete-casestudy.png "case study admin  ")
+
+![service admin ](media/README-images/add-edit-delete-services.png "service admin  ")
+
+The admin superuser access allows admin users to create, read, update and delete both the services and case study sections of the site. Their nav bar also includes a contact list for people who have used the contact form.
+
+![Contact list](media/README-images/contacts.png "contact list nav0bar ")
 
 ### Account
 
-![Account Page]( " ")
+![Account Page](media/README-images/account-details.png "account screenshot ")
 
 Users can save their delivery information on their account page and this will pull through to the orders page.
 They will also be able to see their order history in a drop down list, showing the date they made the order and then the details.
 
-
-### Order History
-
-![order history]( "")
+![Order History Page](media/README-images/order-histroy.png "order history screenshot ")
 
 ## Future Features
+
+Future things to implement
+
+* See who has singed up for the newsletter along with the contacts
+
+* Add items for admin users from the frontend rather than the django admin panel
+
+* Edit quantities from the cart page
 
 [Back to Top](#kmc-projects)
 
@@ -411,6 +434,8 @@ They will also be able to see their order history in a drop down list, showing t
 Lucidchart was used to create the wireframe in the planning stages of the project
 - [drawSQL](https://drawsql.app/ "Drawsql homepage")
 Drawsql was used to create the data schema
+- [GraphvizOnline](https://dreampuf.github.io/GraphvizOnline/ "GraphvizOnline website")
+GraphvizOnline was used for the dot file converstion
 - [HTML5](https://en.wikipedia.org/wiki/HTML5 "link to html5 wikipedia")
 Used to create structure and content for the site.
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html "link to w3")
@@ -421,9 +446,9 @@ The python framework used to develop the site.
 The CSS framework used to add styles and structure to the site.
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language) "link to Python wikipedia")
 Used to provide functionality to the site.
-- [Cloudinary](https://cloudinary.com/ "link to cloudinary homepage")
+- [AWS](https://aws.amazon.com/s3/ "link to aws homepage")
 Used to host images for the site
-- [ElephantSQL](https://www.elephantsql.com/ "link to elephantsql homepage")
+- [Code Institute Postgres Database server](https://dbs.ci-dbs.net/ "Code Institute Postgres Database server")
 Used to host the database used for the site.
 - [Am I Responsive?](https://ui.dev/amiresponsive "Link to Am I responsive webpage")
 Am I Responsive was used to see the responsive design and create screenshots of the final page on different devices.
@@ -440,50 +465,94 @@ Testing detail can be found [here](TESTING.md)
 
 # Deployment
 
-This project was developed [GitPod](https://www.gitpod.io/ "link to gitpod homepage") 
+This project was developed on [GitPod](https://www.gitpod.io/ "link to gitpod homepage") 
 
-## Cloning The Repository
+The deployment steps were as follows:
 
-To clone the repository using GitHub the following steps were taken:
+### Creating a Heroku App
 
-1. In the repository, select the "code" tab.
-2. Select "HTTPS" in the dropdown menu.
-3. Click the 'copy URL to dashboard button.
-4. Open your chosen IDE
-5. Create a new workspace and paste in the copied URL
-6. Press enter
+A Heroku app can be created on [Heroku website](https://id.heroku.com)
 
-## Deploying on GitHub Pages
+1. Click New to create a new app.
 
-To deploy this page to Heroku from its GitPod repository, the following steps were taken:
+2. Give app a name and select closest region. When done, click Create app to confirm. Heroku app names must be unique.
 
-1. Get Python Essentials Template from Code Institute [P3 Template](https://github.com/Code-Institute-Org/p3-template "p3 template link")
-2. Create a new repository using the P3 template
-3. Copy the repo URL and copy it into GitPod to create a new workspace
-4. Install Django - add to requirements file
-5. Create Procfile and add guricorn
-6. Log in to Heroku
-7. Click 'New' - 'Create new app'
-8. Enter a name for the application and select the region
-9. Click 'Create App'
-10. Go to Settings and connect to GitHub - choose the correct repository
-11. Click 'Reveal config vars' and add DISABLE_COLLECTSTATIC as the key with a value of 1
-12. Go to Deploy and scroll down, click on 'Deploy Branch' to manually deploy
-13. Once the app has deployed, click 'Open App' at the top of the page
+### Connecting Database on Heroku
 
-## The CI Database
-CI Database was used for this project, to set up a database the following steps were taken:
+1. Open the Settings tab in the Heroku app
 
-1. Sign up or log in to ElephantSQL with your GitHub account.
-2. 
+2. Add the config var DATABASE_URL, and for the value, copy in the database url from Code Institute Postgres Database server.
 
-You will also need to add the database to your Django settings.py file:
+### Deployment to Heroku
+1. In `settings.py` delete the database created and replace it with:
 
-DATABASES = {
+`if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }`
 
-'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+2. install webserver: `pip3 install gunicorn` - replaces the development server once the app is deployed to Heroku
 
-}
+3. run `pip3 freeze > requirements.txt` - creates a file to let heroku know which packages to install.
+
+4. Create Procfile file
+
+5. Add this code for Heroku to create web dyno: `web: gunicorn green_planet.wsgi:application`
+
+6. Go to Heroku, settings , config var and add variable:
+`COLLECTSTATIC` : 1 ,so that Heroku won't try to collect staticfiles when we deploy.
+
+7. Add the hostname of the Heroku app to `ALLOWED_HOSTS` in settings.py
+
+8. Push the code to Github
+
+9. In the terminal run: `heroku git:remote -a heroku-app-name`
+
+10. git push heroku main to deploy to heroku
+
+### Connecting Heroku to Github
+
+By connecting Heroku to Github the application will automatically deploy the latest code to Heroku.
+
+1. In heroku app, open app, in "Deploy" tab, under the "Deployment method" setting select "GitHub"
+
+2. Search for repository and click "Connect"
+
+3. Choose "Enable Automatic Deploys"
+
+### Config vars
+
+Config vars are needed to be created in Heroku so that to conect the app to Django, AWS, stripe and email.
+
+### Github
+
+#### Create a new repository
+
+- Log into [GitHub](https://github.com/)
+- On the 'Repositories' tab click 'New'
+- Name the repository and click 'Create repository'
+
+#### Forking
+
+- Sign into Github and go to my [repo](https://github.com/ChrisT-CC/H2B-PP5-ecommerce)
+- Press the "Fork" button the top right corner of page
+- Click "Create fork"
+
+#### Cloning
+
+- Sign in to Github and go to my [repo](https://github.com/ChrisT-CC/H2B-PP5-ecommerce)
+- Above the list of files click "Code"
+- Select HTTPS, SSH or Github CLI, then click the copy button to get the URL
+- Open your IDE of choice
+- Type "git clone" and then paste the URL you copied
+- Press Enter
 
 [Back to Top](#kmc-projects)
 
@@ -500,10 +569,6 @@ Images were created in Canva, suppplied by the client or taken from google image
 ## Education
 
 Additional learning:
-
-- Flex calc: 
-https://developer.mozilla.org/en-US/docs/Web/CSS/flex
-https://aidankmcbride.medium.com/css-tips-and-tricks-81d3c641428
 
 - json:
 https://codebeautify.org/blog/how-to-create-json-file/
