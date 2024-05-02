@@ -39,7 +39,7 @@ Return to [README.md](README.md)
 All HTML code has been run through the [W3C HTML Validator](https://validator.w3.org/).
 
 <details>
-<summary> W3C HTML Errors Found and fixed</summary>
+<summary> W3C HTML Errors Found </summary>
 
 ![class error](media/testing-images/class-error.png "class error")
 
@@ -55,9 +55,7 @@ All HTML code has been run through the [W3C HTML Validator](https://validator.w3
 
 </details>
 
-After testing all errors were fixed and document checking complete was shown for all pages
-
-![document checking complete](media/testing-images/document-ok.png "")
+After testing all errors that were able to be fixed were, issues with using Django Summernote caused some error to be unresovled. See [Known Bugs](#known-bugs) for details.
 
 | **TEMPLATE FILE** | **RUN THROUGH VALIDATOR** | **ANY ERRORS** | **ERRORS RESOLVED** |
 | ----------------- | ------------------------- | --------------- | ------------------- |
@@ -232,13 +230,13 @@ Final testing showed:
 
 <summary> Home App </summary>
 
-| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
-| -------- | ---------- | --------------- | -----------| ------- |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
+| **TEST**           | **ACTION**                                    | **EXPECTATION**                             | **RESULT**            | **FIX**            |
+| ------------------ | --------------------------------------------- | --------------------------------------------| ----------------------| ------------------ |
+| Navigation         | Clicked on the Home link in the navigation menu | Redirected to the home page                | Redirected as expected | N/A             |
+| Homepage content   | Scrolled through the homepage                 | See comapny bio and about           | Content displayed correctly | N/A             |
+| Contact Us link    | Clicked on the "Contact Us" link              | Redirected to the contact page              | Redirected as expected | N/A             |
+| Social media links | Clicked on social media icons                 | Redirected to respective social media profiles | Redirected as expected | N/A            |
+| Footer navigation  | Clicked on phone link in the footer                | web phone app opened           | Redirected as expected | N/A             |
 
 </details>
 
@@ -246,13 +244,11 @@ Final testing showed:
 
 <summary> Items App </summary>
 
-| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
-| -------- | ---------- | --------------- | -----------| ------- |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
+| **TEST**           | **ACTION**                                    | **EXPECTATION**                             | **RESULT**            | **FIX**            |
+| ------------------ | --------------------------------------------- | --------------------------------------------| ----------------------| ------------------ |
+| Item display       | Accessed the items page                       | Items displayed in a list    | Items displayed correctly | N/A             |
+| Search function    | Searched for specific item by name                  | Relevant items matching the search query shown | Search results displayed | N/A          |
+| Add to cart        | Clicked on "Add to Cart" button for an item   | Item added to the cart                      | Item successfully added | N/A             |
 
 </details>
 
@@ -260,13 +256,10 @@ Final testing showed:
 
 <summary> Newsletter App </summary>
 
-| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
-| -------- | ---------- | --------------- | -----------| ------- |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
+| **TEST**           | **ACTION**                                    | **EXPECTATION**                             | **RESULT**            | **FIX**            |
+| ------------------ | --------------------------------------------- | --------------------------------------------| ----------------------| ------------------ |
+| Subscription form | Entered email and clicked "Submit" button  | Confirmation message displayed               | Subscription successful | N/A             |
+| Email validation  | Entered invalid email format in subscription form | Error message displayed                 | Error message shown    | N/A             |
 
 </details>
 
@@ -274,13 +267,11 @@ Final testing showed:
 
 <summary> Orders App </summary>
 
-| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
-| -------- | ---------- | --------------- | -----------| ------- |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
+| **TEST**           | **ACTION**                                    | **EXPECTATION**                             | **RESULT**            | **FIX**            |
+| ------------------ | --------------------------------------------- | --------------------------------------------| ----------------------| ------------------ |
+| Order placement    | Added items to cart and proceeded to checkout | Order confirmation page displayed           | Order placed successfully | N/A           |
+| Order details      | Viewed details of a specific order            | Detailed information about the order shown   | Details displayed correctly | N/A          |
+| Delviery details     | Added delviery details           | Detailed information added to order   | Details displayed correctly | N/A          |
 
 </details>
 
@@ -288,13 +279,17 @@ Final testing showed:
 
 <summary> Services App </summary>
 
-| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
-| -------- | ---------- | --------------- | -----------| ------- |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
+| **TEST**           | **ACTION**                                    | **EXPECTATION**                             | **RESULT**            | **FIX**            |
+| ------------------ | --------------------------------------------- | --------------------------------------------| ----------------------| ------------------ |
+| Service offerings  | View list of services          | Services displayed    | Services listed correctly | N/A         |
+| Edit service details as admin    | Clicked to edit a service  | Detailed information about the service shown and able to amke edit | Edit successful | N/A       |
+| Add new service as admin    | Clicked to add a service  | Able to add service details | New Service added successful | N/A       |
+| Delete service details as admin    | Clicked to delete a service  | Delete check message shown | Delete successful | N/A       |
+| Case study view  | View case study          | Case Study displayed    | Case study listed correctly | N/A         |
+| Edit case study details as admin    | Clicked to edit a case study  | Detailed information about the case study shown and able to make edit | Edit successful | N/A       |
+| Add new case study as admin    | Clicked to add a case study  | Able to add case study details | New case study added successful | N/A       |
+| Delete case study details as admin    | Clicked to case study a service  | Delete check message shown | Delete successful | N/A       |
+
 
 </details>
 
@@ -302,38 +297,24 @@ Final testing showed:
 
 <summary> Users App </summary>
 
-| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
-| -------- | ---------- | --------------- | -----------| ------- |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
+| **TEST**           | **ACTION**                                    | **EXPECTATION**                             | **RESULT**            | **FIX**            |
+| ------------------ | --------------------------------------------- | --------------------------------------------| ----------------------| ------------------ |
+| User registration | Signed up for an account                      | Account created successfully                | Account created       | N/A             |
+| User login         | Logged in with registered credentials         | Logged in to user account                    | Login successful      | N/A             |
+| User Account      | Accessed user account page                     | Personal information and settings displayed | Profile displayed correctly | N/A     |
+| Password reset    | Reset password using "Forgot Password" link   | Password reset confirmation received         | Password reset successful | N/A         |
+| Account inormation upadte  | Updated account information   | Changes reflected in order infromation    | Account updated      | N/A             |
+| View order histroy | Created order and view it in account  | See order details    | Can see order successfully      | N/A             |
 
 </details>
-
-<details>
-
-<summary> KMCProjects App </summary>
-
-| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
-| -------- | ---------- | --------------- | -----------| ------- |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-|          |            |                 |            |         |
-
-</details>
-
 
 ## Other Testing
 
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
 | 404 Error |Typed /hello at end of url | 404 error page to show | Worked as expected | N/A |
-| URL Access |Typed /services/add at end of url | 404 error page to show | Taken back to login page | Warning could be added to show to user what happened rather than redirect |
-| URL Access | Typed /contact/list at end of url | 404 error page to show | Taken back to login page | Warning could be added to show to user what happened rather than redirect |
+| URL Access |Typed /services/add at end of url | 404 error page to show | Taken back to login page | N/A |
+| URL Access | Typed /contact/list at end of url | 404 error page to show | was able to access page | add user test to view |
 
 ## Responsiveness testing
 
@@ -355,24 +336,17 @@ The site was tested on the following browser types
 
 A user testing form was sent to friends and family to test the site on their devices and get real world feedback from people who had not been involved in the creation of the site.
 
-Here is the form that was sent.
-
-![user testing image](documentation/testing-images/user-testing-form-tempalate.png "user testing form screenshot")
-
 Feedback from the form
 
 * Better responsiveness for mobile - added media queries after this feedback
-* User testing did not throw many errors as users followed instructions
-* Users found it easy to add, edit, and delete a swim
+* User testing did not throw many errors as users found site easy to use
+* Users found it easy to add, edit, and delete a service and case study when given admin credentials
 * Users found it easy to create an account and navigate the website 
+* Users found it easy to add item to cart and proceed with checkout
 
 ### Things to implement from user testing
 
-* User reported that "I put in a non matching password and it didn't warn me" so password errors were added to form to ensure this cannot happen
-
-* User reported "Had a problem with the time field. Would be good to know the format it was looking for." so placeholder text was added
-
-* User reported "It would be good if errors popped up in a different colour. I entered something incorrectly when creating an account and it took me a second to notice because it was the same colour font" - this would be a good feature for future implementation 
+* Make logo clickable and redirect to homepage
 
 # Accessibility Testing
 
@@ -390,14 +364,14 @@ Examples of results are as follows:
 <details>
 <summary> Home </summary>
 
-![home lighthouse](documentation/testing-images/lighthouse-home.png " hoem lighthouse image")
+![home lighthouse](media/testing-images/home-lighthouse " home lighthouse image")
 
 </details>
 
 <details>
 <summary> Services </summary>
 
-![joined_swmis lighthouse](documentation/testing-images/lighthouse-joined-swim.png "joined swim lighthouse image")
+![services lighthouse](media/testing-images/services-lighthouse " services lighthouse image")
 
 
 </details>
@@ -405,41 +379,47 @@ Examples of results are as follows:
 <details>
 <summary> Products </summary>
 
-![Add Swim lighthouse](documentation/testing-images/lighthouse-add-swim.png "add swim lighthouse image")
+![prodcuts lighthouse](media/testing-images/products-lighthouse " products lighthouse image")
 
 </details>
 
 <details>
 <summary> Your Account </summary>
 
-![your account lighthouse](documentation/testing-images/lighthouse-your-account.png "your account lighthouse image")
+![your account lighthouse](media/testing-images/account-lighthouse "your account lighthouse image")
 
 </details>
 
 <details>
 <summary> Login and Logout </summary>
 
-![login lighthouse](documentation/testing-images/lighthouse-login.png "login lighthouse image")
+![login lighthouse](media/testing-images/account-lighthouse "login lighthouse image")
 
-![logout lighthouse](documentation/testing-images/lighthouse-logout.png "logout lighthouse image")
+![logout lighthouse](media/testing-images/account-lighthouse "logout lighthouse image")
 
 </details>
 
 <details>
 <summary> Cart </summary>
 
-![logout lighthouse](documentation/testing-images/lighthouse-logout.png "logout lighthouse image")
+![cart lighthouse](media/testing-images/cart-lighthouse "cart lighthouse image")
 
 </details>
 
 # Known Bugs
 
-## Resolved
+Djanog summernote has a known bug that it adds extra paragraph tags to the body content in your posts. 
 
+![p-elements error](media/testing-images/p-element-error.png "p-element error")
 
+More details can be found [here](https://github.com/summernote/summernote/issues/2418 "summernot issue")
+
+The same applied for placeholders
+
+![placeholder error](media/testing-images/placeholder-error.png "placeholder error")
 
 ## Unresolved 
 
-No known unresolved bugs
+Django summernote bug listed above.
 
 Return to [README.md](README.md)
