@@ -539,8 +539,6 @@ input[type=checkbox], input[type=radio] {
     color: red;
 }
 
-/* Sign Up */
-
 /* Cart */
 
 .added-item-img {
@@ -652,6 +650,15 @@ footer {
 .order-confirmation-wrapper .row {
     margin-bottom: 5px;
 }
+
+/* Error handling */
+
+.page-error {
+    text-align: center; 
+    margin-top: 20px; 
+  }
+  
+
 
 /* Media Queries for mobile */
 
