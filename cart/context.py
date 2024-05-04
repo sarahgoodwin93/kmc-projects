@@ -3,6 +3,7 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from items.models import Item
 
+
 def cart_contents(request):
     """
     Retrieves the contents of the  cart from the and calculates the total cost.

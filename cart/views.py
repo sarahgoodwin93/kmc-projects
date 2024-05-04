@@ -7,7 +7,7 @@ from items.models import Item
 
 # Create your views here.
 def cart_view(request):
-    """ 
+    """
     Return cart page with items added to the cart
     Or show No items in cart if none have been added
     """
@@ -28,7 +28,7 @@ def add_to_cart(request, item_id):
         # Item is already in the cart, update the quantity
         cart[item_id] += quantity
         updated_quantity = cart[item_id]
-        messages.success(request, f'Updated {item.name} in your cart. New quantity now {updated_quantity}')
+        messages.success(request, f'Updated {item.name} in your cart. New quantity now {updated_quantity}')  # noqa
     else:
         # Item is not in the cart, add it
         cart[item_id] = quantity
@@ -39,7 +39,7 @@ def add_to_cart(request, item_id):
 
 
 def remove_from_cart(request, item_id):
-    """ 
+    """
     Remove item from cart and give success message
     """
 
