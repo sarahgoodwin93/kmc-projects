@@ -27,7 +27,8 @@ def add_to_cart(request, item_id):
     if item_id in list(cart.keys()):
         # Item is already in the cart, update the quantity
         cart[item_id] += quantity
-        messages.success(request, f'Updated {item.name} quantity in your cart')
+        updated_quantity = cart[item_id]
+        messages.success(request, f'Updated {item.name} in your cart. New quantity now {updated_quantity}')
     else:
         # Item is not in the cart, add it
         cart[item_id] = quantity
