@@ -89,15 +89,23 @@ The user stories are as follows:
 - As a guest user, I can access the site's content to learn about the company's mission, values, and team member.
 - As a guest user, I can sign up to the newsletter to keep up to date with the company's latest news and updates.
 - As a guest user, I can use the contact form to get in touch with KMC Projects.
+- As a guest user I can view a list of the items for purchase so that select which items I wish to add to my cart.
+
 
 ### Registered (Logged in) User:
 - As a logged-in user, I can create and manage my account profile on KMC Projects so that I can personalize my experience on the site.
+- As a site user I can login so that I can see my account information and be able to logout.
 - As a logged-in user, I can view my order history from past orders
 - As a logged-in user, I can update my delivery information to save for future orders
 
 ### Admin User:
 - As an admin user, I can add new services to the offerings provided by KMC Projects
-- As an admin user, I can create and update case studies showcasing successful projects completed by KMC Projects.
+- As an admin user I can edit the services so that I can make updates to the services information 
+- As an admin user, I can create case studies showcasing successful projects completed by KMC Projects.
+- As an admin user I can edit the case study so that I can make updates to the case study information
+- As an admin user I can view a list of the contacts that have used the contact us form so that easily get back to them about upcoming business requests
+
+
 
 ### Shopper:
 - As a shopper, I can search for specific products or services offered by KMC Projects to find what I need efficiently.
