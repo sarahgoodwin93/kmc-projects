@@ -80,7 +80,11 @@
                     </div>
                     <!-- Add to Cart Button -->
                     <div class="col-12">
-                        <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Cart">
+                        {% if item.id in cart %}
+                        <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Update Cart">
+                        {% else %}
+                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Cart">
+                        {% endif %}
                     </div>
                     <!-- Hidden Field for Redirect URL -->
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">

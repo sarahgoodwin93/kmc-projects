@@ -15,7 +15,9 @@ def cart_view(request):
 
 
 def add_to_cart(request, item_id):
-    """ Add a quantity of the specified item to the shopping cart """
+    """
+    Add or update the quantity of the specified item in the shopping cart
+    """
 
     item = get_object_or_404(Item, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -23,34 +25,16 @@ def add_to_cart(request, item_id):
     cart = request.session.get('cart', {})
 
     if item_id in list(cart.keys()):
+        # Item is already in the cart, update the quantity
         cart[item_id] += quantity
+        messages.success(request, f'Updated {item.name} quantity in your cart')
     else:
+        # Item is not in the cart, add it
         cart[item_id] = quantity
         messages.success(request, f'Added {item.name} to your cart')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
-
-
-def update_cart(request, item_id):
-    """
-    Adjust the quantity item and give a success message
-    """
-
-    item = get_object_or_404(Item, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
-    cart = request.session.get('cart', {})
-
-    if quantity > 0:
-        cart[item_id] = quantity
-        messages.success(request, f'{item.name} has been updated')
-    else:
-        cart.pop(item_id, None)
-        messages.success(request, f'Removed {item.name} from your cart')
-
-    request.session['cart'] = cart
-    print("Stored Messages:", messages.get_messages(request))
-    return redirect(reverse('cart'))
 
 
 def remove_from_cart(request, item_id):
