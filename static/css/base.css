@@ -698,6 +698,7 @@ footer {
     }
 
     .homepage-box,
+    .homepage-box-form,
     .contact-box,
     .about-box,
     .order-success-box,
@@ -708,7 +709,8 @@ footer {
         margin: 30px 10px;
     }
 
-    .order-form-box {
+    .order-form-box,
+    .user-details-form-box {
         width: 80%;
     }
 
