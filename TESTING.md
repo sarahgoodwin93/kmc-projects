@@ -405,6 +405,10 @@ Examples of results are as follows:
 
 These two error are coming from within the django tempalting and not able to be accessed to edit and resolve.
 
+The extra p tag is coming from the |safe filter and if the |safe filter is removed then
+
+The safe filter in Django templates is used to mark a string as safe HTML content. The casestudy.body likely contains HTML content stored in your Django model's body field. When you apply the safe filter to casestudy.body, you're telling Django to trust that the HTML content is safe and should be rendered as-is, without escaping it. This allows the HTML content to be rendered with its intended formatting and styling on the webpage.
+
 ![p-elements error](media/testing-images/p-element-error.png "p-element error")
 
 The same applied for placeholders

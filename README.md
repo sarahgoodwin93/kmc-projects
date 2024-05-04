@@ -72,6 +72,19 @@ The audience main goals are to
 
 # Agile Development
 
+A Kaban board was used in GitHub to create the agile development process – see the board [here](https://github.com/sarahgoodwin93/kmc-projects/projects?query=is%3Aopen Kaban Board)
+
+There were 4 projects created
+
+- Generic User (Guest)
+
+- Regisered User
+
+- Admin User
+
+- Shopper
+
+To represent the 4 different access areas of the site. 
 User stories were labelled using the MoSCoW method.
 
 [Back to Top](#kmc-projects)
@@ -104,8 +117,6 @@ The user stories are as follows:
 - As an admin user, I can create case studies showcasing successful projects completed by KMC Projects.
 - As an admin user I can edit the case study so that I can make updates to the case study information
 - As an admin user I can view a list of the contacts that have used the contact us form so that easily get back to them about upcoming business requests
-
-
 
 ### Shopper:
 - As a shopper, I can search for specific products or services offered by KMC Projects to find what I need efficiently.
