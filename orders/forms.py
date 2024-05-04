@@ -31,7 +31,6 @@ class OrderForm(forms.ModelForm):
         field is required.
         """
         super().__init__(*args, **kwargs)
-        # Define placeholders for form fields
         placeholders = {
             'full_name': 'Full Name',
             'email': 'Email Address',
@@ -43,7 +42,7 @@ class OrderForm(forms.ModelForm):
         }
 
         # Set autofocus on the full name field
-        self.fields['full_name'].widget.attrs['autofocus'] = True  # <-- Error occurs here
+        self.fields['full_name'].widget.attrs['autofocus'] = True
 
         # Iterate through fields to set placeholders, add star if required
         for field in self.fields:

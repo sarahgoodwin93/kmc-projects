@@ -32,12 +32,13 @@ class UserDetailsForm(forms.ModelForm):
             'default_street_address2': 'Street Address 2',
         }
 
-        self.fields['default_name'].widget.attrs['autofocus'] = True
+        # Iterate through fields to set placeholders, add star if required
         for field in self.fields:
-            if self.fields[field].required:
-                placeholder = f'{placeholders[field]} *'
-            else:
-                placeholder = placeholders[field]
-            self.fields[field].widget.attrs['placeholder'] = placeholder
+            if field != 'country':
+                if self.fields[field].required:
+                    placeholder = f'{placeholders[field]} *'
+                else:
+                    placeholder = placeholders[field]
+                self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
