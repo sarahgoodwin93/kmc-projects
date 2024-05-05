@@ -401,6 +401,9 @@ Examples of results are as follows:
 
 # Known Bugs
 
+At time of submitting known bugs section not appearing on TESTING.md frontend.
+Code of markdown is showing and can be seen [here](https://github.com/sarahgoodwin93/kmc-projects/blob/main/TESTING.md?plain=1 "code for TESTING.md")
+
 ## P Element Error
 ![p-elements error](media/testing-images/p-element-error.png "p-element error")
 
