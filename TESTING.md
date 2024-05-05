@@ -399,32 +399,7 @@ Examples of results are as follows:
 
 </details>
 
-## P Element Error
-![p-elements error](media/testing-images/p-element-error.png "p-element error")
-
-The extra p tag is coming from the |safe filter. By using the safe filter in casestudy.body, it is allowing Django to trust that the HTML content is safe and should be rendered as-is, without escaping it. This allows the HTML content to be rendered with its intended formatting and styling on the webpage.
-
-## Placeholder error
-The error occured because the <select> elements in HTML do not support the placeholder attribute.
-
-![placeholder error](media/testing-images/placeholder-error.png "placeholder error")
-
-## Resolved
-
-By removing country from the placeholders in the __init__ method and checking if the field is country, it will be skipped in the logic. 
-The piece of code `if field != 'country':` was added in so solve this bug. 
-
-## Unresolved 
-
-If the |safe filter is removed then the formatting from the rich body text editor is also removed and the below happens. As this is needed for the site for admin users to be able to edit and format the text. it has been left in and the error noted.
-
-![safe-filter-error](media/testing-images/safe-filter-error.png "safe-filter-error")
-
-Return to [README.md](README.md)
-
 # Known Bugs
-
-At time of submission
 
 ## P Element Error
 ![p-elements error](media/testing-images/p-element-error.png "p-element error")
