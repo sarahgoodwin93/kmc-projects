@@ -42,8 +42,6 @@ All HTML code has been run through the [W3C HTML Validator](https://validator.w3
 
 ![class error](media/testing-images/class-error.png "class error")
 
-![css error](media/testing-images/css-errors.png "css error")
-
 ![p-elements error](media/testing-images/p-element-error.png "p-element error")
 
 ![placeholder error](media/testing-images/placeholder-error.png "placeholder error")
@@ -67,10 +65,10 @@ After testing, all errors that were able to be fixed were resolved, due to the u
 | newsletter.html   | yes                       | no              | N/A                 |
 | orders.html       | yes                       | Attribute placeholder not allowed on element select at this point. |  |
 | order_success.html| yes                       | no              | N/A                 |
-| services.html     | yes                       | No p element in scope but a p end tag seen.|  |
-| add_casestudy.html| yes                       | No p element in scope but a p end tag seen. | |
+| services.html     | yes                       | No p element in scope but a p end tag seen.| No, details below in [unresolved](#unresolved)|
+| add_casestudy.html| yes                       | No p element in scope but a p end tag seen. |No, details below in [unresolved](#unresolved)|
 | delete_casestudy.html| yes                    | no              | N/A                 |
-| edit_casestudy.html| yes                      | No p element in scope but a p end tag seen. | |
+| edit_casestudy.html| yes                      | No p element in scope but a p end tag seen. |No, details below in [unresolved](#unresolved)|
 | add_service.html  | yes                       | no              | N/A                 |
 | delete_service.html| yes                     | no              | N/A                 |
 | edit_service.html | yes                      | no              | N/A                 |
@@ -218,10 +216,10 @@ Final testing showed:
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
 | Cart page|Opened site url	| items appearing in cart |Worked as expected | N/A|
-|No item| |                 |            |         |
-|Remove Item|            |                 |            |         |
-| Checkout button|            |                 |            |         |
-| Keep shopping button|            |                 |            |         |
+|No item| No item added | No items to show in car | Message saying "Your cart is empty." | N/A |
+|Remove Item| Click remove button | Item removed from cart | Message saying "Item remove from your cart" | N/A |
+| Checkout button| Click checkout button | Get taken to checkout page |Redirected to checkout page | N/A|
+| Keep shopping button| Click Keep shopping button | Get taken to prodcuts page | Redirected to products page | N/A |
 
 </details>
 
@@ -313,7 +311,7 @@ Final testing showed:
 | -------- | ---------- | --------------- | -----------| ------- |
 | 404 Error |Typed /hello at end of url | 404 error page to show | Worked as expected | N/A |
 | URL Access |Typed /services/add at end of url | 404 error page to show | Taken back to login page | N/A |
-| URL Access | Typed /contact/list at end of url | 404 error page to show | was able to access page | add user test to view |
+| URL Access | Typed /contact/list at end of url | 404 error page to show | was able to login page | add user test to view |
 
 ## Responsiveness testing
 
@@ -359,14 +357,14 @@ Examples of results are as follows:
 <details>
 <summary> Home </summary>
 
-![home lighthouse](media/testing-images/home-lighthouse " home lighthouse image")
+![home lighthouse](media/testing-images/home-lighthouse.png " home lighthouse image")
 
 </details>
 
 <details>
 <summary> Services </summary>
 
-![services lighthouse](media/testing-images/services-lighthouse " services lighthouse image")
+![services lighthouse](media/testing-images/services-lighthouse.png " services lighthouse image")
 
 
 </details>
@@ -374,36 +372,36 @@ Examples of results are as follows:
 <details>
 <summary> Items </summary>
 
-![items lighthouse](media/testing-images/items-lighthouse " items lighthouse image")
+![items lighthouse](media/testing-images/items-lighthouse.png " items lighthouse image")
 
 </details>
 
 <details>
 <summary> Your Account </summary>
 
-![your account lighthouse](media/testing-images/account-lighthouse "your account lighthouse image")
+![your account lighthouse](media/testing-images/account-lighthouse.png "your account lighthouse image")
 
 </details>
 
 <details>
 <summary> Login and Logout </summary>
 
-![login lighthouse](media/testing-images/account-lighthouse "login lighthouse image")
+![login lighthouse](media/testing-images/account-lighthouse.png "login lighthouse image")
 
-![logout lighthouse](media/testing-images/account-lighthouse "logout lighthouse image")
+![logout lighthouse](media/testing-images/account-lighthouse.png "logout lighthouse image")
 
 </details>
 
 <details>
 <summary> Cart </summary>
 
-![cart lighthouse](media/testing-images/cart-lighthouse "cart lighthouse image")
+![cart lighthouse](media/testing-images/cart-lighthouse.png "cart lighthouse image")
 
 </details>
 
 # Known Bugs
 
-These two error are coming from within the django tempalting and not able to be accessed to edit and resolve.
+These two error are coming from within the django tempalting.
 
 ### P Element Error
 ![p-elements error](media/testing-images/p-element-error.png "p-element error")
