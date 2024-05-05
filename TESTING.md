@@ -401,8 +401,6 @@ Examples of results are as follows:
 
 # Known Bugs
 
-These two error are coming from within the django tempalting.
-
 ## P Element Error
 ![p-elements error](media/testing-images/p-element-error.png "p-element error")
 
