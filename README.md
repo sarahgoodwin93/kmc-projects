@@ -47,7 +47,7 @@ Throughout this README both KMC Projects and Kevin McCaffrey will often be refer
 # Key Project Goals
 
 The main goal of the site is to offer a one-stop-shop for clients of KMC Projects. This main goal can be split into smaller goals, they include
-- Being able to be able to contact KMC Projects and enquire about working with them.
+- Being able to contact KMC Projects and enquire about working with them.
 - See what kind of services KMC Projects offer
 - Read about case studies to see they type of work they can provide
 - Purchase parts from the distribution products list
@@ -57,14 +57,14 @@ The main goal of the site is to offer a one-stop-shop for clients of KMC Project
 
 The business model is both a business-to-customer and business-to-business as they work both with individual professionsals, companies and clients.
 For business to customer, the site provides a list of products to purchase, the customer can do this without being a client of KMC Projects and can purchase as a one off item.
-For business to business, the site provides business a contact form to get in touch with KMC project in order to work with them from their list of services or ask for a bespoke offering. Businesses can also purchase from the prodcuts page.
+For business to business, the site provides business a contact form to get in touch with KMC Projects in order to work with them from their list of services or ask for a bespoke offering. Businesses can also purchase from the prodcuts page.
 Both businesses and customers can create a login in order to see their purchase histroy. 
 
 When speaking with Kevin from KMC Projects he said this business model worked well for them as it allowed a range of people to come and see what they can do. This is called a [Business to Many](https://en.wikipedia.org/wiki/Business_to_many#:~:text=With%20both%20B2B%20and%20B2C,more%20quickly%20on%20the%20market. "Business to many wikipedia") or B2M
 
 ## Target Audience
 
-KMC Projects target audience focus on the hydraulic industry, businesses involved in construction, manufacturing, infrastructure development, and related sectors. Their clients often know what they need before coming to the site.
+KMC Projects target audience focuses on the hydraulic industry, businesses involved in construction, manufacturing, infrastructure development, and related sectors. Their clients often know what they need before coming to the site.
 The audience main goals are to
 - Contact KMC Project
 - Find parts they are already looking for (using part number, or sometimes part name)
@@ -254,10 +254,10 @@ It suits well with the logo that was already created for the business.
 
 ![Color palette Image](media/README-images/colour-pallete.png "colour pallette image")
 
-KMCs hero colour is #f99411, this was taken from their logo which was designed in by [JayKay Art](https://www.jay-kay.co/ "link to jaykay art homepage")
+KMCs hero colour is #f99411, this was taken from their logo which was designed in by [Jay Kay Art](https://www.jay-kay.co/ "link to jaykay art homepage")
 
-The colour pallet was craeted using the logo and the clients instructions to keep the site minimual and clean.
-Different shades of grey were chosen to make the orange stand out and provide a nice contrast while keeping the look industral. 
+The colour palette was created using the logo as inspiration and the clients instructions to keep the site minimual and clean.
+Different shades of grey were chosen to make the orange stand out and provide a nice contrast while keeping the look industrial. 
 
 The colour pallette also allows images added to the site to stand out.
 
@@ -335,7 +335,7 @@ The services page gives users an idea of some of the services to discuss with KM
 - Project Management for Hydraulic Systems
 - Hydraulic Training Programs
 
-For SEO these titles were changes from Consultancy, Project Management & Training. 
+For SEO these titles were changed from Consultancy, Project Management & Training. 
 
 The price of these services has not been included as every service is bespoke to each client and the job specs must be discussed before a quote is offered.
 
@@ -350,7 +350,7 @@ The case study showcases some of the work KMC Project is involved in, giving use
 
 ![Products](media/README-images/products.png "products screenshot")
 
-The products page has the option the view all products or to view by product type.
+The products page has the option to view all products or to view by product type.
 Users can search by product name or item number. When in discussions with Kevin from KMC Projects about the products page, he said his clients knew the item number they would be looking for and would not come to the site in search of a price or to browse types of an item. This is why the products page is clean and simple, just the way KMC Projects wanted it.
 
 Users have the option to add the item to their carts, and choose how many items they wish to add. 
@@ -360,6 +360,14 @@ The products themselves list
 - The item number which is unique to each item
 - The manufacturer
 - A datasheet pdf 
+
+When a product is added to the cart a success message shows and offers a place for the user to head straight to checkout.
+
+![Added item to cart](media/README-images/added-to-cart-msg.png.png "Added item to cart screenshot")
+
+When the same item is added again, the user gets a message to say the item has been updated.
+
+![Updated cart](media/README-images/updated-cart.png.png "updated cart screenshot")
 
 The products page is responsive and changes for mobile users
 
@@ -377,9 +385,14 @@ This functionality provides users with control over their shopping experience, e
 The checkout page is where users finalize their purchases. Users can review the items in their cart, remove any unwanted items, and view the total cost of their order. Users can input their delivery details, which if added from the account page will caryy across. 
 Users can choose to save their delivery details, if they are not logged in they will be prompted to sign up or login if they use to save their details.
 
+To complete the transaction, users can securely pay with their credit or debit card using the integrated Stripe payment gateway. 
+
 ![Checkout](media/README-images/stripe.png "checkout image ")
 
-To complete the transaction, users can securely pay with their credit or debit card using the integrated Stripe payment gateway. 
+Once complete the checkout is complete the user will see their order details listed and an email will be sent with their confirmation.
+
+![Checkout Success](media/README-images/order-complete.png.png "checkout success image ")
+
 
 ### Login, Logout and Sign Up
 
@@ -416,11 +429,15 @@ An example of some of the errors:
 
 ![Admin navbar](media/README-images/admin-navbar.png "admin nav-bar ")
 
-![case study navbar](media/README-images/add-edit-delete-casestudy.png "case study admin  ")
+The admin superuser access allows admin users to create, read, update and delete both the services and case study sections of the site. Their nav bar also includes a contact list for people who have used the contact form.
 
 ![service admin ](media/README-images/add-edit-delete-services.png "service admin  ")
 
-The admin superuser access allows admin users to create, read, update and delete both the services and case study sections of the site. Their nav bar also includes a contact list for people who have used the contact form.
+The same buttons appear for the case study
+
+![case study navbar](media/README-images/add-edit-delete-casestudy.png "case study admin  ")
+
+The admin superuser can also see a list of who has used the contact form so that they can easily go back to their contact list with a reply.
 
 ![Contact list](media/README-images/contacts.png "contact list nav0bar ")
 
@@ -550,26 +567,20 @@ Config vars are needed to be created in Heroku so that to conect the app to Djan
 
 ### Github
 
-#### Create a new repository
+#### Create a new repository 
 
-- Log into [GitHub](https://github.com/)
-- On the 'Repositories' tab click 'New'
-- Name the repository and click 'Create repository'
-
-#### Forking
-
-- Sign into Github and go to my [repo](https://github.com/ChrisT-CC/H2B-PP5-ecommerce)
-- Press the "Fork" button the top right corner of page
-- Click "Create fork"
+- Get Python Essentials Template from Code Institute P3 Template
+- Create a new repository using the P3 template
 
 #### Cloning
 
-- Sign in to Github and go to my [repo](https://github.com/ChrisT-CC/H2B-PP5-ecommerce)
+- Sign in to Github and go to my [repo](https://github.com/sarahgoodwin93/kmc-projects)
 - Above the list of files click "Code"
-- Select HTTPS, SSH or Github CLI, then click the copy button to get the URL
-- Open your IDE of choice
-- Type "git clone" and then paste the URL you copied
-- Press Enter
+- Select HTTPS and copy
+- Open Gitpod
+- Click new workspace and paste in the cloned links
+- Choose VS Code Browser
+- Press Continue
 
 [Back to Top](#kmc-projects)
 
@@ -591,23 +602,19 @@ Certain parts of the project were taken from the Boutique ado walkthrough projec
 
 Additional learning:
 
-- json:
-https://codebeautify.org/blog/how-to-create-json-file/
+- [JSON File](https://codebeautify.org/blog/how-to-create-json-file/ "How to create json file"): An excel spreadsheet of products name, item number, manufacturer and price were provided by the client and this was converted into a json file. To learn how to do this the Code Beautify site was used.
 
-- text editor:
-https://www.youtube.com/watch?v=mF5jzSXb1dc
 
-- choice fields
-https://docs.djangoproject.com/en/5.0/ref/models/fields/
-https://www.geeksforgeeks.org/how-to-align-checkboxes-and-their-labels-on-cross-browsers-using-css/
+- [Rich Text Editor](https://www.youtube.com/watch?v=mF5jzSXb1dc "youtube video for Rich Text Editor"): This video was used to learn how to add the rich text editor for the case study section of the site
 
-- Superusers
-https://stackoverflow.com/questions/15998140/how-to-limit-a-view-to-superuser-only 
+- [Djanog Choice Fields](https://docs.djangoproject.com/en/5.0/ref/models/fields/ "Model field reference django documentation"): This documention was read to learn more about django choice fields for the custom models created for the site, especially the services model. 
 
-- Send emails
-https://docs.djangoproject.com/en/5.0/topics/email/
-https://simpleisbetterthancomplex.com/tutorial/2016/06/13/how-to-send-email.html
-https://github.com/AnaMelisaGo/portfolio-5-green-planet/tree/1f5410657463b6c116d5fb6d87a9875348d427f8/checkout/templates/checkout/confirmation_emails
+- [Limiting view to superusers](https://stackoverflow.com/questions/15998140/how-to-limit-a-view-to-superuser-only "stackoverflow for limited view for superusers"): This stack overflow conversation was used to learn how to limit certain views to superusers only.  
+
+- The following sites were used to learn how to send confrimation emails for both the newsletter and order success pages.
+[Django Sending email](https://docs.djangoproject.com/en/5.0/topics/email/ "django documents for sending emails")
+[simpleisbetterthancomplex](https://simpleisbetterthancomplex.com/tutorial/2016/06/13/how-to-send-email.html "simpleisbetterthancomplex blog post on how to send emails")
+[AnaMelisaGo Github](https://github.com/AnaMelisaGo/portfolio-5-green-planet/tree/1f5410657463b6c116d5fb6d87a9875348d427f8/checkout/templates/checkout/confirmation_emails "AnaMelisaGo github page for confrimation emails")
 
 # Acknowledgements
 

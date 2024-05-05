@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /accounts/
 Disallow: /cart/
-Sitemap: https://kmc-projects-686d2f98b9c9.herokuapp.com/
+Sitemap: https://kmc-projects-686d2f98b9c9.herokuapp.com/sitemap.xml
