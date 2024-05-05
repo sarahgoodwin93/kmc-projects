@@ -422,6 +422,6 @@ The piece of code `if field != 'country':` was added in so solve this bug.
 
 If the |safe filter is removed then the formatting from the rich body text editor is also removed and the below happens. As this is needed for the site for admin users to be able to edit and format the text. it has been left in and the error noted.
 
-![safe-filter-error](media/README-images/safe-filter-error.png "safe-filter-error")
+![safe-filter-error](media/testing-images/safe-filter-error.png "safe-filter-error")
 
 Return to [README.md](README.md)
