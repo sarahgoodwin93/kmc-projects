@@ -409,7 +409,7 @@ These two error are coming from within the django tempalting.
 The extra p tag is coming from the |safe filter. By using the safe filter in casestudy.body, it is allowing Django to trust that the HTML content is safe and should be rendered as-is, without escaping it. This allows the HTML content to be rendered with its intended formatting and styling on the webpage.
 
 ### Placeholder error
-The error occured because the <select> elements in HTML do not support the placeholder attribute. 
+The error occured because the <select> elements in HTML do not support the placeholder attribute.
 
 ![placeholder error](media/testing-images/placeholder-error.png "placeholder error")
 
