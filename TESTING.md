@@ -404,6 +404,25 @@ Examples of results are as follows:
 At time of submitting known bugs section not appearing on TESTING.md frontend.
 Code of markdown is showing and can be seen [here](https://github.com/sarahgoodwin93/kmc-projects/blob/main/TESTING.md?plain=1 "code for TESTING.md")
 
+Written again below without headers:
+
+![p-elements error](media/testing-images/p-element-error.png "p-element error")
+
+The extra p tag is coming from the |safe filter. By using the safe filter in casestudy.body, it is allowing Django to trust that the HTML content is safe and should be rendered as-is, without escaping it. This allows the HTML content to be rendered with its intended formatting and styling on the webpage.
+
+The error occured because the <select> elements in HTML do not support the placeholder attribute.
+
+![placeholder error](media/testing-images/placeholder-error.png "placeholder error")
+
+By removing country from the placeholders in the __init__ method and checking if the field is country, it will be skipped in the logic. 
+The piece of code `if field != 'country':` was added in so solve this bug. 
+
+If the |safe filter is removed then the formatting from the rich body text editor is also removed and the below happens. As this is needed for the site for admin users to be able to edit and format the text. it has been left in and the error noted.
+
+![safe-filter-error](media/testing-images/safe-filter-error.png "safe-filter-error")
+
+And with headers (which is now showing on TESTING.md)
+
 ## P Element Error
 ![p-elements error](media/testing-images/p-element-error.png "p-element error")
 
