@@ -2,16 +2,16 @@
 
 ![am-i-responsive-image](media/README-images/am-i-responsive.png "am-i-responsive-image")
 
-- Introduction
+# Introduction
 - [Live Site Link](https://kmc-projects-686d2f98b9c9.herokuapp.com/ "KMC Projects deployed site")
 
-KMC Projects is a real world business founded by Kevin McCaffrey. The site has been created to showcase the work and serives that KMC Projects provides, offer an easy contact for clients to get in touch, and a database of products that KMC Projects distributes that clients can purchase. 
+KMC Projects is a real world business founded by Kevin McCaffrey. The site has been created to showcase the work and services that KMC Projects provides, offer an easy contact for clients to get in touch, and a database of products that KMC Projects distributes that clients can purchase. 
 
 KMC Projects offers a comprehensive range of services tailored to meet the diverse needs of commercial companies in the hydraulic industry. From hydraulic design and consultancy to project management and training, they are dedicated to delivering innovative solutions that ensure precision, efficiency, and success.
 
-They provide a distribution list of hydraulic products. Whether you're sourcing components for a new project or replacing parts in existing systems, our inventory ensures that you have access to top-quality products that meet your requirements.
+They provide a distribution list of hydraulic products. Whether you're sourcing components for a new project or replacing parts in existing systems, their inventory ensures that you have access to top-quality products that meet your requirements.
 
-Throughout this README both KMC Projects and Kevin McCaffrey will be referred to as 'the client'.
+Throughout this README both KMC Projects and Kevin McCaffrey will often be referred to as 'the client'.
 
 ## Table of Contents
 
@@ -49,26 +49,25 @@ Throughout this README both KMC Projects and Kevin McCaffrey will be referred to
 The main goal of the site is to offer a one-stop-shop for clients of KMC Projects. This main goal can be split into smaller goals, they include
 - Being able to be able to contact KMC Projects and enquire about working with them.
 - See what kind of services KMC Projects offer
-- Read about case studies
+- Read about case studies to see they type of work they can provide
 - Purchase parts from the distribution products list
-- Login and see their purchase histroy 
+- Login and see their order histroy 
 
 # Business Model
 
 The business model is both a business-to-customer and business-to-business as they work both with individual professionsals, companies and clients.
-
 For business to customer, the site provides a list of products to purchase, the customer can do this without being a client of KMC Projects and can purchase as a one off item.
-
-For business to business, the site provides business a contact form to get in touch with KMC project in order to work with them. Businesses can also purchase from the prodcuts page.
-
+For business to business, the site provides business a contact form to get in touch with KMC project in order to work with them from their list of services or ask for a bespoke offering. Businesses can also purchase from the prodcuts page.
 Both businesses and customers can create a login in order to see their purchase histroy. 
+
+When speaking with Kevin from KMC Projects he said this business model worked well for them as it allowed a range of people to come and see what they can do. This is called a [Business to Many](https://en.wikipedia.org/wiki/Business_to_many#:~:text=With%20both%20B2B%20and%20B2C,more%20quickly%20on%20the%20market. "Business to many wikipedia") or B2M
 
 ## Target Audience
 
 KMC Projects target audience focus on the hydraulic industry, businesses involved in construction, manufacturing, infrastructure development, and related sectors. Their clients often know what they need before coming to the site.
 The audience main goals are to
 - Contact KMC Project
-- Find parts they are already looking for
+- Find parts they are already looking for (using part number, or sometimes part name)
 
 # Agile Development
 
@@ -130,13 +129,12 @@ The user stories are as follows:
 - As a future registered user, I would be able to see my contact form responses and make amends to them
 
 ### Admin User:
-- As a future admin user, I would be able to view a list of the contact forms that site users had filled out without going to the django admin panel
 - As a future admin user, I would be able to view a list of the newsletter signsups without going to the django admin panel
 - As a future admin user, I would be able to edit the products list page without going to the django admin panel
 
 ### Shopper:
-- As a future shopper, I would be able to request certain parts be made avalaible 
-- As a future shopper, I would be notified if a new product was made avalaible 
+- As a future shopper, I would be able to request certain parts be made available 
+- As a future shopper, I would be notified if a new product was made available 
 
 # Web Marketing
 
@@ -148,7 +146,7 @@ For this project the following web marketing strategies were used:
 
 ## SEO Implementation
 
-To implement SEO in this project, various techniques were used. These include using semantic HTML, avoiding excessive keyword repetition, integrating keywords naturally within website content, providing descriptive alt attributes for images, incorporating metadata descriptions and keywords at the head level of the project, and using the 'noopener' attribute in the 'rel' tag. Additionally, we ensure that external links have descriptive 'aria-label' attributes for enhanced accessibility.
+To implement SEO in this project, various techniques were used. These include using semantic HTML, avoiding excessive keyword repetition, integrating keywords naturally within website content, incorporating metadata descriptions and keywords at the head level of the project, and using the 'noopener' attribute in the 'rel' tag. External links have descriptive 'aria-label' attributes for enhanced accessibility.
 
 The keywords are short-tailed and long-tailed and are as follows:
 
