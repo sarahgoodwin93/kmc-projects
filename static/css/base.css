@@ -277,6 +277,9 @@ a {
     margin-bottom: 10px;
 }
 
+img.card-img-top.img-fluid {
+    border-radius: 10px;
+}
 
 .casestudy-box {
     display: flex;
@@ -287,7 +290,7 @@ a {
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid #ccc;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
