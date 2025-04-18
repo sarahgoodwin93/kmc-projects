@@ -20,3 +20,4 @@ window.addEventListener('DOMContentLoaded', () => {
     ease: "power3.out"
   }, "-=0.5");
 });
+

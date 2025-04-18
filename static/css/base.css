@@ -14,7 +14,7 @@ h2 {
 }
 
 .site-headings {
-    margin-top: 20px;
+    margin-top: 2%;
 }
 
 a {
@@ -271,6 +271,13 @@ a {
     box-sizing: border-box;
 }
 
+.service-icon {
+    font-size: 2.5rem;
+    color: #f99411;
+    margin-bottom: 10px;
+}
+
+
 .casestudy-box {
     display: flex;
     align-items: center;
@@ -511,6 +518,7 @@ a {
 .django-ckeditor-widget {
     width: 100%;
 }
+
 
 /* Items */
 
