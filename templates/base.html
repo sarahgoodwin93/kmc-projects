@@ -82,24 +82,24 @@
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == services_url %}active{% endif %}" href="{% url 'services' %}">Services</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <!-- Items -->
-                            <a class="nav-link {% if request.path == items_url %}active{% endif %}" href="{% url 'items' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <!-- <li class="nav-item dropdown">
+                            <-- Items -->
+                            <!-- <a class="nav-link {% if request.path == items_url %}active{% endif %}" href="{% url 'items' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Products
                                 <i class="fa-solid fa-square-chevron-down"></i>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="nav-link {% if request.path == items_url %}active{% endif %}" href="{% url 'items' %}">View all products</a>
-                                <!-- Dropdown items for different item types -->
-                                <div class="dropdown-divider"></div>
+                                <--- Dropdown items for different item types -->
+                                <!-- <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{% url 'items' %}?type=actuator">Actuators</a>
                                 <a class="dropdown-item" href="{% url 'items' %}?type=connector">Connectors</a>
                                 <a class="dropdown-item" href="{% url 'items' %}?type=electronics">Electronics</a>
                                 <a class="dropdown-item" href="{% url 'items' %}?type=filtration">Filtration</a>
                                 <a class="dropdown-item" href="{% url 'items' %}?type=sensors">Sensors</a>
                                 <a class="dropdown-item" href="{% url 'items' %}?type=valve">Valves</a>
-                            </div>
-                        </li>
+                            </div> -->
+                        <!-- </li> -->
                         <!-- Account and Logout Links -->
                         {% if user.is_authenticated %}
                             <li class="nav-item">
