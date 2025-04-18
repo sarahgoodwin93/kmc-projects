@@ -41,7 +41,7 @@ class ContactFormView(CreateView):
                 f"Email: {contact['email']}"
             ),
             from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=['sarah@lylotechstudio.com'],
+            recipient_list=['sarah@lylotechstudio.com', 'kevin@kmcprojects.com.au'],
         )
 
         messages.success(self.request, "Thanks for contacting us, we'll be in touch soon")

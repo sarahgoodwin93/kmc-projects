@@ -3,34 +3,42 @@
 
 {% block content %}
 <div class="content-wrapper">
-    <!-- Heading -->
-    <h1 class="home-heading">Problems Solved</h1>
-    <!-- Contact Us Button -->
-    <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
-    <!-- Homepage box -->
-    <div class="homepage-box">
-        <div>
-            <!-- Tagline -->
-            <p>Hydraulic Design, Consultancy, Project Management & Training</p>
-            <br>
-            <!-- Homepage text -->
-            <p class="homepage-text">About KMC Projects</p>
-            <p>
-                Welcome to our world of Hydraulic Design Excellence! 
-                At KMC Projects, we offer a comprehensive suite of services including
-                <strong>hydraulic design, consultancy, project management, and training.</strong>
-                With years of experience and a team of seasoned experts, we specialize in crafting innovative
-                <strong>hydraulic solutions</strong> tailored to your unique needs. Whether you're embarking on a new project, seeking optimization
-                for existing systems, or aiming to enhance your team's skills, we're here to guide you every step of the way.
-                Dive into the fluid dynamics of success with KMC Projects, where precision, efficiency, and expertise converge.
-                Check out our products page where you'll find quality hydraulic products for purchase in our product distribution list.
-            </p>
-        </div>
-    </div>
     <!-- Homepage image -->
-    <div class="cylinder-scroll">
-        <img class="cylinders-img" src="{% static 'images/cylinders.jpg' %}" alt="cylinders image">
-    </div>
+    <section class="hero-section">
+        <div class="hero-image">
+          <img src="{% static 'images/hero-image.jpg' %}" alt="Hydraulic system image">
+          <div class="hero-overlay">
+            <h1 class="hero-title">Hydraulic Design Excellence</h1>
+            <p class="hero-subtitle">Bespoke consultancy & project solutions that keep things moving</p>
+            <a href="{% url 'contact' %}" class="hero-button">Contact Us</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="services-icons">
+        <div class="icon-block">
+          <i class="fas fa-cogs"></i>
+          <p>Hydraulic Design</p>
+        </div>
+        <div class="icon-block">
+          <i class="fas fa-lightbulb"></i>
+          <p>Consultancy</p>
+        </div>
+        <div class="icon-block">
+          <i class="fas fa-tasks"></i>
+          <p>Project Management</p>
+        </div>
+        <div class="icon-block">
+          <i class="fas fa-chalkboard-teacher"></i>
+          <p>Training</p>
+        </div>
+        <div class="icon-block">
+          <i class="fas fa-wrench"></i>
+          <p>Problem Solving</p>
+        </div>
+      </section>
+      
+
     <!-- About Section -->
     <div class="homepage-bottom">
         <div class="about-box">
@@ -39,14 +47,20 @@
             </div>
             <!-- About Text -->
             <div class="about-text">
+                <h1 class="homepage-text">Who We Are</h1>
+                <p>At KMC Projects, we specialise in delivering tailored hydraulic solutions across design, consultancy, project management, and training. 
+                    With over 20 years of hands-on industry experience, Chartered Engineer Kevin McCaffrey leads a team that understands the critical role hydraulics play in system efficiency and operational reliability. 
+                    From concept development to commissioning, we work collaboratively to ensure every design is robust, compliant, and optimised for real-world performance.
+                </p>
+                <br>
+                <p>Whether you’re launching a new infrastructure project, upgrading legacy systems, or developing in-house capability, KMC Projects offers a streamlined, expert-led approach. 
+                    We pride ourselves on translating complex hydraulic challenges into practical, effective outcomes — helping clients reduce risk, increase efficiency, and stay ahead of industry demands.
+                </p>
+                <br>
                 <h1 class="homepage-text">About Kevin McCaffrey</h1>
                     <p>
                         Kevin began his previous company, Excel Hydraulics, in 1998. What began with Kevin tinkering in his garage led to a thriving business, acquired in 2016.
-                    </p>
-                    <p>
                         His passion for fixing problems continues in his new enterprise. Kevin is renowned for his innovation and getting the best out of people.
-                    </p>
-                    <p>
                         He is a specialist in <strong>fluid power engineering, hydraulics, and problem-solving</strong>.
                     </p>
             </div>

@@ -23,9 +23,26 @@ a {
 
 /* Logo */
 
+.main-logo-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    pointer-events: auto;
+    z-index: 9999;
+    position: relative;
+}
+
+.main-logo-link:hover {
+    text-decoration: none;
+}
+
 .logo-img {
     width: 50%;
-    text-align: center;
+    margin: 0 auto;
+    pointer-events: auto;
+    z-index: 9999;
+    position: relative;
+    cursor: pointer;
 }
 
 .tagline {
@@ -70,7 +87,8 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 30px 80px;
+    width: 80%;
+    margin: 30px auto;
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid #ccc;
     padding: 20px;
@@ -165,7 +183,8 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 30px 80px;
+    width: 75%;
+    margin: 30px auto;
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid #ccc;
     padding: 20px;
@@ -262,14 +281,14 @@ a {
     font-size: 2.5rem;
     margin-bottom: 20px;
     text-transform: uppercase;
-    margin-top: 10px;
+    margin-top: 2%;
 }
 
 .contact-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #f99411;
-    color: #fff;
+    color: black;
     text-decoration: none;
     border-radius: 5px;
     text-transform: uppercase;
@@ -297,6 +316,7 @@ a {
 .homepage-text {
     font-size: 15px;
     color: black;
+    margin: 0% 10% 0% 10%;
 }
 
 .homepage-bottom {
@@ -539,8 +559,6 @@ input[type=checkbox], input[type=radio] {
     color: red;
 }
 
-/* Sign Up */
-
 /* Cart */
 
 .added-item-img {
@@ -619,6 +637,14 @@ footer {
     color: white;
 }
 
+.site-creator li a:hover {
+    color: #F4B6D2;
+}
+
+.lylologo {
+    height: 24px;
+    margin-right: 2px;
+}
 
 /* Messages */
 
@@ -652,6 +678,44 @@ footer {
 .order-confirmation-wrapper .row {
     margin-bottom: 5px;
 }
+
+/* Error handling */
+
+.page-error {
+    text-align: center; 
+    margin-top: 200px; 
+}
+
+/* Text Scroller */
+  
+.scrolling-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .scrolling-section h1 {
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    z-index: 1;
+    font-size: 3em;
+    font-weight: 400;
+  }
+  
+
 
 /* Media Queries for mobile */
 
@@ -691,6 +755,7 @@ footer {
     }
 
     .homepage-box,
+    .homepage-box-form,
     .contact-box,
     .about-box,
     .order-success-box,
@@ -698,10 +763,12 @@ footer {
     .sign-up-box,
     .casestudy-box,
     .services-box {
-        margin: 30px 10px;
+        margin: 30px auto;
+        width: 80%;
     }
 
-    .order-form-box {
+    .order-form-box,
+    .user-details-form-box {
         width: 80%;
     }
 
