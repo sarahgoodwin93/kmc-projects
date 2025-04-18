@@ -60,8 +60,10 @@
         <div class="col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
             <!-- Logo and Tagline -->
             <div class="nav-link main-logo-link">
-                <img class="logo-img" src="{% static 'images/logo.png' %}" alt="kmc project logo image">
-                <p class="tagline">Hydraulic Design, Consultancy, Project Management & Training</p>
+                <a class="main-logo-link" href="{% url 'home' %}">
+                    <img class="logo-img" src="{% static 'images/logo.png' %}" alt="kmc project logo image">
+                    <p class="tagline">Hydraulic Design, Consultancy, Project Management & Training</p>
+                </a>
             </div>
         </div>
         <div class="col-lg-8">

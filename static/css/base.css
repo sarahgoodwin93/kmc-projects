@@ -23,9 +23,26 @@ a {
 
 /* Logo */
 
+.main-logo-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    pointer-events: auto;
+    z-index: 9999;
+    position: relative;
+}
+
+.main-logo-link:hover {
+    text-decoration: none;
+}
+
 .logo-img {
     width: 50%;
-    text-align: center;
+    margin: 0 auto;
+    pointer-events: auto;
+    z-index: 9999;
+    position: relative;
+    cursor: pointer;
 }
 
 .tagline {
@@ -262,7 +279,7 @@ a {
     font-size: 2.5rem;
     margin-bottom: 20px;
     text-transform: uppercase;
-    margin-top: 10px;
+    margin-top: 2%;
 }
 
 .contact-button {
