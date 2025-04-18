@@ -286,12 +286,13 @@ img.card-img-top.img-fluid {
     align-items: center;
     justify-content: center;
     text-align: left;
-    margin: 30px 80px;
+    margin: 30px auto;
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
 }
 
 .item-box {
