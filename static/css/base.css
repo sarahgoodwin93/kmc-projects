@@ -154,31 +154,40 @@ a {
   
   .services-icons {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
     padding: 40px 20px;
     background-color: #f5f5f5;
-    flex-wrap: wrap;
     text-align: center;
+    width: 100vw;
   }
   
   .icon-block {
     flex: 1 1 150px;
-    margin: 10px;
+    min-width: 120px;
+    text-align: center;
   }
   
   .icon-block i {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #f99411;
     margin-bottom: 10px;
   }
-  
-  .icon-block p {
-    margin: 0;
-    font-weight: 600;
-    font-size: 1rem;
+
+  .icon-block {
+    flex: 0 0 auto;
+    min-width: 120px;
+    scroll-snap-align: start;
   }
   
+  
+  .icon-block p {
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0;
+  }
+
 
 /* Site boxes */
 
@@ -881,7 +890,7 @@ footer {
     .casestudy-box,
     .services-box {
         margin: 30px auto;
-        width: 80%;
+        width: 95%;
     }
 
     .order-form-box,
@@ -916,6 +925,7 @@ footer {
 
     .services-box {
         flex-wrap: wrap;
+        padding: 5px;
     }
 
     .service-text {
@@ -1000,3 +1010,37 @@ footer {
         margin-top: 20px;
     }
 }
+
+
+/* Enable scroll only on small screens for services icons */
+/* Make it scroll horizontally on Mobile & iPad */
+@media (max-width: 1024px) {
+    .services-icons {
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding: 20px;
+      gap: 16px;
+      margin-top: 5%;
+    }
+  
+    .services-icons::-webkit-scrollbar {
+      display: none;
+    }
+  
+    .icon-block {
+      flex: 0 0 auto;
+      min-width: 120px;
+      scroll-snap-align: start;
+      text-align: center;
+    }
+  }
+  
+  /* Optional: Prevent overlap from homepage-bottom */
+  @media (max-width: 1024px) {
+    .homepage-bottom {
+      margin-top: 70%;
+      margin-bottom: 70%;
+    }
+  }
