@@ -634,6 +634,13 @@ footer {
     color: white;
 }
 
+.lylologo img {
+    height: 24px;
+}
+
+.site-creator li:hover {
+    color: #F4B6D2!important;
+}
 
 /* Messages */
 

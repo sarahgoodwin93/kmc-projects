@@ -178,20 +178,21 @@
                     <li class="d-flex flex-row align-items-center">
                         <a href="https://www.linkedin.com/in/kevmccaffrey?originalSubdomain=nz" target="_blank" rel="noopener" aria-label="Linkedin Kevin McCaffrey"><i class="fab fa-linkedin mr-2"></i> LinkedIn</a>
                     </li>
-                    <li class="d-flex flex-row align-items-center">
+                    <!-- <li class="d-flex flex-row align-items-center">
                         <a href="{% url 'newsletter' %}" rel="noopener" aria-label="Newsletter contact form"><i class="fa-solid fa-envelope"></i>  Newsletter Sign Up</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <!-- Site Creator details -->
             <div class="col-md-6 text-right site-creator">
                 <ul class="list-unstyled d-flex flex-column">
                     <li>
-                        {% block copyright %}Site made by Sarah Goodwin{% endblock copyright %}
+                        {% block copyright %}Site made by Lylo Tech Studio {% endblock copyright %}
                     </li>
-                    <li>
+                    <li class="lylologolink">
                         <!-- Link to GitHub page -->
-                        <a href="https://github.com/sarahgoodwin93" target="_blank" rel="noopener" aria-label="Github Page">Github: <i class="fab fa-github"></i></a>
+                        <a href="https://lylotechstudio.com" target="_blank" rel="noopener" aria-label="Lylo Tech Website">
+                            <img class="lylologo" src="{% static 'images/lylo-icon-pink.png' %}" alt="lylotech logo image">Lylo Tech:  </a>
                     </li>
                 </ul>
             </div>

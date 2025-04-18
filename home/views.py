@@ -9,6 +9,8 @@ from django.views.generic.edit import CreateView
 from django.views.generic.list import ListView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.decorators import user_passes_test
+from django.core.mail import send_mail
+from django.conf import settings
 
 
 # Homepage View
@@ -28,11 +30,25 @@ class ContactFormView(CreateView):
 
     def form_valid(self, form):
         form.instance.creator = self.request.user
-        messages.success(self.request, "Thanks for contacting us, we'll be in touch soon")  # noqa
+
+        # Send email to your inbox
+        contact = form.cleaned_data
+        send_mail(
+            subject=f"New KMC Contact: {contact['name']}",
+            message=(
+                f"Service Needed: {contact['service_needed']}\n\n"
+                f"Message:\n{contact['message']}\n\n"
+                f"Email: {contact['email']}"
+            ),
+            from_email=settings.DEFAULT_FROM_EMAIL,
+            recipient_list=['sarah@lylotechstudio.com'],
+        )
+
+        messages.success(self.request, "Thanks for contacting us, we'll be in touch soon")
         return super().form_valid(form)
 
     def form_invalid(self, form):
-        messages.error(self.request, "There was an error with the form.")
+        messages.error(self.request, "There was an error with the form. Please check your details and try again.")
         return self.render_to_response(
             self.get_context_data(form=form, heading="Contact")
         )
