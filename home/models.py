@@ -44,6 +44,7 @@ class WhoWeAre(models.Model):
     name = models.CharField(max_length=100)
     sku = models.CharField(max_length=254, null=True, blank=True, unique=True)
     description = RichTextField(blank=True, null=True)
+    about_kevin = RichTextField(blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.BooleanField(default=False)
 
