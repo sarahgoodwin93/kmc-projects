@@ -1,6 +1,6 @@
 
 from django.contrib import admin
-from .models import Contact
+from .models import Contact, WhoWeAre
 
 
 # Admin adjustments for Contact Form.
@@ -15,6 +15,12 @@ class ContactAdmin(admin.ModelAdmin):
     )
 
     ordering = ('created_on',)
+
+
+@admin.register(WhoWeAre)
+class WhoWeAreAdmin(admin.ModelAdmin):
+    def has_add_permission(self, request):
+        return not WhoWeAre.objects.exists()
 
 
 admin.site.register(Contact, ContactAdmin)

@@ -3,9 +3,9 @@ from django.urls import reverse_lazy, reverse
 from django.views import generic
 from django.http import HttpResponseRedirect
 from django.contrib import messages
-from .models import Contact
-from .forms import ContactForm
-from django.views.generic.edit import CreateView
+from .models import Contact, WhoWeAre
+from .forms import ContactForm, EditWhoWeAreForm
+from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic.list import ListView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.decorators import user_passes_test
@@ -16,8 +16,8 @@ from django.conf import settings
 # Homepage View
 def index(request):
     """ A view to return the index page """
-
-    return render(request, 'home/index.html')
+    who_we_are = WhoWeAre.objects.first()
+    return render(request, 'home/index.html', {'who_we_are': who_we_are})
 
 
 # Contact Form View
@@ -68,6 +68,26 @@ class ContactListView(LoginRequiredMixin, UserPassesTestMixin, ListView):
     model = Contact
     template_name = 'home/contact_list.html'
     context_object_name = 'contacts'
+
+    def test_func(self):
+        return self.request.user.is_superuser
+
+
+# Edit Homepage Text View
+class EditWhoWeAreView(UserPassesTestMixin, UpdateView):
+    """
+    Shows the edit who we are page so that a superuser can edit
+    the homepage text, once the user has edited the text sucssefully it will
+    redirect back to the homepage using the success_url
+    """
+    model = WhoWeAre
+    template_name = "home/edit_whoweare.html"
+    form_class = EditWhoWeAreForm
+    success_url = reverse_lazy("home")
+
+    def swim_edit(self, request):
+        messages.success(self, request, "Text has been updated")
+        return response
 
     def test_func(self):
         return self.request.user.is_superuser
