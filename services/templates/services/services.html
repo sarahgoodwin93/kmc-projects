@@ -4,7 +4,7 @@
 {% block content %}
     <div class="content-wrapper">
         <!-- Heading and contact button -->
-        <h1 class="site-headings">Serviceshi</h1>
+        <h1 class="site-headings">Services</h1>
         <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
         <!-- Services list -->
         <div class="services-box{% if services|length > 3 and forloop.counter0|divisibleby:3 %} wrap-after-three{% endif %}">
