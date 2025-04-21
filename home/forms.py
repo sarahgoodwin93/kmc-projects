@@ -28,5 +28,6 @@ class EditWhoWeAreForm(forms.ModelForm):
         fields = [
             "name",
             "description",
+            "about_kevin",
         ]
 

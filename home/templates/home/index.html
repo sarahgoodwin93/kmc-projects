@@ -33,18 +33,18 @@
       <div class="about-text">
         {% if who_we_are %}
           <h1 class="homepage-text">{{ who_we_are.name }}</h1>
-          <p class="lead mb-0 service-text">{{ who_we_are.description }}</p>
+          <p class="lead mb-0 service-text">{{ who_we_are.description|safe }}</p>
           <br>
           <h1 class="homepage-text">About Kevin McCaffrey</h1>
-          <p class="lead mb-0 service-text">{{ who_we_are.about_kevin }}</p>
+          <p class="lead mb-0 service-text">{{ who_we_are.about_kevin|safe }}</p>
         {% else %}
           <p>No "Who We Are" content found.</p>
         {% endif %}
           <!-- Edit button -->
         <div class="card-buttons">
           {% if user.is_authenticated and user.is_superuser and who_we_are %}
-              <a href="{% url 'edit_whoweare' pk=1 %}" class="btn btn-edit">Edit</a>
-          {% endif %}
+          <a href="{% url 'edit_whoweare' pk=who_we_are.pk %}" class="btn btn-edit">Edit</a>
+        {% endif %}
         </div>
       </div>
     </div>

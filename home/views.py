@@ -16,7 +16,7 @@ from django.conf import settings
 # Homepage View
 def index(request):
     """ A view to return the index page """
-    who_we_are = WhoWeAre.objects.first()
+    who_we_are = WhoWeAre.objects.last()
     return render(request, 'home/index.html', {'who_we_are': who_we_are})
 
 

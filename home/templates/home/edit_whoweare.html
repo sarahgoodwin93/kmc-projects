@@ -17,14 +17,16 @@
             {{ form.name.errors}}
             </p>
             <p>
+            {{ form.media }}
             {{ form.description.label_tag }}
             {{ form.description }}
             {{ form.description.errors }}
             </p>
             <p>
+            {{ form.media }}
             {{ form.about_kevin.label_tag }}
             {{ form.about_kevin }}
-            {{ form.description.errors }}
+            {{ form.about_kevin.errors }}
             </p>
             <!-- Edit Services button -->
             <input class="btn btn-success" type="submit" name="update" />
