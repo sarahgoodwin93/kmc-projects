@@ -8,28 +8,27 @@
     <h1 class="home-heading">Problems Solved</h1>
     <div class="homepage-box-form">
         <h2 class="form-heading">Edit Who We Are</h2>
-                  <!-- Edit Services Form -->
-                  <form class="mb-5" method="POST" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    <p>
-                      {{ form.name.label_tag}}
-                      {{ form.name }}
-                      {{ form.name.errors}}
-                    </p>
-                    <p>
-                      {{ form.description.label_tag }}
-                      {{ form.description }}
-                      {{ form.description.errors }}
-                    </p>
-                    <p>About Kevin McCaffrey</p>
-                    <p>
-                        {{ form.about_kevin.label_tag }}
-                        {{ form.about_kevin }}
-                        {{ form.description.errors }}
-                      </p>
-                    <!-- Edit Services button -->
-                    <input class="btn btn-success" type="submit" name="update" />
-                  </form>
+        <!-- Edit Services Form -->
+        <form class="mb-5" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+            <p>
+            {{ form.name.label_tag}}
+            {{ form.name }}
+            {{ form.name.errors}}
+            </p>
+            <p>
+            {{ form.description.label_tag }}
+            {{ form.description }}
+            {{ form.description.errors }}
+            </p>
+            <p>
+            {{ form.about_kevin.label_tag }}
+            {{ form.about_kevin }}
+            {{ form.description.errors }}
+            </p>
+            <!-- Edit Services button -->
+            <input class="btn btn-success" type="submit" name="update" />
+        </form>
     </div>
 </div>
 {% endblock %}
