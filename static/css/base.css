@@ -252,7 +252,7 @@ a {
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
-.services-inner-box::before {
+/* .services-inner-box::before {
     content: '';
     position: absolute;
     top: 0; left: 0;
@@ -262,10 +262,15 @@ a {
     z-index: 0;
     transition: opacity 0.3s ease;
     opacity: 0;
-}
+} */
 
 .services-inner-box:hover::before {
     opacity: 1;
+}
+
+.services-inner-box > * {
+    position: relative;
+    z-index: 1;
 }
 
 .services-box {
